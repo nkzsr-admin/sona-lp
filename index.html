@@ -44,6 +44,10 @@
     gtag('config', 'AW-17922920559');
   </script>
   <!-- End Google tag -->
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Noto+Sans+JP:wght@400;500;600;700;900&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -51,168 +55,194 @@
       box-sizing: border-box;
     }
 
+    :root {
+      --navy: #162133;
+      --navy-light: #1e3048;
+      --accent: #2b8a7e;
+      --accent-light: #34a393;
+      --accent-pale: #e8f5f3;
+      --green-cta: #06C755;
+      --red: #d94f4f;
+      --text: #1a1a1a;
+      --text-sub: #5a6474;
+      --text-muted: #8b95a5;
+      --bg: #ffffff;
+      --bg-warm: #f7f8fa;
+      --border: #e8eaef;
+    }
+
     body {
-      font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", sans-serif;
-      color: #1a1a1a;
+      font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", sans-serif;
+      color: var(--text);
       line-height: 1.8;
-      background: #fff;
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .font-inter {
+      font-family: "Inter", sans-serif;
     }
 
     /* ========== HEADER ========== */
     header {
-      padding: 16px 24px;
-      background: #fff;
-      border-bottom: 1px solid #eee;
+      padding: 0 24px;
+      height: 64px;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
       z-index: 100;
+      display: flex;
+      align-items: center;
     }
 
     .header-inner {
-      max-width: 1000px;
+      max-width: 1080px;
       margin: 0 auto;
+      width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
     .logo {
-      font-size: 24px;
+      font-family: "Inter", sans-serif;
+      font-size: 22px;
       font-weight: 900;
-      color: #1a1a1a;
-      letter-spacing: 2px;
+      color: var(--navy);
+      letter-spacing: 3px;
+      text-transform: lowercase;
     }
 
     .header-cta {
-      background: #06C755;
+      background: var(--green-cta);
       color: #fff;
       padding: 10px 24px;
-      border-radius: 50px;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: 700;
       font-size: 14px;
-      transition: opacity 0.3s;
+      transition: all 0.2s;
     }
 
     .header-cta:hover {
-      opacity: 0.85;
+      opacity: 0.9;
+      transform: translateY(-1px);
     }
 
     /* ========== HERO ========== */
     .hero {
-      margin-top: 60px;
-      padding: 80px 24px 60px;
-      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
-      color: #fff;
+      margin-top: 64px;
+      padding: 100px 24px 80px;
+      background: var(--bg);
       text-align: center;
       position: relative;
       overflow: hidden;
     }
 
-    /* ヘキサゴナルドットグリッド */
     .hero::before {
       content: "";
       position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background-image:
-        radial-gradient(circle, rgba(96,165,250,0.15) 1px, transparent 1px),
-        radial-gradient(circle, rgba(96,165,250,0.15) 1px, transparent 1px);
-      background-size: 28px 48px;
-      background-position: 0 0, 14px 24px;
-      mask-image:
-        radial-gradient(ellipse 60% 70% at 82% 25%, black 0%, transparent 60%),
-        radial-gradient(ellipse 40% 40% at 15% 78%, rgba(0,0,0,0.3) 0%, transparent 50%),
-        radial-gradient(ellipse 30% 30% at 50% 50%, rgba(0,0,0,0.1) 0%, transparent 50%);
-      -webkit-mask-image:
-        radial-gradient(ellipse 60% 70% at 82% 25%, black 0%, transparent 60%),
-        radial-gradient(ellipse 40% 40% at 15% 78%, rgba(0,0,0,0.3) 0%, transparent 50%),
-        radial-gradient(ellipse 30% 30% at 50% 50%, rgba(0,0,0,0.1) 0%, transparent 50%);
-      mask-composite: add;
-      -webkit-mask-composite: source-over;
+      top: -40%;
+      right: -20%;
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(43,138,126,0.06) 0%, transparent 70%);
+      border-radius: 50%;
       pointer-events: none;
     }
 
-    /* グロー＋ボケ光彩 */
     .hero::after {
       content: "";
       position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background:
-        /* 右上エリアの大きなグロー */
-        radial-gradient(circle 200px at 88% 15%, rgba(96,165,250,0.06) 0%, transparent 100%),
-        radial-gradient(circle 120px at 75% 25%, rgba(96,165,250,0.04) 0%, transparent 100%),
-        /* 右上の中〜大ボケ円 */
-        radial-gradient(circle 14px at 91% 10%, rgba(96,165,250,0.20) 0%, rgba(96,165,250,0.05) 60%, transparent 100%),
-        radial-gradient(circle 10px at 84% 18%, rgba(96,165,250,0.18) 0%, rgba(96,165,250,0.04) 60%, transparent 100%),
-        radial-gradient(circle 20px at 95% 30%, rgba(96,165,250,0.12) 0%, rgba(96,165,250,0.03) 60%, transparent 100%),
-        radial-gradient(circle 8px at 78% 8%, rgba(96,165,250,0.22) 0%, transparent 100%),
-        radial-gradient(circle 6px at 70% 20%, rgba(96,165,250,0.15) 0%, transparent 100%),
-        radial-gradient(circle 4px at 65% 10%, rgba(96,165,250,0.12) 0%, transparent 100%),
-        radial-gradient(circle 3px at 88% 38%, rgba(96,165,250,0.10) 0%, transparent 100%),
-        /* 左下エリア（控えめ） */
-        radial-gradient(circle 80px at 12% 82%, rgba(96,165,250,0.04) 0%, transparent 100%),
-        radial-gradient(circle 5px at 18% 76%, rgba(96,165,250,0.12) 0%, transparent 100%),
-        radial-gradient(circle 8px at 25% 85%, rgba(96,165,250,0.08) 0%, transparent 100%),
-        radial-gradient(circle 3px at 10% 70%, rgba(96,165,250,0.10) 0%, transparent 100%);
+      bottom: -30%;
+      left: -15%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(43,138,126,0.04) 0%, transparent 70%);
+      border-radius: 50%;
       pointer-events: none;
     }
 
     .hero-label {
       display: inline-block;
-      background: rgba(255,255,255,0.15);
+      background: var(--accent-pale);
+      color: var(--accent);
       padding: 6px 20px;
-      border-radius: 50px;
+      border-radius: 6px;
       font-size: 14px;
+      font-weight: 600;
       margin-bottom: 32px;
-      letter-spacing: 1px;
+      letter-spacing: 0.5px;
     }
 
     .hero h1 {
-      font-size: clamp(26px, 5vw, 42px);
+      font-size: clamp(28px, 5.5vw, 48px);
       font-weight: 900;
-      line-height: 1.4;
-      margin-bottom: 24px;
+      line-height: 1.35;
+      margin-bottom: 28px;
+      color: var(--navy);
+      letter-spacing: -0.02em;
     }
 
-    .hero h1 .num-highlight {
-      color: #60a5fa;
-      font-size: 1.1em;
+    .hero h1 em {
+      font-style: normal;
+      color: var(--accent);
     }
 
     .hero p.hero-subtitle {
-      font-size: clamp(16px, 2.5vw, 20px);
-      color: rgba(255,255,255,0.85);
-      margin-bottom: 40px;
-      line-height: 1.8;
+      font-size: clamp(15px, 2.2vw, 18px);
+      color: var(--text-sub);
+      margin-bottom: 48px;
+      line-height: 1.9;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .hero-cta {
-      display: inline-block;
-      background: #06C755;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--green-cta);
       color: #fff;
-      padding: 18px 48px;
-      border-radius: 50px;
+      padding: 18px 44px;
+      border-radius: 12px;
       text-decoration: none;
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 700;
-      transition: transform 0.3s, box-shadow 0.3s;
-      box-shadow: 0 4px 20px rgba(6, 199, 85, 0.4);
+      transition: all 0.25s;
+      box-shadow: 0 4px 24px rgba(6, 199, 85, 0.25);
     }
 
     .hero-cta:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 30px rgba(6, 199, 85, 0.5);
+      box-shadow: 0 8px 32px rgba(6, 199, 85, 0.35);
     }
 
     .hero-sub {
-      margin-top: 12px;
+      margin-top: 14px;
       font-size: 13px;
-      color: rgba(255,255,255,0.5);
+      color: var(--text-muted);
     }
 
-    /* ========== COMMON ========== */
+    /* ========== SECTION COMMON ========== */
+    .section-label {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-family: "Inter", sans-serif;
+      margin-bottom: 16px;
+    }
+
     .section-inner {
       max-width: 800px;
       margin: 0 auto;
@@ -225,118 +255,162 @@
 
     /* ========== PAIN ========== */
     .pain {
-      padding: 80px 24px;
-      background: #f8f9fa;
+      padding: 96px 24px 88px;
+      background: var(--bg-warm);
     }
 
     .pain h2 {
       text-align: center;
-      font-size: clamp(22px, 4vw, 32px);
+      font-size: clamp(22px, 4vw, 30px);
       font-weight: 900;
-      margin-bottom: 48px;
+      margin-bottom: 52px;
       line-height: 1.5;
+      color: var(--navy);
     }
 
     .pain-list {
       list-style: none;
-      max-width: 640px;
+      max-width: 600px;
       margin: 0 auto;
     }
 
     .pain-list li {
       background: #fff;
-      padding: 24px 28px;
-      margin-bottom: 16px;
-      border-radius: 12px;
-      font-size: 18px;
+      padding: 22px 28px;
+      margin-bottom: 12px;
+      border-radius: 10px;
+      font-size: 16px;
       font-weight: 600;
-      border-left: 4px solid #ef4444;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      border-left: 3px solid var(--red);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      transition: transform 0.2s;
     }
 
-    .pain-list li span {
-      color: #ef4444;
-      margin-right: 12px;
+    .pain-list li:hover {
+      transform: translateX(4px);
+    }
+
+    .pain-list li .pain-icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #fef2f2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: var(--red);
+      font-weight: 800;
+      font-family: "Inter", sans-serif;
     }
 
     /* ========== BIG NUMBERS ========== */
     .big-numbers {
-      padding: 80px 24px;
-      background: #fff;
+      padding: 96px 24px;
+      background: var(--bg);
     }
 
     .big-numbers h2 {
       text-align: center;
-      font-size: clamp(22px, 4vw, 32px);
+      font-size: clamp(22px, 4vw, 30px);
       font-weight: 900;
-      margin-bottom: 48px;
+      margin-bottom: 56px;
       line-height: 1.5;
+      color: var(--navy);
     }
 
     .numbers-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      max-width: 900px;
+      gap: 20px;
+      max-width: 780px;
       margin: 0 auto;
     }
 
     .number-card {
-      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
-      border-radius: 20px;
+      background: var(--bg-warm);
+      border: 1px solid var(--border);
+      border-radius: 16px;
       padding: 40px 24px;
       text-align: center;
-      color: #fff;
+      transition: all 0.3s;
+    }
+
+    .number-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 4px 20px rgba(43,138,126,0.08);
     }
 
     .number-card .number-value {
-      font-size: clamp(32px, 6vw, 56px);
+      font-family: "Inter", sans-serif;
+      font-size: clamp(36px, 6vw, 56px);
       font-weight: 900;
-      color: #60a5fa;
-      line-height: 1.2;
-      margin-bottom: 4px;
+      color: var(--accent);
+      line-height: 1.1;
+      margin-bottom: 2px;
     }
 
     .number-card .number-unit {
-      font-size: clamp(16px, 2.5vw, 22px);
+      font-size: clamp(16px, 2.5vw, 20px);
       font-weight: 700;
-      color: #60a5fa;
+      color: var(--accent);
     }
 
     .number-card .number-label {
-      font-size: clamp(14px, 2vw, 18px);
-      color: rgba(255,255,255,0.7);
+      font-size: 15px;
+      color: var(--text-sub);
       margin-top: 12px;
       font-weight: 500;
     }
 
     /* ========== COST VISUAL COMPARISON ========== */
     .cost-visual {
-      padding: 80px 24px;
-      background: #f8f9fa;
+      padding: 96px 24px;
+      background: var(--navy);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cost-visual::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      right: -30%;
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(43,138,126,0.12) 0%, transparent 60%);
+      border-radius: 50%;
+      pointer-events: none;
     }
 
     .cost-visual h2 {
       text-align: center;
-      font-size: clamp(22px, 4vw, 32px);
+      font-size: clamp(22px, 4vw, 30px);
       font-weight: 900;
-      margin-bottom: 48px;
+      margin-bottom: 52px;
       line-height: 1.5;
+      position: relative;
     }
 
     .cost-compare-box {
-      max-width: 800px;
+      max-width: 760px;
       margin: 0 auto;
-      background: #fff;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
       border-radius: 20px;
-      padding: 48px 32px;
+      padding: 48px 36px;
+      position: relative;
     }
 
     .cost-compare-row {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 24px;
+      gap: 28px;
       flex-wrap: wrap;
     }
 
@@ -345,314 +419,347 @@
       min-width: 220px;
       text-align: center;
       padding: 32px 24px;
-      border-radius: 16px;
+      border-radius: 14px;
     }
 
     .cost-side.cost-old {
-      background: #f8f9fa;
-      border: 2px solid #ef4444;
+      background: rgba(217,79,79,0.08);
+      border: 1px solid rgba(217,79,79,0.25);
     }
 
     .cost-side.cost-new {
-      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
-      color: #fff;
+      background: rgba(43,138,126,0.12);
+      border: 1px solid rgba(43,138,126,0.3);
     }
 
     .cost-side .cost-label {
-      font-size: 16px;
-      font-weight: 700;
+      font-size: 15px;
+      font-weight: 600;
       margin-bottom: 12px;
-    }
-
-    .cost-side.cost-old .cost-label {
-      color: #666;
-    }
-
-    .cost-side.cost-new .cost-label {
-      color: rgba(255,255,255,0.8);
+      color: rgba(255,255,255,0.7);
     }
 
     .cost-side .cost-price {
-      font-size: clamp(24px, 4vw, 36px);
+      font-size: clamp(22px, 3.5vw, 30px);
       font-weight: 900;
       line-height: 1.3;
     }
 
     .cost-side.cost-old .cost-price {
-      color: #ef4444;
+      color: #f08080;
       text-decoration: line-through;
+      text-decoration-thickness: 2px;
     }
 
     .cost-side.cost-new .cost-price {
-      color: #60a5fa;
+      color: var(--accent-light);
     }
 
     .cost-arrow {
-      font-size: 40px;
-      color: #0f172a;
+      font-size: 32px;
+      color: rgba(255,255,255,0.3);
       flex-shrink: 0;
     }
 
     .cost-saving-box {
       margin-top: 32px;
-      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
-      color: #fff;
+      background: rgba(43,138,126,0.15);
+      border: 1px solid rgba(43,138,126,0.25);
       border-radius: 12px;
       padding: 24px;
       text-align: center;
     }
 
     .cost-saving-box .saving-text {
-      font-size: clamp(18px, 3vw, 24px);
-      font-weight: 900;
+      font-size: clamp(16px, 2.5vw, 20px);
+      font-weight: 700;
     }
 
     .cost-saving-box .saving-sub {
       font-size: 14px;
-      opacity: 0.9;
+      opacity: 0.7;
       margin-top: 4px;
     }
 
     .cost-note {
-      max-width: 800px;
-      margin: 16px auto 0;
-      font-size: 13px;
-      color: #999;
+      max-width: 760px;
+      margin: 20px auto 0;
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
       text-align: center;
     }
 
     /* ========== COMPARISON TABLE ========== */
     .comparison {
-      padding: 80px 24px;
-      background: #fff;
+      padding: 96px 24px;
+      background: var(--bg);
     }
 
     .comparison h2 {
       text-align: center;
-      font-size: clamp(22px, 4vw, 32px);
+      font-size: clamp(22px, 4vw, 30px);
       font-weight: 900;
       margin-bottom: 16px;
       line-height: 1.5;
+      color: var(--navy);
     }
 
     .comparison .table-lead {
       text-align: center;
-      font-size: 16px;
-      color: #666;
-      margin-bottom: 40px;
+      font-size: 15px;
+      color: var(--text-sub);
+      margin-bottom: 44px;
     }
 
     .compare-table-wrap {
-      max-width: 800px;
+      max-width: 760px;
       margin: 0 auto;
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
     }
 
     .compare-table {
-      border-collapse: collapse;
+      border-collapse: separate;
+      border-spacing: 0;
       width: 100%;
-      min-width: 560px;
+      min-width: 540px;
       background: #fff;
-      border-radius: 16px;
+      border-radius: 14px;
       overflow: hidden;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      border: 1px solid var(--border);
     }
 
     .compare-table th,
     .compare-table td {
-      padding: 20px 24px;
+      padding: 18px 20px;
       text-align: center;
-      border-bottom: 1px solid #f0f0f0;
-      font-size: 15px;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
     }
 
-    .compare-table th {
-      background: #0f172a;
-      color: #fff;
+    .compare-table thead th {
+      background: var(--bg-warm);
       font-weight: 700;
-      font-size: 16px;
+      font-size: 14px;
+      color: var(--text-sub);
     }
 
     .compare-table th.sona-col {
-      background: #1e3a5f;
-      color: #60a5fa;
+      background: var(--accent-pale);
+      color: var(--accent);
+      font-weight: 800;
     }
 
     .compare-table td:first-child {
       font-weight: 600;
       text-align: left;
-      background: #fafafa;
+      color: var(--navy);
     }
 
     .compare-table td.good {
-      color: #06C755;
+      color: var(--accent);
       font-weight: 700;
     }
 
     .compare-table td.bad {
-      color: #999;
+      color: var(--text-muted);
+    }
+
+    .compare-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .compare-table tbody tr:last-child {
+      background: var(--bg-warm);
+    }
+
+    .compare-table tbody tr:last-child td.good {
+      font-size: 16px;
     }
 
     .table-note {
-      max-width: 800px;
-      margin: 24px auto 0;
-      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
-      color: #fff;
+      max-width: 760px;
+      margin: 28px auto 0;
+      background: var(--accent-pale);
+      color: var(--navy);
       border-radius: 12px;
       padding: 24px 32px;
       text-align: center;
-      font-size: clamp(15px, 2.5vw, 18px);
-      font-weight: 700;
+      font-size: clamp(14px, 2.2vw, 16px);
+      font-weight: 600;
       line-height: 1.7;
+      border: 1px solid rgba(43,138,126,0.15);
     }
 
     .table-note .note-highlight {
-      color: #60a5fa;
+      color: var(--accent);
+      font-weight: 800;
       font-size: 1.1em;
     }
 
     .table-source {
-      max-width: 800px;
+      max-width: 760px;
       margin: 12px auto 0;
-      font-size: 12px;
-      color: #999;
+      font-size: 11px;
+      color: var(--text-muted);
       text-align: right;
     }
 
     /* ========== TASKS ========== */
     .tasks {
-      padding: 80px 24px;
-      background: #f8f9fa;
+      padding: 96px 24px;
+      background: var(--bg-warm);
     }
 
     .tasks h2 {
       text-align: center;
-      font-size: clamp(22px, 4vw, 32px);
+      font-size: clamp(22px, 4vw, 30px);
       font-weight: 900;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
       line-height: 1.5;
+      color: var(--navy);
     }
 
     .tasks .lead {
       text-align: center;
-      font-size: 16px;
-      color: #666;
-      margin-bottom: 48px;
+      font-size: 15px;
+      color: var(--text-sub);
+      margin-bottom: 52px;
     }
 
     .task-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      max-width: 900px;
+      gap: 16px;
+      max-width: 840px;
       margin: 0 auto;
     }
 
     .task-card {
       background: #fff;
-      border-radius: 16px;
+      border-radius: 14px;
       padding: 32px 24px;
-      text-align: center;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
-      transition: transform 0.3s;
+      border: 1px solid var(--border);
+      transition: all 0.25s;
     }
 
     .task-card:hover {
-      transform: translateY(-4px);
+      border-color: var(--accent);
+      box-shadow: 0 4px 16px rgba(43,138,126,0.08);
+      transform: translateY(-3px);
     }
 
     .task-card .task-icon {
-      font-size: 36px;
-      margin-bottom: 16px;
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--accent-pale);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--accent);
+      font-family: "Inter", sans-serif;
     }
 
     .task-card h4 {
-      font-size: 17px;
+      font-size: 16px;
       font-weight: 700;
       margin-bottom: 8px;
+      color: var(--navy);
     }
 
     .task-card p {
-      font-size: 14px;
-      color: #666;
+      font-size: 13px;
+      color: var(--text-sub);
       line-height: 1.7;
     }
 
     /* ========== VOICE (SIMULATION) ========== */
     .voice {
-      padding: 80px 24px;
-      background: #fff;
+      padding: 96px 24px;
+      background: var(--bg);
     }
 
     .voice h2 {
       text-align: center;
-      font-size: clamp(22px, 4vw, 32px);
+      font-size: clamp(22px, 4vw, 30px);
       font-weight: 900;
       margin-bottom: 12px;
       line-height: 1.5;
+      color: var(--navy);
     }
 
     .voice-disclaimer {
       text-align: center;
-      font-size: 13px;
-      color: #999;
-      margin-bottom: 40px;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 44px;
     }
 
     .voice-cards {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-      max-width: 800px;
+      gap: 20px;
+      max-width: 760px;
       margin: 0 auto;
     }
 
     .voice-card {
-      background: #f8f9fa;
-      border-radius: 16px;
-      padding: 32px 28px;
+      background: var(--bg-warm);
+      border-radius: 14px;
+      padding: 28px 24px;
+      border: 1px solid var(--border);
+      transition: all 0.25s;
+    }
+
+    .voice-card:hover {
+      border-color: var(--accent);
     }
 
     .voice-card .voice-tag {
       display: inline-block;
-      background: #0f172a;
-      color: #60a5fa;
-      font-size: 13px;
+      background: var(--accent-pale);
+      color: var(--accent);
+      font-size: 12px;
       font-weight: 700;
       padding: 4px 12px;
       border-radius: 6px;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
 
     .voice-card .voice-text {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 500;
       line-height: 1.8;
       margin-bottom: 16px;
+      color: var(--text);
     }
 
     .voice-card .voice-attr {
-      font-size: 13px;
-      color: #999;
+      font-size: 12px;
+      color: var(--text-muted);
     }
 
     /* ========== FLOW ========== */
     .flow {
-      padding: 80px 24px;
-      background: #f8f9fa;
+      padding: 96px 24px;
+      background: var(--bg-warm);
     }
 
     .flow h2 {
       text-align: center;
-      font-size: clamp(22px, 4vw, 32px);
+      font-size: clamp(22px, 4vw, 30px);
       font-weight: 900;
-      margin-bottom: 48px;
+      margin-bottom: 56px;
       line-height: 1.5;
+      color: var(--navy);
     }
 
     .flow-steps {
-      max-width: 600px;
+      max-width: 560px;
       margin: 0 auto;
     }
 
@@ -667,119 +774,125 @@
     .flow-step:not(:last-child)::after {
       content: "";
       position: absolute;
-      left: 28px;
-      top: 60px;
-      width: 2px;
-      height: calc(100% - 20px);
-      background: #e5e7eb;
+      left: 23px;
+      top: 52px;
+      width: 1px;
+      height: calc(100% - 12px);
+      background: var(--border);
     }
 
     .flow-num {
       flex-shrink: 0;
-      width: 56px;
-      height: 56px;
-      background: #0f172a;
+      width: 48px;
+      height: 48px;
+      background: var(--navy);
       color: #fff;
-      border-radius: 50%;
+      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 22px;
+      font-size: 18px;
       font-weight: 900;
+      font-family: "Inter", sans-serif;
       position: relative;
       z-index: 1;
     }
 
     .flow-content h4 {
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 700;
-      margin-bottom: 8px;
-      padding-top: 4px;
+      margin-bottom: 6px;
+      padding-top: 2px;
+      color: var(--navy);
     }
 
     .flow-content p {
-      font-size: 15px;
-      color: #666;
+      font-size: 14px;
+      color: var(--text-sub);
+      line-height: 1.7;
     }
 
     /* ========== PRICING ========== */
     .pricing {
-      padding: 80px 24px;
-      background: #fff;
+      padding: 96px 24px;
+      background: var(--bg);
     }
 
     .pricing h2 {
       text-align: center;
-      font-size: clamp(22px, 4vw, 32px);
+      font-size: clamp(22px, 4vw, 30px);
       font-weight: 900;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
       line-height: 1.5;
+      color: var(--navy);
     }
 
     .pricing .pricing-lead {
       text-align: center;
-      font-size: 16px;
-      color: #666;
-      margin-bottom: 48px;
+      font-size: 15px;
+      color: var(--text-sub);
+      margin-bottom: 52px;
     }
 
     .pricing-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-      max-width: 800px;
+      gap: 20px;
+      max-width: 760px;
       margin: 0 auto;
     }
 
     .pricing-card {
-      background: #f8f9fa;
-      border-radius: 20px;
+      background: #fff;
+      border-radius: 16px;
       padding: 40px 32px;
       position: relative;
-      transition: transform 0.3s;
-      border: 2px solid transparent;
+      transition: all 0.25s;
+      border: 1px solid var(--border);
     }
 
     .pricing-card:hover {
-      transform: translateY(-4px);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
     }
 
     .pricing-card.recommended {
-      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+      background: var(--navy);
       color: #fff;
-      border-color: #60a5fa;
+      border-color: var(--accent);
+      border-width: 2px;
     }
 
     .pricing-badge {
       position: absolute;
-      top: -14px;
+      top: -13px;
       left: 50%;
       transform: translateX(-50%);
-      background: #60a5fa;
+      background: var(--accent);
       color: #fff;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
-      padding: 6px 20px;
-      border-radius: 50px;
+      padding: 5px 18px;
+      border-radius: 6px;
       white-space: nowrap;
     }
 
     .pricing-card .plan-name {
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 900;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       text-align: center;
     }
 
     .pricing-card .plan-target {
-      font-size: 14px;
-      color: #666;
+      font-size: 13px;
+      color: var(--text-sub);
       text-align: center;
       margin-bottom: 24px;
     }
 
     .pricing-card.recommended .plan-target {
-      color: rgba(255,255,255,0.6);
+      color: rgba(255,255,255,0.55);
     }
 
     .pricing-card .plan-price {
@@ -788,54 +901,55 @@
     }
 
     .pricing-card .plan-price .price-amount {
+      font-family: "Inter", sans-serif;
       font-size: clamp(28px, 5vw, 40px);
       font-weight: 900;
-      color: #1a1a1a;
+      color: var(--navy);
     }
 
     .pricing-card.recommended .plan-price .price-amount {
-      color: #60a5fa;
+      color: var(--accent-light);
     }
 
     .pricing-card .plan-price .price-unit {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 700;
     }
 
     .pricing-card .plan-price .price-tax {
-      font-size: 13px;
-      color: #999;
+      font-size: 12px;
+      color: var(--text-muted);
     }
 
     .pricing-card.recommended .plan-price .price-tax {
-      color: rgba(255,255,255,0.5);
+      color: rgba(255,255,255,0.45);
     }
 
     .pricing-card .plan-initial {
       text-align: center;
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 600;
       margin-bottom: 24px;
       padding-bottom: 24px;
-      border-bottom: 1px solid #e5e7eb;
+      border-bottom: 1px solid var(--border);
     }
 
     .pricing-card.recommended .plan-initial {
-      border-bottom-color: rgba(255,255,255,0.15);
+      border-bottom-color: rgba(255,255,255,0.12);
     }
 
     .pricing-card .plan-initial .initial-label {
-      color: #666;
+      color: var(--text-sub);
       margin-right: 4px;
     }
 
     .pricing-card.recommended .plan-initial .initial-label {
-      color: rgba(255,255,255,0.6);
+      color: rgba(255,255,255,0.55);
     }
 
     .pricing-card .plan-initial .initial-free {
-      color: #06C755;
-      font-size: 18px;
+      color: var(--green-cta);
+      font-size: 17px;
       font-weight: 900;
     }
 
@@ -845,8 +959,8 @@
     }
 
     .pricing-card .plan-features li {
-      font-size: 15px;
-      padding: 8px 0;
+      font-size: 14px;
+      padding: 6px 0;
       display: flex;
       align-items: flex-start;
       gap: 10px;
@@ -854,71 +968,72 @@
 
     .pricing-card .plan-features li::before {
       content: "\2713";
-      color: #06C755;
+      color: var(--accent);
       font-weight: 700;
       flex-shrink: 0;
     }
 
     .pricing-card .plan-features li span {
-      color: #666;
+      color: var(--text-sub);
     }
 
     .pricing-card.recommended .plan-features li span {
-      color: rgba(255,255,255,0.85);
+      color: rgba(255,255,255,0.8);
     }
 
     .pricing-card .plan-cta {
       display: block;
       text-align: center;
-      padding: 16px 24px;
-      border-radius: 50px;
+      padding: 14px 24px;
+      border-radius: 10px;
       text-decoration: none;
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 700;
-      transition: transform 0.3s, box-shadow 0.3s;
+      transition: all 0.25s;
     }
 
     .pricing-card .plan-cta:hover {
-      transform: translateY(-2px);
+      transform: translateY(-1px);
     }
 
     .pricing-card.recommended .plan-cta {
-      background: #06C755;
+      background: var(--green-cta);
       color: #fff;
-      box-shadow: 0 4px 20px rgba(6, 199, 85, 0.4);
+      box-shadow: 0 4px 16px rgba(6, 199, 85, 0.3);
     }
 
     .pricing-card.recommended .plan-cta:hover {
-      box-shadow: 0 6px 30px rgba(6, 199, 85, 0.5);
+      box-shadow: 0 6px 24px rgba(6, 199, 85, 0.4);
     }
 
     .pricing-card:not(.recommended) .plan-cta {
-      background: #0f172a;
+      background: var(--navy);
       color: #fff;
     }
 
     .pricing-note {
       text-align: center;
-      margin-top: 32px;
-      font-size: 15px;
-      color: #666;
+      margin-top: 28px;
+      font-size: 14px;
+      color: var(--text-sub);
     }
 
     /* ========== FAQ ========== */
     .faq {
-      padding: 80px 24px;
-      background: #f8f9fa;
+      padding: 96px 24px;
+      background: var(--bg-warm);
     }
 
     .faq h2 {
       text-align: center;
-      font-size: clamp(22px, 4vw, 32px);
+      font-size: clamp(22px, 4vw, 30px);
       font-weight: 900;
-      margin-bottom: 48px;
+      margin-bottom: 52px;
+      color: var(--navy);
     }
 
     .faq-list {
-      max-width: 700px;
+      max-width: 660px;
       margin: 0 auto;
     }
 
@@ -926,101 +1041,137 @@
       background: #fff;
       border-radius: 12px;
       padding: 24px 28px;
-      margin-bottom: 16px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      margin-bottom: 12px;
+      border: 1px solid var(--border);
+      transition: all 0.2s;
+    }
+
+    .faq-item:hover {
+      border-color: var(--accent);
     }
 
     .faq-q {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 700;
       margin-bottom: 12px;
       display: flex;
       align-items: flex-start;
       gap: 12px;
+      color: var(--navy);
     }
 
     .faq-q span {
-      color: #1e3a5f;
+      color: var(--accent);
       font-weight: 900;
       flex-shrink: 0;
+      font-family: "Inter", sans-serif;
     }
 
     .faq-a {
-      font-size: 15px;
-      color: #666;
+      font-size: 14px;
+      color: var(--text-sub);
       padding-left: 32px;
       line-height: 1.8;
     }
 
     /* ========== FINAL CTA ========== */
     .final-cta {
-      padding: 80px 24px;
-      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+      padding: 96px 24px;
+      background: var(--navy);
       color: #fff;
       text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .final-cta::before {
+      content: "";
+      position: absolute;
+      top: -40%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(43,138,126,0.1) 0%, transparent 60%);
+      border-radius: 50%;
+      pointer-events: none;
     }
 
     .final-cta h2 {
-      font-size: clamp(22px, 4vw, 34px);
+      font-size: clamp(22px, 4vw, 32px);
       font-weight: 900;
       margin-bottom: 16px;
       line-height: 1.5;
+      position: relative;
     }
 
     .final-cta p {
-      font-size: 16px;
-      color: rgba(255,255,255,0.7);
+      font-size: 15px;
+      color: rgba(255,255,255,0.65);
       margin-bottom: 12px;
       line-height: 1.8;
+      position: relative;
     }
 
     .final-cta .cta-zoom {
       display: inline-block;
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: 50px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 8px;
       padding: 10px 28px;
-      font-size: 15px;
-      color: rgba(255,255,255,0.9);
-      margin-bottom: 32px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 36px;
+      position: relative;
     }
 
     .final-cta .hero-cta {
-      font-size: 20px;
-      padding: 20px 56px;
+      font-size: 18px;
+      padding: 20px 52px;
+      position: relative;
     }
 
     .final-cta .hero-sub {
       margin-top: 16px;
+      position: relative;
     }
 
     /* ========== FOOTER ========== */
     footer {
-      padding: 32px 24px;
-      background: #0a0f1a;
-      color: rgba(255,255,255,0.4);
+      padding: 28px 24px;
+      background: #0e1620;
+      color: rgba(255,255,255,0.35);
       text-align: center;
-      font-size: 13px;
+      font-size: 12px;
+      font-family: "Inter", sans-serif;
     }
 
     /* ========== RESPONSIVE ========== */
     @media (max-width: 768px) {
       .hero {
-        padding: 60px 20px 50px;
+        padding: 72px 20px 60px;
       }
 
       .numbers-grid {
         grid-template-columns: 1fr;
-        gap: 16px;
-        max-width: 400px;
+        gap: 12px;
+        max-width: 360px;
       }
 
       .number-card {
-        padding: 32px 20px;
+        padding: 28px 20px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        text-align: left;
       }
 
       .number-card .number-value {
-        font-size: 40px;
+        font-size: 36px;
+      }
+
+      .number-card .number-label {
+        margin-top: 0;
       }
 
       .cost-compare-row {
@@ -1038,20 +1189,21 @@
       }
 
       .cost-compare-box {
-        padding: 32px 20px;
+        padding: 28px 20px;
       }
 
       .task-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
       }
 
       .pricing-grid {
         grid-template-columns: 1fr;
-        max-width: 420px;
+        max-width: 400px;
       }
 
       .pricing-card {
-        padding: 36px 24px;
+        padding: 32px 24px;
       }
 
       .voice-cards {
@@ -1061,7 +1213,7 @@
       .compare-table th,
       .compare-table td {
         padding: 14px 12px;
-        font-size: 13px;
+        font-size: 12px;
       }
 
       .header-cta {
@@ -1074,17 +1226,18 @@
       }
 
       .flow-num {
-        width: 44px;
-        height: 44px;
-        font-size: 18px;
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+        border-radius: 10px;
       }
 
       .flow-step:not(:last-child)::after {
-        left: 22px;
+        left: 20px;
       }
 
       .table-note {
-        padding: 20px 24px;
+        padding: 20px;
       }
     }
 
@@ -1095,20 +1248,47 @@
     }
 
     /* ========== ANIMATION ========== */
-    .fade-in {
+    .reveal {
       opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
+      transform: translateY(20px);
+      transition: opacity 0.5s cubic-bezier(0.25, 0.1, 0.25, 1),
+                  transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
     }
 
-    .fade-in.visible {
+    .reveal.visible {
       opacity: 1;
       transform: translateY(0);
     }
 
-    .fade-in-delay-1 { transition-delay: 0.1s; }
-    .fade-in-delay-2 { transition-delay: 0.2s; }
-    .fade-in-delay-3 { transition-delay: 0.3s; }
+    .reveal-slide-left {
+      opacity: 0;
+      transform: translateX(-20px);
+      transition: opacity 0.5s cubic-bezier(0.25, 0.1, 0.25, 1),
+                  transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+
+    .reveal-slide-left.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .reveal-scale {
+      opacity: 0;
+      transform: scale(0.96);
+      transition: opacity 0.5s cubic-bezier(0.25, 0.1, 0.25, 1),
+                  transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+
+    .reveal-scale.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .delay-1 { transition-delay: 0.08s; }
+    .delay-2 { transition-delay: 0.16s; }
+    .delay-3 { transition-delay: 0.24s; }
+    .delay-4 { transition-delay: 0.32s; }
+    .delay-5 { transition-delay: 0.40s; }
   </style>
 </head>
 <body>
@@ -1126,7 +1306,7 @@
     <div class="hero-label">中小企業の人手不足を解決</div>
     <h1>
       採用せずに、<br>
-      <span class="num-highlight">人手不足を解決する。</span>
+      <em>人手不足を解決する。</em>
     </h1>
     <p class="hero-subtitle">
       採用・教育・離職の手間なく、事務・経理・広報をまとめて任せられる。<br>
@@ -1139,13 +1319,13 @@
   <!-- ===== 2. PAIN POINTS ===== -->
   <section class="pain">
     <div class="section-inner">
-      <h2 class="fade-in">こんなお悩み、ありませんか？</h2>
+      <h2 class="reveal">こんなお悩み、ありませんか？</h2>
       <ul class="pain-list">
-        <li class="fade-in"><span>&#9634;</span>人手が足りないが、採用する余裕がない</li>
-        <li class="fade-in"><span>&#9634;</span>採用してもすぐ辞めて、また一からやり直し</li>
-        <li class="fade-in"><span>&#9634;</span>事務作業に追われて、本業に集中できない</li>
-        <li class="fade-in"><span>&#9634;</span>経理・広報・事務を兼務していて手が回らない</li>
-        <li class="fade-in"><span>&#9634;</span>人件費の負担が重く、これ以上増やせない</li>
+        <li class="reveal-slide-left delay-1"><div class="pain-icon">!</div>人手が足りないが、採用する余裕がない</li>
+        <li class="reveal-slide-left delay-2"><div class="pain-icon">!</div>採用してもすぐ辞めて、また一からやり直し</li>
+        <li class="reveal-slide-left delay-3"><div class="pain-icon">!</div>事務作業に追われて、本業に集中できない</li>
+        <li class="reveal-slide-left delay-4"><div class="pain-icon">!</div>経理・広報・事務を兼務していて手が回らない</li>
+        <li class="reveal-slide-left delay-5"><div class="pain-icon">!</div>人件費の負担が重く、これ以上増やせない</li>
       </ul>
     </div>
   </section>
@@ -1153,21 +1333,28 @@
   <!-- ===== 3. BIG NUMBERS ===== -->
   <section class="big-numbers">
     <div class="section-inner-wide">
-      <h2 class="fade-in">sonaなら、こう変わります</h2>
+      <div class="section-label reveal" style="text-align:center;">What Changes</div>
+      <h2 class="reveal">sonaなら、こう変わります</h2>
       <div class="numbers-grid">
-        <div class="number-card fade-in fade-in-delay-1">
-          <div class="number-value">0</div>
-          <div class="number-unit">円</div>
+        <div class="number-card reveal-scale delay-1">
+          <div>
+            <span class="number-value font-inter">0</span>
+            <span class="number-unit">円</span>
+          </div>
           <div class="number-label">採用コスト</div>
         </div>
-        <div class="number-card fade-in fade-in-delay-2">
-          <div class="number-value">0</div>
-          <div class="number-unit">日</div>
+        <div class="number-card reveal-scale delay-2">
+          <div>
+            <span class="number-value font-inter">0</span>
+            <span class="number-unit">日</span>
+          </div>
           <div class="number-label">教育期間</div>
         </div>
-        <div class="number-card fade-in fade-in-delay-3">
-          <div class="number-value">0</div>
-          <div class="number-unit">%</div>
+        <div class="number-card reveal-scale delay-3">
+          <div>
+            <span class="number-value font-inter">0</span>
+            <span class="number-unit">%</span>
+          </div>
           <div class="number-label">離職リスク</div>
         </div>
       </div>
@@ -1177,14 +1364,15 @@
   <!-- ===== 4. COST COMPARISON ===== -->
   <section class="cost-visual">
     <div class="section-inner">
-      <h2 class="fade-in">採用のコスト、把握していますか？</h2>
-      <div class="cost-compare-box fade-in">
+      <div class="section-label reveal" style="text-align:center;color:rgba(255,255,255,0.4);">Cost Comparison</div>
+      <h2 class="reveal">採用のコスト、把握していますか？</h2>
+      <div class="cost-compare-box reveal-scale">
         <div class="cost-compare-row">
           <div class="cost-side cost-old">
             <div class="cost-label">正社員1人を採用すると</div>
             <div class="cost-price">年間326〜514万円</div>
           </div>
-          <div class="cost-arrow">&#10132;</div>
+          <div class="cost-arrow">→</div>
           <div class="cost-side cost-new">
             <div class="cost-label">sonaなら</div>
             <div class="cost-price">年間132万円〜</div>
@@ -1195,16 +1383,17 @@
           <div class="saving-sub">事務・経理・広報をまとめて任せられます</div>
         </div>
       </div>
-      <p class="cost-note fade-in">※ 正社員コストは給与・社会保険・採用費・教育費を含む年間総額の一般的な試算です。sonaの金額はおまかせプラン月額110,000円（税込）の年額です。</p>
+      <p class="cost-note reveal">※ 正社員コストは給与・社会保険・採用費・教育費を含む年間総額の一般的な試算です。sonaの金額はおまかせプラン月額110,000円（税込）の年額です。</p>
     </div>
   </section>
 
   <!-- ===== 5. COMPARISON TABLE ===== -->
   <section class="comparison">
     <div class="section-inner">
-      <h2 class="fade-in">採用の手間とリスクを、まるごと解消</h2>
-      <p class="table-lead fade-in">給与以外にかかる「見えないコスト」も含めて比較できます</p>
-      <div class="compare-table-wrap fade-in">
+      <div class="section-label reveal" style="text-align:center;">Comparison</div>
+      <h2 class="reveal">採用の手間とリスクを、まるごと解消</h2>
+      <p class="table-lead reveal">給与以外にかかる「見えないコスト」も含めて比較できます</p>
+      <div class="compare-table-wrap reveal-scale">
         <table class="compare-table">
           <thead>
             <tr>
@@ -1260,47 +1449,48 @@
           </tbody>
         </table>
       </div>
-      <div class="table-note fade-in">
+      <div class="table-note reveal">
         採用・教育・離職リスク<span class="note-highlight">ゼロ</span>。<br>
         事務・経理・広報を<span class="note-highlight">まとめて</span>お任せください。
       </div>
-      <p class="table-source fade-in">※ 正社員・派遣のコストは、厚生労働省「就労条件総合調査」および一般的な求人媒体の費用相場に基づく試算です。</p>
+      <p class="table-source reveal">※ 正社員・派遣のコストは、厚生労働省「就労条件総合調査」および一般的な求人媒体の費用相場に基づく試算です。</p>
     </div>
   </section>
 
   <!-- ===== 6. WHAT THEY DO ===== -->
   <section class="tasks">
     <div class="section-inner-wide">
-      <h2 class="fade-in">この仕事、全部お任せください</h2>
-      <p class="lead fade-in">「社長がやらなくていい仕事」を、デジタルスタッフが引き受けます。</p>
+      <div class="section-label reveal" style="text-align:center;">Services</div>
+      <h2 class="reveal">この仕事、全部お任せください</h2>
+      <p class="lead reveal">「社長がやらなくていい仕事」を、デジタルスタッフが引き受けます。</p>
       <div class="task-grid">
-        <div class="task-card fade-in">
-          <div class="task-icon">&#128231;</div>
+        <div class="task-card reveal delay-1">
+          <div class="task-icon">01</div>
           <h4>事務・メール対応</h4>
           <p>取引先への返信、お礼状、案内文、契約書の下書きなど日常業務</p>
         </div>
-        <div class="task-card fade-in">
-          <div class="task-icon">&#128202;</div>
+        <div class="task-card reveal delay-2">
+          <div class="task-icon">02</div>
           <h4>経理・データ集計</h4>
           <p>請求書作成、入金管理、売上集計、月次レポートの作成</p>
         </div>
-        <div class="task-card fade-in">
-          <div class="task-icon">&#128227;</div>
+        <div class="task-card reveal delay-3">
+          <div class="task-icon">03</div>
           <h4>広報・SNS運用</h4>
           <p>ブログ記事、SNS投稿、プレスリリース、情報発信の代行</p>
         </div>
-        <div class="task-card fade-in">
-          <div class="task-icon">&#128269;</div>
+        <div class="task-card reveal delay-1">
+          <div class="task-icon">04</div>
           <h4>リサーチ・調査</h4>
           <p>競合調査、市場分析、補助金・助成金の情報収集とレポート</p>
         </div>
-        <div class="task-card fade-in">
-          <div class="task-icon">&#128221;</div>
+        <div class="task-card reveal delay-2">
+          <div class="task-icon">05</div>
           <h4>資料・提案書作成</h4>
           <p>営業資料、企画書、見積書、社内報告書の作成</p>
         </div>
-        <div class="task-card fade-in">
-          <div class="task-icon">&#128196;</div>
+        <div class="task-card reveal delay-3">
+          <div class="task-icon">06</div>
           <h4>議事録・スケジュール管理</h4>
           <p>会議内容の整理、スケジュール調整、社内連絡の取りまとめ</p>
         </div>
@@ -1311,25 +1501,26 @@
   <!-- ===== 7. SIMULATION ===== -->
   <section class="voice">
     <div class="section-inner">
-      <h2 class="fade-in">導入シミュレーション</h2>
-      <p class="voice-disclaimer fade-in">※ 以下はサービス内容に基づく想定例です。実在の企業ではありません。</p>
+      <div class="section-label reveal" style="text-align:center;">Use Cases</div>
+      <h2 class="reveal">導入シミュレーション</h2>
+      <p class="voice-disclaimer reveal">※ 以下はサービス内容に基づく想定例です。実在の企業ではありません。</p>
       <div class="voice-cards">
-        <div class="voice-card fade-in">
+        <div class="voice-card reveal delay-1">
           <div class="voice-tag">事務員の採用を検討していた</div>
           <div class="voice-text">事務員を1人雇おうとしていたが、採用費・教育期間がネックだった。sonaなら採用費ゼロ・即日稼働で、同じ業務をカバーできる。</div>
           <div class="voice-attr">建設業 / 従業員8名の場合</div>
         </div>
-        <div class="voice-card fade-in">
+        <div class="voice-card reveal delay-2">
           <div class="voice-tag">採用しても定着しなかった</div>
           <div class="voice-text">求人広告に費用をかけて採用しても、数ヶ月で離職するケースが続いていた。sonaなら離職リスクがなく、業務が途切れない。</div>
           <div class="voice-attr">小売業 / 従業員3名の場合</div>
         </div>
-        <div class="voice-card fade-in">
+        <div class="voice-card reveal delay-1">
           <div class="voice-tag">事務・経理・広報を兼務していた</div>
           <div class="voice-text">社長が事務・経理・広報を兼務し、本業に集中できなかった。sonaでバックオフィスをまとめて任せ、営業に集中できるようになる。</div>
           <div class="voice-attr">不動産業 / 従業員12名の場合</div>
         </div>
-        <div class="voice-card fade-in">
+        <div class="voice-card reveal delay-2">
           <div class="voice-tag">人件費の固定費を減らしたかった</div>
           <div class="voice-text">パート・アルバイトの社会保険負担が大きかった。sonaなら社保負担なし、必要な業務だけを依頼できる。</div>
           <div class="voice-attr">飲食業 / 従業員5名の場合</div>
@@ -1341,30 +1532,31 @@
   <!-- ===== 8. FLOW ===== -->
   <section class="flow">
     <div class="section-inner">
-      <h2 class="fade-in">ご利用の流れ</h2>
+      <div class="section-label reveal" style="text-align:center;">Flow</div>
+      <h2 class="reveal">ご利用の流れ</h2>
       <div class="flow-steps">
-        <div class="flow-step fade-in">
+        <div class="flow-step reveal delay-1">
           <div class="flow-num">1</div>
           <div class="flow-content">
             <h4>無料相談</h4>
             <p>LINEからお気軽にご相談ください。現在のお悩みや業務内容をお聞きします。</p>
           </div>
         </div>
-        <div class="flow-step fade-in">
+        <div class="flow-step reveal delay-2">
           <div class="flow-num">2</div>
           <div class="flow-content">
             <h4>業務ヒアリング・ご提案</h4>
             <p>御社の業務内容に合わせて、最適なスタッフ配置をご提案します。</p>
           </div>
         </div>
-        <div class="flow-step fade-in">
+        <div class="flow-step reveal delay-3">
           <div class="flow-num">3</div>
           <div class="flow-content">
             <h4>デジタルスタッフ配置・稼働開始</h4>
             <p>御社専用のデジタルスタッフを配置。すぐに業務を開始します。</p>
           </div>
         </div>
-        <div class="flow-step fade-in">
+        <div class="flow-step reveal delay-4">
           <div class="flow-num">4</div>
           <div class="flow-content">
             <h4>定期レポート・改善</h4>
@@ -1378,16 +1570,17 @@
   <!-- ===== 9. PRICING ===== -->
   <section class="pricing">
     <div class="section-inner">
-      <h2 class="fade-in">料金プラン</h2>
-      <p class="pricing-lead fade-in">御社に合ったプランをお選びください</p>
+      <div class="section-label reveal" style="text-align:center;">Pricing</div>
+      <h2 class="reveal">料金プラン</h2>
+      <p class="pricing-lead reveal">御社に合ったプランをお選びください</p>
       <div class="pricing-grid">
         <!-- おまかせプラン（推奨） -->
-        <div class="pricing-card recommended fade-in">
+        <div class="pricing-card recommended reveal-scale delay-1">
           <div class="pricing-badge">おすすめ</div>
           <div class="plan-name">おまかせプラン</div>
           <div class="plan-target">ITに詳しくなくてもOK。LINEで依頼するだけ</div>
           <div class="plan-price">
-            <span class="price-amount">110,000</span><span class="price-unit">円/月</span>
+            <span class="price-amount font-inter">110,000</span><span class="price-unit">円/月</span>
             <div class="price-tax">（税込）</div>
           </div>
           <div class="plan-initial">
@@ -1404,11 +1597,11 @@
           <a href="https://lin.ee/FYl4bJd" onclick="fbq('track', 'Lead');" class="plan-cta">LINEで無料相談する</a>
         </div>
         <!-- セルフプラン -->
-        <div class="pricing-card fade-in">
+        <div class="pricing-card reveal-scale delay-2">
           <div class="plan-name">セルフプラン</div>
           <div class="plan-target">自分で使いこなしたい経営者向け</div>
           <div class="plan-price">
-            <span class="price-amount">55,000</span><span class="price-unit">円/月</span>
+            <span class="price-amount font-inter">55,000</span><span class="price-unit">円/月</span>
             <div class="price-tax">（税込）</div>
           </div>
           <div class="plan-initial">
@@ -1424,40 +1617,41 @@
           <a href="https://lin.ee/FYl4bJd" onclick="fbq('track', 'Lead');" class="plan-cta">LINEで無料相談する</a>
         </div>
       </div>
-      <p class="pricing-note fade-in">※ 最低利用期間なし。合わなければいつでも解約OK</p>
+      <p class="pricing-note reveal">※ 最低利用期間なし。合わなければいつでも解約OK</p>
     </div>
   </section>
 
   <!-- ===== 10. FAQ ===== -->
   <section class="faq">
     <div class="section-inner">
-      <h2 class="fade-in">よくあるご質問</h2>
+      <div class="section-label reveal" style="text-align:center;">FAQ</div>
+      <h2 class="reveal">よくあるご質問</h2>
       <div class="faq-list">
-        <div class="faq-item fade-in">
+        <div class="faq-item reveal">
           <div class="faq-q"><span>Q.</span>「デジタルスタッフ」とは何ですか？</div>
           <div class="faq-a">AIと専門スタッフの品質管理を組み合わせた業務代行サービスです。最新のAI技術を活用し、専門スタッフが品質をチェック・管理することで、正確で実用的な成果物をお届けします。</div>
         </div>
-        <div class="faq-item fade-in">
+        <div class="faq-item reveal">
           <div class="faq-q"><span>Q.</span>パソコンに詳しくなくても使えますか？</div>
           <div class="faq-a">はい。おまかせプランならLINEでやり取りするだけで業務を依頼できます。難しい操作は一切ありません。</div>
         </div>
-        <div class="faq-item fade-in">
+        <div class="faq-item reveal">
           <div class="faq-q"><span>Q.</span>どんな業種でも対応できますか？</div>
           <div class="faq-a">はい。建設、飲食、小売、不動産、士業など、幅広い業種の事務・経理・広報業務に対応可能です。</div>
         </div>
-        <div class="faq-item fade-in">
+        <div class="faq-item reveal">
           <div class="faq-q"><span>Q.</span>AIを使っているということですか？</div>
           <div class="faq-a">はい。最新のAI技術を業務処理の基盤として活用しています。ただし、AIが出力した内容はすべて専門スタッフが確認・品質管理を行い、そのまま使える状態でお届けします。「AIに丸投げ」ではなく、「AI + 人の品質管理」で成果物の精度を担保しています。</div>
         </div>
-        <div class="faq-item fade-in">
+        <div class="faq-item reveal">
           <div class="faq-q"><span>Q.</span>機密情報は大丈夫ですか？</div>
           <div class="faq-a">お預かりする情報は厳重に管理しております。ご契約時にNDA（秘密保持契約）を締結し、情報の取り扱いについて明確にいたします。</div>
         </div>
-        <div class="faq-item fade-in">
+        <div class="faq-item reveal">
           <div class="faq-q"><span>Q.</span>最低利用期間はありますか？</div>
           <div class="faq-a">最低利用期間はございません。合わなければいつでも解約いただけます。</div>
         </div>
-        <div class="faq-item fade-in">
+        <div class="faq-item reveal">
           <div class="faq-q"><span>Q.</span>まずは試してみたいのですが。</div>
           <div class="faq-a">まずは無料相談で、御社のお悩みをお聞かせください。業務内容に合わせた具体的なご提案をいたします。</div>
         </div>
@@ -1467,15 +1661,15 @@
 
   <!-- ===== 11. FINAL CTA ===== -->
   <section class="final-cta" id="cta">
-    <h2 class="fade-in">採用せずに、人手不足を解決しませんか？</h2>
-    <p class="fade-in">
+    <h2 class="reveal">採用せずに、人手不足を解決しませんか？</h2>
+    <p class="reveal">
       まずは御社の業務内容をお聞かせください。<br>
       最適なスタッフ配置をご提案します。
     </p>
-    <div class="cta-zoom fade-in">LINE相談無料 &#12539; 無理な営業は一切なし</div>
+    <div class="cta-zoom reveal">LINE相談無料・無理な営業は一切なし</div>
     <br>
-    <a href="https://lin.ee/FYl4bJd" onclick="fbq('track', 'Lead');" class="hero-cta fade-in">LINEで無料相談する</a>
-    <div class="hero-sub fade-in">※ 30秒で友だち追加できます</div>
+    <a href="https://lin.ee/FYl4bJd" onclick="fbq('track', 'Lead');" class="hero-cta reveal">LINEで無料相談する</a>
+    <div class="hero-sub reveal">※ 30秒で友だち追加できます</div>
   </section>
 
   <!-- FOOTER -->
@@ -1485,19 +1679,38 @@
 
   <!-- SCROLL ANIMATION -->
   <script>
+    const observerOpts = {
+      threshold: 0.08,
+      rootMargin: '0px 0px -60px 0px'
+    };
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
         }
       });
-    }, {
-      threshold: 0.1,
-      rootMargin: '0px 0px -40px 0px'
+    }, observerOpts);
+
+    document.querySelectorAll('.reveal, .reveal-slide-left, .reveal-scale').forEach(el => {
+      observer.observe(el);
     });
 
-    document.querySelectorAll('.fade-in').forEach(el => {
-      observer.observe(el);
+    // Smooth header shadow on scroll
+    const header = document.querySelector('header');
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          if (window.scrollY > 10) {
+            header.style.boxShadow = '0 1px 12px rgba(0,0,0,0.06)';
+          } else {
+            header.style.boxShadow = 'none';
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
     });
   </script>
 
