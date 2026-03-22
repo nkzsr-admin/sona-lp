@@ -44,6 +44,23 @@
     gtag('config', 'AW-17922920559');
   </script>
   <!-- End Google tag -->
+  <!-- Google Ads Conversion Tracking (LINE登録) -->
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-17922920559/CjeSCNes340cEO-gqOJC',
+        'value': 1.0,
+        'currency': 'JPY',
+        'event_callback': callback
+      });
+      return false;
+    }
+  </script>
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1312,7 +1329,7 @@
       採用・教育・離職の手間なく、事務・経理・広報をまとめて任せられる。<br>
       中小企業のための「デジタルスタッフ」配置サービス。
     </p>
-    <a href="https://lin.ee/FYl4bJd" onclick="fbq('track', 'Lead');" class="hero-cta">まずは無料で相談する</a>
+    <a href="https://lin.ee/FYl4bJd" onclick="fbq('track', 'Lead'); return gtag_report_conversion('https://lin.ee/FYl4bJd');" class="hero-cta">まずは無料で相談する</a>
     <div class="hero-sub">※ 無理な営業は一切ありません</div>
   </section>
 
@@ -1594,7 +1611,7 @@
             <li><span>月次レポートで成果を可視化</span></li>
             <li><span>難しい操作は一切不要</span></li>
           </ul>
-          <a href="https://lin.ee/FYl4bJd" onclick="fbq('track', 'Lead');" class="plan-cta">LINEで無料相談する</a>
+          <a href="https://lin.ee/FYl4bJd" onclick="fbq('track', 'Lead'); return gtag_report_conversion('https://lin.ee/FYl4bJd');" class="plan-cta">LINEで無料相談する</a>
         </div>
         <!-- セルフプラン -->
         <div class="pricing-card reveal-scale delay-2">
@@ -1614,7 +1631,7 @@
             <li><span>操作サポート付きで安心</span></li>
             <li><span>ChatGPT経験者におすすめ</span></li>
           </ul>
-          <a href="https://lin.ee/FYl4bJd" onclick="fbq('track', 'Lead');" class="plan-cta">LINEで無料相談する</a>
+          <a href="https://lin.ee/FYl4bJd" onclick="fbq('track', 'Lead'); return gtag_report_conversion('https://lin.ee/FYl4bJd');" class="plan-cta">LINEで無料相談する</a>
         </div>
       </div>
       <p class="pricing-note reveal">※ 最低利用期間なし。合わなければいつでも解約OK</p>
@@ -1668,7 +1685,7 @@
     </p>
     <div class="cta-zoom reveal">LINE相談無料・無理な営業は一切なし</div>
     <br>
-    <a href="https://lin.ee/FYl4bJd" onclick="fbq('track', 'Lead');" class="hero-cta reveal">LINEで無料相談する</a>
+    <a href="https://lin.ee/FYl4bJd" onclick="fbq('track', 'Lead'); return gtag_report_conversion('https://lin.ee/FYl4bJd');" class="hero-cta reveal">LINEで無料相談する</a>
     <div class="hero-sub reveal">※ 30秒で友だち追加できます</div>
   </section>
 
