@@ -1307,35 +1307,243 @@
     .delay-4 { transition-delay: 0.32s; }
     .delay-5 { transition-delay: 0.40s; }
 
-    /* === P1 LP IMPROVEMENTS (2026-03-23) === */
+    /* === LP REDESIGN Phase 1 (2026-03-23) === */
+    /* 3チーム統合: デザイントレンド / 画像プロンプト / CSSリデザイン */
 
-    /* Hero Badge (月5社限定) */
+    /* --- 新カラー変数 --- */
+    :root {
+      --amber: #e8960c;
+      --amber-light: #f5b731;
+      --bg-accent-soft: #f0f7f6;
+      --bg-navy-soft: #f2f4f8;
+      --bg-warm-beige: #fbf7f0;
+    }
+
+    /* --- 1. ヒーロー背景: ドットパターン+グラデーション --- */
+    .hero {
+      background: linear-gradient(165deg, #f0faf8 0%, #ffffff 40%, #f7f8fa 100%) !important;
+    }
+    .hero::before {
+      background-image: radial-gradient(circle, rgba(43,138,126,0.07) 1px, transparent 1px) !important;
+      background-size: 24px 24px !important;
+      opacity: 1 !important;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: -30%;
+      right: -15%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(43,138,126,0.12) 0%, transparent 60%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    /* --- Hero Badge (月5社限定) --- */
     .hero-badge {
       display: inline-block;
-      background: #e74c3c;
+      background: var(--amber);
       color: #fff;
       font-size: 0.85rem;
       font-weight: 700;
       padding: 6px 20px;
-      border-radius: 4px;
-      margin-bottom: 12px;
+      border-radius: 6px;
+      margin-bottom: 16px;
       letter-spacing: 0.05em;
+      box-shadow: 0 2px 8px rgba(232,150,12,0.3);
+      position: relative;
+      z-index: 1;
     }
+
+    /* --- 2. 見出しサイズ強化 --- */
+    .hero h1 {
+      font-size: clamp(32px, 6.5vw, 56px) !important;
+      line-height: 1.25 !important;
+      letter-spacing: -0.03em !important;
+    }
+    /* h1 em にマーカー風下線 */
+    .hero h1 em::after {
+      content: "";
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      right: 0;
+      height: 8px;
+      background: rgba(43,138,126,0.15);
+      border-radius: 4px;
+      z-index: -1;
+    }
+    .hero h1 em {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* セクション見出し: 30→38px */
+    .pain h2, .big-numbers h2, .cost-visual h2, .comparison h2,
+    .tasks h2, .voice h2, .flow h2, .pricing h2, .faq h2,
+    .tools h2, .about-operator h2 {
+      font-size: clamp(26px, 5vw, 38px) !important;
+      font-weight: 900 !important;
+    }
+    /* 見出し下アクセントライン */
+    .pain h2::after, .tasks h2::after, .flow h2::after,
+    .pricing h2::after, .faq h2::after, .tools h2::after,
+    .about-operator h2::after {
+      content: "";
+      display: block;
+      width: 48px;
+      height: 3px;
+      background: var(--accent);
+      margin: 20px auto 0;
+      border-radius: 2px;
+    }
+
+    /* hero-subtitle の価格強調 */
     .hero-subtitle strong {
-      color: #2563eb;
-      font-weight: 700;
+      color: var(--amber) !important;
+      font-weight: 800;
     }
 
     /* Hero Microcopy */
     .hero-micro {
       font-size: 0.82rem;
-      color: rgba(0,0,0,0.5);
-      margin-top: 12px;
+      color: rgba(0,0,0,0.45);
+      margin-top: 14px;
       letter-spacing: 0.03em;
+      position: relative;
+      z-index: 1;
     }
 
-    /* Tools Section */
-    .tools { background: #f8f9fa; padding: 80px 0; }
+    /* --- 3. CTAボタン: グラデーション+シマー+パルス --- */
+    .hero-cta {
+      background: linear-gradient(180deg, #0ad264 0%, #06C755 50%, #05b34b 100%) !important;
+      padding: 20px 52px !important;
+      font-size: 18px !important;
+      font-weight: 800 !important;
+      border-radius: 14px !important;
+      box-shadow: 0 4px 16px rgba(6,199,85,0.3), 0 8px 32px rgba(6,199,85,0.15), inset 0 1px 0 rgba(255,255,255,0.2) !important;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-cta::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+      transition: left 0.5s;
+    }
+    .hero-cta:hover::after { left: 100%; }
+    .hero-cta:hover {
+      transform: translateY(-3px) !important;
+      box-shadow: 0 6px 20px rgba(6,199,85,0.35), 0 12px 40px rgba(6,199,85,0.2) !important;
+    }
+    .hero .hero-cta {
+      animation: cta-pulse 3s ease-in-out infinite;
+    }
+    @keyframes cta-pulse {
+      0%, 100% { box-shadow: 0 4px 16px rgba(6,199,85,0.3), 0 8px 32px rgba(6,199,85,0.15); }
+      50% { box-shadow: 0 4px 20px rgba(6,199,85,0.4), 0 8px 40px rgba(6,199,85,0.2); }
+    }
+
+    /* --- 4. カード: 常時微影+ホバー+上辺ライン --- */
+    .task-card, .voice-card, .faq-item {
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03) !important;
+      transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1) !important;
+      position: relative;
+      overflow: hidden;
+    }
+    .task-card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-light));
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .task-card:hover::before { opacity: 1; }
+    .task-card:hover, .voice-card:hover {
+      box-shadow: 0 4px 12px rgba(43,138,126,0.08), 0 12px 32px rgba(43,138,126,0.06) !important;
+      transform: translateY(-5px) !important;
+    }
+    .faq-item:hover {
+      transform: translateX(4px) !important;
+      border-color: var(--accent) !important;
+    }
+    /* 数字カード */
+    .number-card .number-value, .big-numbers .number-value {
+      font-size: clamp(42px, 7vw, 64px) !important;
+    }
+
+    /* --- 5. セクション背景バリエーション --- */
+    .big-numbers { background: var(--bg-accent-soft) !important; }
+    .tasks { background: var(--bg-navy-soft) !important; }
+    .voice { background: var(--bg-accent-soft) !important; }
+    .about-operator { background: var(--bg-warm-beige) !important; }
+
+    /* navy セクション斜め区切り */
+    .cost-visual {
+      clip-path: polygon(0 24px, 100% 0, 100% calc(100% - 24px), 0 100%) !important;
+      padding-top: 120px !important;
+      padding-bottom: 120px !important;
+    }
+    .final-cta {
+      clip-path: polygon(0 24px, 100% 0, 100% 100%, 0 100%) !important;
+      padding-top: 120px !important;
+    }
+
+    /* --- 6. アンバーカラー導入 --- */
+    .pricing-badge, .plan-badge {
+      background: var(--amber) !important;
+      box-shadow: 0 2px 8px rgba(232,150,12,0.3);
+    }
+
+    /* --- 7. 「AIっぽさ」を消すテクニック --- */
+
+    /* ランダム角丸（導入シミュレーションカード） */
+    .voice-card:nth-child(1) { border-radius: 20px 16px 20px 8px !important; }
+    .voice-card:nth-child(2) { border-radius: 8px 20px 16px 20px !important; }
+    .voice-card:nth-child(3) { border-radius: 16px 8px 20px 20px !important; }
+    .voice-card:nth-child(4) { border-radius: 20px 20px 8px 16px !important; }
+
+    /* 不均等アニメーション遅延 */
+    .delay-1 { transition-delay: 0.1s !important; }
+    .delay-2 { transition-delay: 0.22s !important; }
+    .delay-3 { transition-delay: 0.35s !important; }
+    .delay-4 { transition-delay: 0.42s !important; }
+    .delay-5 { transition-delay: 0.52s !important; }
+
+    /* reveal アニメーション強化 */
+    .reveal {
+      transform: translateY(28px) !important;
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+    .reveal.visible {
+      transform: translateY(0) !important;
+    }
+
+    /* テキスト選択カラー */
+    ::selection { background: rgba(43,138,126,0.2); color: var(--navy); }
+
+    /* navy背景に微かな斜線パターン */
+    .cost-visual::after, .final-cta::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: repeating-linear-gradient(
+        -45deg, transparent, transparent 40px,
+        rgba(255,255,255,0.015) 40px, rgba(255,255,255,0.015) 41px
+      );
+      pointer-events: none;
+    }
+
+    /* --- Tools Section --- */
+    .tools { background: #fff; padding: 80px 0; }
     .tools-desc {
       text-align: center;
       color: #666;
@@ -1350,36 +1558,45 @@
     }
     .tool-item {
       background: #fff;
-      border: 1px solid #e0e0e0;
-      border-radius: 12px;
-      padding: 20px 28px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px 28px;
       text-align: center;
       font-weight: 600;
       font-size: 0.95rem;
       min-width: 140px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+      transition: all 0.3s;
+    }
+    .tool-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      border-color: var(--accent);
     }
     .tool-item span {
       display: block;
       font-size: 0.75rem;
       font-weight: 400;
-      color: #999;
+      color: var(--text-muted);
       margin-top: 4px;
     }
 
-    /* About Section */
+    /* --- About Section --- */
     .about-operator { padding: 80px 0; }
     .about-card {
       max-width: 640px;
       margin: 0 auto;
       background: #fff;
-      border: 1px solid #e0e0e0;
-      border-radius: 16px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
       padding: 40px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
     }
     .about-name {
       font-size: 1.3rem;
       font-weight: 700;
       margin-bottom: 8px;
+      color: var(--navy);
     }
     .about-name span {
       font-size: 1.1rem;
@@ -1387,7 +1604,7 @@
       margin-left: 12px;
     }
     .about-bio {
-      color: #555;
+      color: var(--text-sub);
       line-height: 1.8;
       margin: 16px 0 24px;
       font-size: 0.95rem;
@@ -1395,13 +1612,14 @@
     .about-commitment {
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 10px;
     }
     .commitment-item {
       font-size: 0.88rem;
-      color: #2563eb;
-      padding-left: 20px;
+      color: var(--accent);
+      padding-left: 24px;
       position: relative;
+      font-weight: 500;
     }
     .commitment-item::before {
       content: '✓';
@@ -1410,7 +1628,7 @@
       font-weight: 700;
     }
 
-    /* Fixed CTA Bar */
+    /* --- Fixed CTA Bar --- */
     .fixed-cta-bar {
       position: fixed;
       bottom: 0;
@@ -1426,15 +1644,17 @@
     }
     .fixed-cta-btn {
       display: inline-block;
-      background: #06c755;
+      background: linear-gradient(180deg, #0ad264 0%, #06C755 100%);
       color: #fff;
-      font-weight: 700;
-      font-size: 1rem;
-      padding: 14px 40px;
+      font-weight: 800;
+      font-size: 1.05rem;
+      padding: 16px 40px;
       border-radius: 50px;
       text-decoration: none;
       width: 100%;
       max-width: 360px;
+      box-shadow: 0 4px 16px rgba(6,199,85,0.3);
+      animation: cta-pulse 3s ease-in-out infinite;
     }
     @media (max-width: 768px) {
       .fixed-cta-bar { display: block; }
