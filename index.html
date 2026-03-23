@@ -105,10 +105,10 @@
     header {
       padding: 0 24px;
       height: 64px;
-      background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
+      background: transparent;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      border-bottom: none;
       position: fixed;
       top: 0;
       left: 0;
@@ -1319,7 +1319,164 @@
       --bg-warm-beige: #fbf7f0;
     }
 
-    /* --- 1. ヒーロー背景: ドットパターン+グラデーション --- */
+    /* --- 1. ヒーロー: Pattern B (Premium Dark) --- */
+    .hero-dark {
+      background: #0a0a0a;
+      color: #fff;
+      min-height: 100vh;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      margin-top: 0;
+    }
+    .hero-dark .hero-bg-image {
+      position: absolute;
+      inset: 0;
+      background: url('hero-b.png') center center / cover no-repeat;
+      opacity: 0.5;
+      z-index: 0;
+    }
+    .hero-dark .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 70%, rgba(0,0,0,0.9) 100%);
+      z-index: 1;
+    }
+    .hero-dark .hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 1100px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 40px;
+      text-align: center;
+    }
+    .hero-label-en {
+      font-family: "Inter", sans-serif;
+      font-size: 12px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      opacity: 0.5;
+      margin-bottom: 16px;
+    }
+    .hero-dark h1 {
+      font-size: clamp(28px, 4.5vw, 48px) !important;
+      font-weight: 900 !important;
+      line-height: 2.8 !important;
+      margin-bottom: 24px !important;
+      letter-spacing: -0.02em !important;
+      color: #fff !important;
+    }
+    .hero-dark h1 strong,
+    .hero-dark h1 em {
+      font-style: normal;
+      background: rgba(22,33,51,0.6);
+      padding: 2px 10px;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+      display: inline-block;
+      margin-bottom: 6px;
+    }
+    .hero-dark h1 em {
+      color: #06c755;
+    }
+    .hero-dark h1 em::after { display: none; }
+    .hero-dark .hero-subtitle {
+      font-size: 16px;
+      opacity: 1;
+      margin-bottom: 32px;
+      color: #ffffff;
+      font-weight: 700;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.6), 0 0 2px rgba(0,0,0,1);
+    }
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .hero-cta-secondary {
+      display: inline-block;
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 16px 32px;
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 12px;
+      transition: all 0.3s;
+    }
+    .hero-cta-secondary:hover {
+      border-color: #fff;
+      background: rgba(255,255,255,0.05);
+    }
+    .hero-stats {
+      display: flex;
+      gap: 0;
+      z-index: 2;
+      margin-top: 32px;
+      justify-content: center;
+    }
+    .stat {
+      text-align: center;
+      padding: 0 28px;
+      border-right: 1px solid rgba(255,255,255,0.2);
+    }
+    .stat:last-child { border-right: none; }
+    .stat-value {
+      font-family: "Inter", sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #fff;
+    }
+    .stat-label {
+      font-size: 11px;
+      opacity: 0.5;
+      color: #fff;
+      letter-spacing: 1px;
+      margin-top: 4px;
+    }
+    @media (max-width: 768px) {
+      header {
+        background: transparent !important;
+        backdrop-filter: none !important;
+        box-shadow: none !important;
+        border-bottom: none !important;
+      }
+      .header-inner { justify-content: center !important; }
+      .header-cta { display: none !important; }
+      .hero-dark {
+        min-height: 100vh;
+        align-items: center;
+        padding: 60px 0 30px;
+        margin-top: 0 !important;
+        justify-content: center;
+      }
+      .hero-dark .hero-bg-image { opacity: 0.35; }
+      .hero-dark .hero-overlay {
+        background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.8) 100%);
+      }
+      .hero-dark .hero-inner { text-align: center; padding: 0 16px; }
+      .hero-dark h1 { font-size: 11vw !important; line-height: 2.0 !important; }
+      .hero-dark .hero-subtitle { font-size: 4.5vw; max-width: 100%; }
+      .hero-badge { font-size: 4vw; }
+      .badge-num { font-size: 8vw; }
+      .hero-actions { justify-content: center; flex-direction: column; gap: 12px; }
+      .hero-actions .hero-cta,
+      .hero-actions .hero-cta-secondary { width: 100%; max-width: 300px; text-align: center; }
+      .hero-stats { position: static; margin-top: 24px; justify-content: center; gap: 0; }
+      .stat { text-align: center; padding: 0 16px; }
+      .stat-value { font-size: 20px; }
+    }
+
+    /* --- 1b. ヒーロー背景: ドットパターン+グラデーション --- */
     .hero {
       background: linear-gradient(165deg, #f0faf8 0%, #ffffff 40%, #f7f8fa 100%) !important;
     }
@@ -1343,17 +1500,27 @@
     /* --- Hero Badge (月5社限定) --- */
     .hero-badge {
       display: inline-block;
-      background: var(--amber);
-      color: #fff;
+      background: none;
+      color: rgba(255,255,255,0.85);
       font-size: 0.85rem;
-      font-weight: 700;
-      padding: 6px 20px;
-      border-radius: 6px;
+      font-weight: 500;
+      padding: 0;
+      border-radius: 0;
+      border: none;
       margin-bottom: 16px;
-      letter-spacing: 0.05em;
-      box-shadow: 0 2px 8px rgba(232,150,12,0.3);
+      letter-spacing: 0.1em;
+      box-shadow: none;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.6);
       position: relative;
       z-index: 1;
+    }
+    .badge-num {
+      font-family: "Inter", sans-serif;
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: #e84040;
+      vertical-align: baseline;
+      margin: 0 2px;
     }
 
     /* --- 2. 見出しサイズ強化 --- */
@@ -1657,7 +1824,8 @@
       animation: cta-pulse 3s ease-in-out infinite;
     }
     @media (max-width: 768px) {
-      .fixed-cta-bar { display: block; }
+      .fixed-cta-bar { display: block; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
+      .fixed-cta-bar.visible { opacity: 1; pointer-events: auto; }
       footer { padding-bottom: 80px; }
     }
   </style>
@@ -1672,20 +1840,28 @@
     </div>
   </header>
 
-  <!-- ===== 1. HERO ===== -->
-  <section class="hero">
-    <div class="hero-badge">月5社限定</div>
-    <div class="hero-label">中小企業の人手不足を解決</div>
-    <h1>
-      採用せずに、<br>
-      <em>人手不足を解決する。</em>
-    </h1>
-    <p class="hero-subtitle">
-      AI＋専門スタッフが、事務・経理・広報を<strong>月11万円</strong>で丸ごと代行。<br>
-      採用コスト0円・教育期間0日・離職リスク0%。
-    </p>
-    <a href="https://lin.ee/FYl4bJd" onclick="fbq('track', 'Lead'); return gtag_report_conversion('https://lin.ee/FYl4bJd');" class="hero-cta">LINEで無料相談する</a>
-    <div class="hero-micro">初期費用0円 ／ いつでも解約OK ／ 営業電話なし</div>
+  <!-- ===== 1. HERO (Pattern B: Premium Dark) ===== -->
+  <section class="hero hero-dark">
+    <div class="hero-bg-image"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-inner">
+      <div class="hero-badge">月<span class="badge-num">5</span>社限定</div>
+      <h1>
+        <strong>事務・経理・広報</strong><br>
+        <em>AI＋専門スタッフ</em><strong>に、すべて任せる。</strong>
+      </h1>
+      <p class="hero-subtitle">採用せずに、人手不足を解決する。中小企業のためのデジタルスタッフ配置サービス。</p>
+      <div class="hero-actions">
+        <a href="https://lin.ee/FYl4bJd" onclick="fbq('track', 'Lead'); return gtag_report_conversion('https://lin.ee/FYl4bJd');" class="hero-cta">LINEで無料相談する</a>
+        <a href="#service" class="hero-cta-secondary">サービス内容を見る →</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-value">¥110,000</div><div class="stat-label">月額（税込）</div></div>
+        <div class="stat"><div class="stat-value">¥0</div><div class="stat-label">初期費用</div></div>
+        <div class="stat"><div class="stat-value">1週間</div><div class="stat-label">最短導入</div></div>
+      </div>
+      <p style="font-size:11px; opacity:0.4; color:#fff; margin-top:8px; text-align:center;">※ おまかせプランの場合</p>
+    </div>
   </section>
 
   <!-- ===== 2. PAIN POINTS ===== -->
@@ -1810,7 +1986,7 @@
               <td>対応時間</td>
               <td class="bad">営業時間内</td>
               <td class="bad">契約時間内</td>
-              <td class="good">24時間</td>
+              <td class="good">柔軟に対応</td>
             </tr>
             <tr>
               <td>年間トータルコスト</td>
@@ -1825,9 +2001,16 @@
         採用・教育・離職リスク<span class="note-highlight">ゼロ</span>。<br>
         事務・経理・広報を<span class="note-highlight">まとめて</span>お任せください。
       </div>
-      <p class="table-source reveal">※ 正社員・派遣のコストは、厚生労働省「就労条件総合調査」および一般的な求人媒体の費用相場に基づく試算です。</p>
+      <p class="table-source reveal">※ 正社員・派遣のコストは、各種公開データおよび一般的な求人媒体の費用相場に基づく試算です。実際のコストは企業規模・業種により異なります。</p>
     </div>
   </section>
+
+  <!-- ===== MID CTA ===== -->
+  <div style="text-align:center; padding:48px 20px 48px; background:#fff;">
+    <p style="font-size:18px; font-weight:700; color:#162133; margin-bottom:20px;">御社の場合のコスト削減額を試算します</p>
+    <a href="https://lin.ee/FYl4bJd" onclick="fbq('track', 'Lead'); return gtag_report_conversion('https://lin.ee/FYl4bJd');" class="hero-cta">まずは話を聞いてみる</a>
+    <div style="font-size:13px; color:#8b95a5; margin-top:12px;">初期費用0円 ／ いつでも解約OK</div>
+  </div>
 
   <!-- ===== 6. WHAT THEY DO ===== -->
   <section class="tasks" id="service">
@@ -1878,24 +2061,24 @@
       <p class="voice-disclaimer reveal">※ 以下はサービス内容に基づく想定例です。実在の企業ではありません。</p>
       <div class="voice-cards">
         <div class="voice-card reveal delay-1">
-          <div class="voice-tag">事務員の採用を検討していた</div>
-          <div class="voice-text">事務員を1人雇おうとしていたが、採用費・教育期間がネックだった。sonaなら採用費ゼロ・即日稼働で、同じ業務をカバーできる。</div>
-          <div class="voice-attr">建設業 / 従業員8名の場合</div>
+          <div class="voice-tag">経理・事務を兼務し本業に集中できない</div>
+          <div class="voice-text">顧問先への対応に加え、請求書作成・経費処理・スケジュール管理まで所長が兼務。sonaに事務作業を任せ、本業のコンサルティングに集中できるようになる。</div>
+          <div class="voice-attr">税理士事務所 / 従業員6名の場合</div>
         </div>
         <div class="voice-card reveal delay-2">
-          <div class="voice-tag">採用しても定着しなかった</div>
-          <div class="voice-text">求人広告に費用をかけて採用しても、数ヶ月で離職するケースが続いていた。sonaなら離職リスクがなく、業務が途切れない。</div>
-          <div class="voice-attr">小売業 / 従業員3名の場合</div>
+          <div class="voice-tag">事務員の採用を検討していた</div>
+          <div class="voice-text">事務員を1人雇おうとしていたが、採用費・教育期間がネックだった。sonaなら採用費ゼロ・最短1週間で稼働開始、同じ業務をカバーできる。</div>
+          <div class="voice-attr">ITコンサル / 従業員10名の場合</div>
         </div>
         <div class="voice-card reveal delay-1">
-          <div class="voice-tag">事務・経理・広報を兼務していた</div>
-          <div class="voice-text">社長が事務・経理・広報を兼務し、本業に集中できなかった。sonaでバックオフィスをまとめて任せ、営業に集中できるようになる。</div>
+          <div class="voice-tag">採用しても定着しなかった</div>
+          <div class="voice-text">求人広告に費用をかけて採用しても、数ヶ月で離職するケースが続いていた。sonaなら離職リスクがなく、業務が途切れない。</div>
           <div class="voice-attr">不動産業 / 従業員12名の場合</div>
         </div>
         <div class="voice-card reveal delay-2">
           <div class="voice-tag">人件費の固定費を減らしたかった</div>
           <div class="voice-text">パート・アルバイトの社会保険負担が大きかった。sonaなら社保負担なし、必要な業務だけを依頼できる。</div>
-          <div class="voice-attr">飲食業 / 従業員5名の場合</div>
+          <div class="voice-attr">建設業 / 従業員8名の場合</div>
         </div>
       </div>
     </div>
@@ -1966,7 +2149,7 @@
             <li><span>月次レポートで成果を可視化</span></li>
             <li><span>難しい操作は一切不要</span></li>
           </ul>
-          <a href="https://lin.ee/FYl4bJd" onclick="fbq('track', 'Lead'); return gtag_report_conversion('https://lin.ee/FYl4bJd');" class="plan-cta">LINEで無料相談する</a>
+          <a href="https://lin.ee/FYl4bJd" onclick="fbq('track', 'Lead'); return gtag_report_conversion('https://lin.ee/FYl4bJd');" class="plan-cta">おまかせプランで相談する</a>
         </div>
         <!-- セルフプラン -->
         <div class="pricing-card reveal-scale delay-2">
@@ -1984,9 +2167,9 @@
             <li><span>御社専用の環境を構築</span></li>
             <li><span>自分のペースで業務を効率化</span></li>
             <li><span>操作サポート付きで安心</span></li>
-            <li><span>ChatGPT経験者におすすめ</span></li>
+            <li><span>AIツール経験者におすすめ</span></li>
           </ul>
-          <a href="https://lin.ee/FYl4bJd" onclick="fbq('track', 'Lead'); return gtag_report_conversion('https://lin.ee/FYl4bJd');" class="plan-cta">LINEで無料相談する</a>
+          <a href="https://lin.ee/FYl4bJd" onclick="fbq('track', 'Lead'); return gtag_report_conversion('https://lin.ee/FYl4bJd');" class="plan-cta">セルフプランで相談する</a>
         </div>
       </div>
       <p class="pricing-note reveal">※ 最低利用期間なし。合わなければいつでも解約OK</p>
@@ -2024,8 +2207,24 @@
           <div class="faq-a">最低利用期間はございません。合わなければいつでも解約いただけます。</div>
         </div>
         <div class="faq-item reveal">
+          <div class="faq-q"><span>Q.</span>対応できない業務はありますか？</div>
+          <div class="faq-a">電話対応・来客対応・物理的な作業（郵送・現場作業等）には対応しておりません。オンラインで完結する事務・経理・広報業務が対象です。</div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-q"><span>Q.</span>月にどれくらいの量の仕事を頼めますか？</div>
+          <div class="faq-a">業務量の目安は無料相談時にご案内いたします。御社の業務内容に合わせて、対応可能な範囲を事前にすり合わせますのでご安心ください。</div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-q"><span>Q.</span>納品物の修正はできますか？</div>
+          <div class="faq-a">はい。納品後の修正にも対応しております。ご満足いただけるまで調整いたします。</div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-q"><span>Q.</span>プラン変更はできますか？</div>
+          <div class="faq-a">はい。セルフプランからおまかせプラン、またはその逆への変更も可能です。お気軽にご相談ください。</div>
+        </div>
+        <div class="faq-item reveal">
           <div class="faq-q"><span>Q.</span>まずは試してみたいのですが。</div>
-          <div class="faq-a">まずは無料相談で、御社のお悩みをお聞かせください。業務内容に合わせた具体的なご提案をいたします。</div>
+          <div class="faq-a">まずは無料相談で、御社のお悩みをお聞かせください。初月で合わないと感じた場合は、最低利用期間なしでいつでも解約いただけます。</div>
         </div>
       </div>
     </div>
@@ -2036,13 +2235,18 @@
     <div class="section-inner">
       <div class="section-label reveal" style="text-align:center;">Technology</div>
       <h2 class="reveal">信頼性の高いツールで業務を処理</h2>
-      <p class="tools-desc reveal">最新のAI技術と業務ツールを組み合わせ、専門スタッフが品質を管理しています。</p>
+      <p class="tools-desc reveal">最新のAI技術と業務ツールを組み合わせ、専門スタッフが品質を管理しています。<br>おまかせプランなら、お客様がこれらのツールを操作する必要はありません。</p>
       <div class="tools-logos reveal">
         <div class="tool-item">Claude<span>AI基盤</span></div>
+        <div class="tool-item">ChatGPT<span>AI対話</span></div>
+        <div class="tool-item">Gemini<span>AI分析</span></div>
         <div class="tool-item">Google Workspace<span>業務管理</span></div>
         <div class="tool-item">Shopify<span>EC構築</span></div>
         <div class="tool-item">Slack<span>連絡ツール</span></div>
         <div class="tool-item">Notion<span>ナレッジ管理</span></div>
+        <div class="tool-item">Canva<span>デザイン</span></div>
+        <div class="tool-item">LINE公式<span>顧客連絡</span></div>
+        <div class="tool-item">freee<span>会計・経理</span></div>
       </div>
     </div>
   </section>
@@ -2078,7 +2282,7 @@
     </p>
     <div class="cta-zoom reveal">月5社限定 ／ LINE相談無料</div>
     <br>
-    <a href="https://lin.ee/FYl4bJd" onclick="fbq('track', 'Lead'); return gtag_report_conversion('https://lin.ee/FYl4bJd');" class="hero-cta reveal">LINEで無料相談する</a>
+    <a href="https://lin.ee/FYl4bJd" onclick="fbq('track', 'Lead'); return gtag_report_conversion('https://lin.ee/FYl4bJd');" class="hero-cta reveal">30秒で無料相談を始める</a>
     <div class="hero-micro reveal">初期費用0円 ／ いつでも解約OK ／ 営業電話なし</div>
   </section>
 
@@ -2127,6 +2331,18 @@
         ticking = true;
       }
     });
+
+    // Fixed CTA bar: show after scrolling past hero
+    const fixedBar = document.querySelector('.fixed-cta-bar');
+    if (fixedBar) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 600) {
+          fixedBar.classList.add('visible');
+        } else {
+          fixedBar.classList.remove('visible');
+        }
+      });
+    }
   </script>
 
 </body>
