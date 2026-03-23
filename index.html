@@ -1306,6 +1306,140 @@
     .delay-3 { transition-delay: 0.24s; }
     .delay-4 { transition-delay: 0.32s; }
     .delay-5 { transition-delay: 0.40s; }
+
+    /* === P1 LP IMPROVEMENTS (2026-03-23) === */
+
+    /* Hero Badge (月5社限定) */
+    .hero-badge {
+      display: inline-block;
+      background: #e74c3c;
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 6px 20px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+      letter-spacing: 0.05em;
+    }
+    .hero-subtitle strong {
+      color: #2563eb;
+      font-weight: 700;
+    }
+
+    /* Hero Microcopy */
+    .hero-micro {
+      font-size: 0.82rem;
+      color: rgba(0,0,0,0.5);
+      margin-top: 12px;
+      letter-spacing: 0.03em;
+    }
+
+    /* Tools Section */
+    .tools { background: #f8f9fa; padding: 80px 0; }
+    .tools-desc {
+      text-align: center;
+      color: #666;
+      margin-bottom: 40px;
+      font-size: 0.95rem;
+    }
+    .tools-logos {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    .tool-item {
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 20px 28px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 0.95rem;
+      min-width: 140px;
+    }
+    .tool-item span {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: #999;
+      margin-top: 4px;
+    }
+
+    /* About Section */
+    .about-operator { padding: 80px 0; }
+    .about-card {
+      max-width: 640px;
+      margin: 0 auto;
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 16px;
+      padding: 40px;
+    }
+    .about-name {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .about-name span {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-left: 12px;
+    }
+    .about-bio {
+      color: #555;
+      line-height: 1.8;
+      margin: 16px 0 24px;
+      font-size: 0.95rem;
+    }
+    .about-commitment {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .commitment-item {
+      font-size: 0.88rem;
+      color: #2563eb;
+      padding-left: 20px;
+      position: relative;
+    }
+    .commitment-item::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      font-weight: 700;
+    }
+
+    /* Fixed CTA Bar */
+    .fixed-cta-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      padding: 12px 20px;
+      z-index: 1000;
+      text-align: center;
+      box-shadow: 0 -2px 12px rgba(0,0,0,0.1);
+      display: none;
+    }
+    .fixed-cta-btn {
+      display: inline-block;
+      background: #06c755;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 14px 40px;
+      border-radius: 50px;
+      text-decoration: none;
+      width: 100%;
+      max-width: 360px;
+    }
+    @media (max-width: 768px) {
+      .fixed-cta-bar { display: block; }
+      footer { padding-bottom: 80px; }
+    }
   </style>
 </head>
 <body>
@@ -1320,17 +1454,18 @@
 
   <!-- ===== 1. HERO ===== -->
   <section class="hero">
+    <div class="hero-badge">月5社限定</div>
     <div class="hero-label">中小企業の人手不足を解決</div>
     <h1>
       採用せずに、<br>
       <em>人手不足を解決する。</em>
     </h1>
     <p class="hero-subtitle">
-      採用・教育・離職の手間なく、事務・経理・広報をまとめて任せられる。<br>
-      中小企業のための「デジタルスタッフ」配置サービス。
+      AI＋専門スタッフが、事務・経理・広報を<strong>月11万円</strong>で丸ごと代行。<br>
+      採用コスト0円・教育期間0日・離職リスク0%。
     </p>
-    <a href="https://lin.ee/FYl4bJd" onclick="fbq('track', 'Lead'); return gtag_report_conversion('https://lin.ee/FYl4bJd');" class="hero-cta">まずは無料で相談する</a>
-    <div class="hero-sub">※ 無理な営業は一切ありません</div>
+    <a href="https://lin.ee/FYl4bJd" onclick="fbq('track', 'Lead'); return gtag_report_conversion('https://lin.ee/FYl4bJd');" class="hero-cta">LINEで無料相談する</a>
+    <div class="hero-micro">初期費用0円 ／ いつでも解約OK ／ 営業電話なし</div>
   </section>
 
   <!-- ===== 2. PAIN POINTS ===== -->
@@ -1676,6 +1811,44 @@
     </div>
   </section>
 
+  <!-- ===== 10.5 TOOLS ===== -->
+  <section class="tools">
+    <div class="section-inner">
+      <div class="section-label reveal" style="text-align:center;">Technology</div>
+      <h2 class="reveal">信頼性の高いツールで業務を処理</h2>
+      <p class="tools-desc reveal">最新のAI技術と業務ツールを組み合わせ、専門スタッフが品質を管理しています。</p>
+      <div class="tools-logos reveal">
+        <div class="tool-item">Claude<span>AI基盤</span></div>
+        <div class="tool-item">Google Workspace<span>業務管理</span></div>
+        <div class="tool-item">Shopify<span>EC構築</span></div>
+        <div class="tool-item">Slack<span>連絡ツール</span></div>
+        <div class="tool-item">Notion<span>ナレッジ管理</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 10.7 ABOUT ===== -->
+  <section class="about-operator">
+    <div class="section-inner">
+      <div class="section-label reveal" style="text-align:center;">About</div>
+      <h2 class="reveal">運営者について</h2>
+      <div class="about-card reveal">
+        <div class="about-info">
+          <div class="about-name">sona 代表<span>仲座</span></div>
+          <p class="about-bio">
+            中小企業の「人が足りない、でも採用できない」という課題に向き合い、AI技術と専門知識を組み合わせた業務代行サービス「sona」を立ち上げました。
+            Web制作・EC構築・業務設計の実務経験をベースに、経営者の方が本業に集中できる環境づくりをサポートしています。
+          </p>
+          <div class="about-commitment">
+            <div class="commitment-item">NDA（秘密保持契約）締結対応</div>
+            <div class="commitment-item">データは厳重に管理・第三者提供なし</div>
+            <div class="commitment-item">AI活用は透明に開示</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== 11. FINAL CTA ===== -->
   <section class="final-cta" id="cta">
     <h2 class="reveal">採用せずに、人手不足を解決しませんか？</h2>
@@ -1683,11 +1856,16 @@
       まずは御社の業務内容をお聞かせください。<br>
       最適なスタッフ配置をご提案します。
     </p>
-    <div class="cta-zoom reveal">LINE相談無料・無理な営業は一切なし</div>
+    <div class="cta-zoom reveal">月5社限定 ／ LINE相談無料</div>
     <br>
     <a href="https://lin.ee/FYl4bJd" onclick="fbq('track', 'Lead'); return gtag_report_conversion('https://lin.ee/FYl4bJd');" class="hero-cta reveal">LINEで無料相談する</a>
-    <div class="hero-sub reveal">※ 30秒で友だち追加できます</div>
+    <div class="hero-micro reveal">初期費用0円 ／ いつでも解約OK ／ 営業電話なし</div>
   </section>
+
+  <!-- FIXED CTA BAR (Mobile) -->
+  <div class="fixed-cta-bar">
+    <a href="https://lin.ee/FYl4bJd" onclick="fbq('track', 'Lead'); return gtag_report_conversion('https://lin.ee/FYl4bJd');" class="fixed-cta-btn">LINEで無料相談する</a>
+  </div>
 
   <!-- FOOTER -->
   <footer>
