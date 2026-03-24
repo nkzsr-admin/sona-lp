@@ -15,12 +15,12 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3, ease }}
-          className="font-playfair italic text-teal text-lg md:text-3xl mb-4 md:mb-6"
+          className="font-playfair italic text-teal text-lg md:text-2xl mb-3 md:mb-4"
         >
           Digital Staffing Agency
         </motion.p>
 
-        <h1 className="font-syne font-[800] uppercase tracking-tighter text-[11vw] md:text-[12vw] leading-[0.88] mb-6 md:mb-10">
+        <h1 className="font-syne font-[800] uppercase tracking-[-0.07em] text-[10vw] md:text-[9vw] leading-[0.88] mb-4 md:mb-6">
           <motion.span
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
