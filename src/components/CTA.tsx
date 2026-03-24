@@ -44,14 +44,14 @@ function MagneticButton({ children }: { children: React.ReactNode }) {
       window.fbq("track", "Lead");
     }
     if (typeof window.gtag_report_conversion === "function") {
-      window.gtag_report_conversion("https://lin.ee/xlPnjXK");
+      window.gtag_report_conversion("https://lin.ee/FYl4bJd");
     }
   };
 
   return (
     <a
       ref={btnRef}
-      href="https://lin.ee/xlPnjXK"
+      href="https://lin.ee/FYl4bJd"
       target="_blank"
       rel="noopener noreferrer"
       onClick={handleClick}
