@@ -1,0 +1,78 @@
+"use client";
+
+import { motion } from "framer-motion";
+import NebulaCanvas from "./NebulaCanvas";
+
+const ease = [0.16, 1, 0.3, 1] as [number, number, number, number];
+
+export default function Hero() {
+  return (
+    <section className="relative w-screen h-screen overflow-hidden">
+      <NebulaCanvas />
+
+      <div className="relative z-10 flex flex-col justify-center h-full px-6 md:px-[8vw]">
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.3, ease }}
+          className="font-playfair italic text-teal text-lg md:text-3xl mb-4 md:mb-6"
+        >
+          Digital Staffing Agency
+        </motion.p>
+
+        <h1 className="font-syne font-[800] uppercase tracking-tighter text-[11vw] md:text-[12vw] leading-[0.88] mb-6 md:mb-10">
+          <motion.span
+            initial={{ opacity: 0, y: 60 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5, ease }}
+            className="block text-offwhite"
+          >
+            HIRE
+          </motion.span>
+          <motion.span
+            initial={{ opacity: 0, y: 60 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.7, ease }}
+            className="block text-outline-white"
+          >
+            SMARTER,
+          </motion.span>
+          <motion.span
+            initial={{ opacity: 0, y: 60 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.9, ease }}
+            className="block text-offwhite"
+          >
+            NOT HARDER.
+          </motion.span>
+        </h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 1.4, ease }}
+          className="font-noto text-offwhite text-base md:text-lg mb-2"
+        >
+          人材不足を解決する、新しいデジタルの働き手。
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.6 }}
+          transition={{ duration: 1, delay: 1.6, ease }}
+          className="font-noto text-offwhite text-sm"
+        >
+          AI-powered back-office support for modern SMBs.
+        </motion.p>
+      </div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.5 }}
+        transition={{ duration: 1, delay: 2, ease }}
+        className="fixed bottom-8 right-[4vw] z-10 font-syne font-[800] text-xs text-offwhite uppercase tracking-[0.25em] hidden md:block"
+      >
+        SCROLL ↓
+      </motion.div>
+    </section>
+  );
+}

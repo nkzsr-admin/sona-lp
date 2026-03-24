@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --color-teal: #2b8a7e;
+  --color-navy: #0f1923;
+  --color-offwhite: #F4F4F1;
+  --color-line-green: #06C755;
+  --color-light-gray: #EBEBE8;
+  --font-syne: "Syne", sans-serif;
+  --font-playfair: "Playfair Display", serif;
+  --font-noto: "Noto Sans JP", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-noto);
+  color: var(--color-navy);
+  background: var(--color-offwhite);
+  overflow-x: hidden;
+}
+
+@media (hover: hover) {
+  body {
+    cursor: none;
+  }
+  a, button {
+    cursor: none;
+  }
+}
+
+/* Text outline utility */
+.text-outline {
+  -webkit-text-stroke: 2px var(--color-navy);
+  color: transparent;
+}
+
+.text-outline-white {
+  -webkit-text-stroke: 2px var(--color-offwhite);
+  color: transparent;
+}
+
+/* Marquee */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+/* Grow line */
+.grow-line {
+  height: 1px;
+  background: rgba(15, 25, 35, 0.1);
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.grow-line.visible {
+  transform: scaleX(1);
+}
+
+/* Custom cursor hide on touch */
+@media (hover: none) {
+  .cursor-dot, .cursor-outline {
+    display: none !important;
+  }
+}
