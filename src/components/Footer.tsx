@@ -8,20 +8,6 @@ export default function Footer() {
         >
           sona.
         </a>
-        <div className="flex items-center gap-8 text-sm">
-          <a
-            href="#"
-            className="text-offwhite/50 hover:text-offwhite hover:underline transition-all no-underline"
-          >
-            利用規約
-          </a>
-          <a
-            href="#"
-            className="text-offwhite/50 hover:text-offwhite hover:underline transition-all no-underline"
-          >
-            プライバシーポリシー
-          </a>
-        </div>
         <p className="text-offwhite/30 text-xs">
           © 2026 sona. All rights reserved.
         </p>
