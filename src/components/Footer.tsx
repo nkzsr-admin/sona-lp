@@ -9,13 +9,13 @@ export default function Footer() {
           sona.
         </a>
         <nav className="flex gap-6">
-          <a href="/privacy.html" className="text-offwhite/50 text-xs hover:text-offwhite transition-colors">
+          <a href="/privacy" className="text-offwhite/50 text-xs hover:text-offwhite transition-colors">
             プライバシーポリシー
           </a>
-          <a href="/terms.html" className="text-offwhite/50 text-xs hover:text-offwhite transition-colors">
+          <a href="/terms" className="text-offwhite/50 text-xs hover:text-offwhite transition-colors">
             利用規約
           </a>
-          <a href="/legal.html" className="text-offwhite/50 text-xs hover:text-offwhite transition-colors">
+          <a href="/legal" className="text-offwhite/50 text-xs hover:text-offwhite transition-colors">
             特定商取引法に基づく表記
           </a>
         </nav>
