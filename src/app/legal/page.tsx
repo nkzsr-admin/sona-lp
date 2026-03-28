@@ -21,7 +21,7 @@ const rows = [
 
 export default function LegalPage() {
   return (
-    <div className="[&_*]:!cursor-auto" style={{ cursor: "auto" }}>
+    <div className="!cursor-auto [&_a]:!cursor-pointer [&_button]:!cursor-pointer">
       <header className="bg-navy py-4 px-6 md:px-[4vw]">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <Link href="/" className="font-syne font-[800] text-2xl text-offwhite no-underline tracking-tighter">
