@@ -8,6 +8,19 @@ export default function Footer() {
         >
           sona.
         </a>
+        <nav className="flex gap-6">
+          <a href="/privacy.html" className="text-offwhite/50 text-xs hover:text-offwhite transition-colors">
+            プライバシーポリシー
+          </a>
+          <a href="/terms.html" className="text-offwhite/50 text-xs hover:text-offwhite transition-colors">
+            利用規約
+          </a>
+          <a href="/legal.html" className="text-offwhite/50 text-xs hover:text-offwhite transition-colors">
+            特定商取引法に基づく表記
+          </a>
+        </nav>
+      </div>
+      <div className="max-w-7xl mx-auto mt-6 text-center">
         <p className="text-offwhite/30 text-xs">
           © 2026 sona. All rights reserved.
         </p>
