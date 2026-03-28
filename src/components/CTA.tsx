@@ -1,9 +1,11 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, FormEvent } from "react";
 
 const ease = [0.16, 1, 0.3, 1] as [number, number, number, number];
+
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzhV1MpXieQ4rL6Lq2o1T_qUwLurjZNKEqz1VIrFZ4Oo5NUBTObJxiSCpDPtgOeVWiu/exec";
 
 declare global {
   interface Window {
@@ -71,6 +73,84 @@ function MagneticButton({ children }: { children: React.ReactNode }) {
   );
 }
 
+function ContactForm() {
+  const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setSubmitting(true);
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    try {
+      await fetch(APPS_SCRIPT_URL, { method: "POST", body: data, mode: "no-cors" });
+      setSubmitted(true);
+    } catch {
+      alert("送信に失敗しました。もう一度お試しください。");
+    }
+    setSubmitting(false);
+  };
+
+  if (submitted) {
+    return (
+      <div className="text-center py-10">
+        <p className="font-syne font-[800] text-2xl text-teal mb-3">Thank you!</p>
+        <p className="font-noto text-offwhite/80">送信完了しました。担当者よりご連絡いたします。</p>
+      </div>
+    );
+  }
+
+  const inputClass = "w-full bg-white/10 border border-offwhite/20 rounded-lg px-4 py-3 text-offwhite placeholder-offwhite/30 font-noto text-sm focus:outline-none focus:border-teal transition-colors";
+  const labelClass = "block font-noto text-sm text-offwhite/70 mb-2";
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-5 text-left">
+      <div>
+        <label className={labelClass}>会社名・屋号</label>
+        <input type="text" name="company" placeholder="例）株式会社○○" className={inputClass} />
+      </div>
+      <div>
+        <label className={labelClass}>お名前 <span className="text-teal text-xs ml-1">必須</span></label>
+        <input type="text" name="name" placeholder="例）山田 太郎" required className={inputClass} />
+      </div>
+      <div>
+        <label className={labelClass}>メールアドレス <span className="text-teal text-xs ml-1">必須</span></label>
+        <input type="email" name="email" placeholder="例）info@example.com" required className={inputClass} />
+      </div>
+      <div>
+        <label className={labelClass}>電話番号</label>
+        <input type="tel" name="phone" placeholder="例）03-0000-0000" className={inputClass} />
+      </div>
+      <div>
+        <label className={labelClass}>お問い合わせ理由</label>
+        <select name="reason" className={`${inputClass} appearance-none`}>
+          <option value="">選択してください</option>
+          <option value="導入キャンペーンに申し込みたい">導入キャンペーンに申し込みたい</option>
+          <option value="スポットプランに申し込みたい">スポットプランに申し込みたい</option>
+          <option value="おまかせライトに申し込みたい">おまかせライトに申し込みたい</option>
+          <option value="おまかせスタンダードに申し込みたい">おまかせスタンダードに申し込みたい</option>
+          <option value="セルフプランに申し込みたい">セルフプランに申し込みたい</option>
+          <option value="無料お試しを利用したい">無料お試しを利用したい</option>
+          <option value="見積り・料金について">見積り・料金について</option>
+          <option value="その他">その他</option>
+        </select>
+      </div>
+      <div>
+        <label className={labelClass}>お問い合わせ内容</label>
+        <textarea name="message" rows={4} placeholder="お気軽にご記入ください" className={inputClass} />
+      </div>
+      <button
+        type="submit"
+        disabled={submitting}
+        className="w-full font-syne font-[600] text-sm bg-teal text-offwhite rounded-full py-4 no-underline hover:bg-teal/90 transition-colors duration-300 disabled:opacity-50"
+        data-hover
+      >
+        {submitting ? "送信中..." : "送信する"}
+      </button>
+    </form>
+  );
+}
+
 export default function CTA() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
@@ -105,7 +185,7 @@ export default function CTA() {
           transition={{ duration: 1, delay: 0.2, ease }}
           className="font-noto text-lg mb-12"
         >
-          まずはLINEで無料相談。あなたの企業の課題に合わせた活用方法をご提案します。
+          「こういう事やってほしい」「お試しで使いたい」など、どんな些細なことでもお気軽にご相談ください。
         </motion.p>
 
         <motion.div
@@ -121,10 +201,32 @@ export default function CTA() {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 0.4 } : {}}
           transition={{ duration: 1, delay: 0.5, ease }}
-          className="font-noto text-sm"
+          className="font-noto text-sm mb-16"
         >
           ※ 相談無料・契約縛りなし・24時間受付
         </motion.p>
+
+        {/* Separator */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={inView ? { opacity: 0.3 } : {}}
+          transition={{ duration: 1, delay: 0.6, ease }}
+          className="flex items-center gap-4 mb-12"
+        >
+          <div className="flex-1 h-px bg-offwhite/20" />
+          <p className="font-noto text-sm text-offwhite/50 whitespace-nowrap">または、フォームからお問い合わせ</p>
+          <div className="flex-1 h-px bg-offwhite/20" />
+        </motion.div>
+
+        {/* Contact Form */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 1, delay: 0.7, ease }}
+          className="max-w-lg mx-auto"
+        >
+          <ContactForm />
+        </motion.div>
       </div>
     </section>
   );

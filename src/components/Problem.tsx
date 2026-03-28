@@ -56,7 +56,7 @@ export default function Problem() {
               transition={{ duration: 1, delay: 0.2, ease }}
               className="font-noto text-lg mb-4"
             >
-              日本の中小企業の過半数が、深刻な人材不足に直面しています。
+              経理・人事・Web・各業務で毎日忙しいお客様へ。1人雇うほどでもない...だけど人手が欲しい。
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 40 }}
@@ -64,7 +64,7 @@ export default function Problem() {
               transition={{ duration: 1, delay: 0.4, ease }}
               className="font-noto font-light text-base"
             >
-              採用コストの高騰、離職率の増加、そして教育にかかる時間。従来の「人を雇う」という解決策は、もはや持続可能ではありません。バックオフィス業務の圧迫が、企業の本来の成長を妨げています。
+              採用・教育にかける時間もコストもない。請求書や資料作成に追われて、本来の仕事に集中できない。外注したいが、品質やセキュリティが心配。このようなお悩みはsonaで解決できます。
             </motion.p>
           </div>
 

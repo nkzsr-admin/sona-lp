@@ -14,31 +14,31 @@ const ease = [0.16, 1, 0.3, 1] as [number, number, number, number];
 const cards = [
   {
     num: "01",
-    title: "Accounting",
-    ja: "経理・財務サポート",
-    icon: Calculator,
-    desc: "請求書発行、経費精算、記帳代行など、正確性が求められる経理業務を自動化・代行。",
+    title: "Secretary",
+    ja: "秘書",
+    icon: ClipboardText,
+    desc: "メール下書き / スケジュール調整 / リサーチ / 議事録作成 / 各種手配",
   },
   {
     num: "02",
-    title: "Admin",
-    ja: "一般事務・アシスタント",
-    icon: ClipboardText,
-    desc: "データ入力、スケジュール調整、問い合わせ対応など、煩雑な事務作業を巻き取ります。",
+    title: "Accounting",
+    ja: "経理",
+    icon: Calculator,
+    desc: "記帳代行 / 請求書作成 / 経費精算 / 売掛金管理 / 月次レポート",
   },
   {
     num: "03",
-    title: "PR & Mktg",
-    ja: "広報・マーケティング",
+    title: "Web & SNS",
+    ja: "Web・SNS",
     icon: Megaphone,
-    desc: "SNS運用、メルマガ作成、プレスリリース配信など、発信活動を継続的にサポート。",
+    desc: "Webサイト更新 / SNS運用代行 / ブログ更新 / ECサイト管理 / アクセス分析",
   },
   {
     num: "04",
     title: "Research",
-    ja: "リサーチ・データ収集",
+    ja: "リサーチ・資料作成",
     icon: MagnifyingGlass,
-    desc: "競合調査、リスト作成、市場データ収集など、AIを活用した高速なリサーチ業務。",
+    desc: "競合調査 / 提案書・企画書作成 / データ入力・整理 / 翻訳（日英）",
   },
 ];
 
@@ -73,7 +73,7 @@ export default function Solution() {
           transition={{ duration: 1, delay: 0.2, ease }}
           className="font-noto font-light text-base md:text-lg max-w-2xl mb-10 md:mb-16"
         >
-          必要な時に、必要なスキルを。採用活動も、社会保険料も、PCの支給も必要ありません。即戦力のデジタルアシスタントが、あなたのチームに参加します。
+          忙しい経営者に代わり、AIと専属スタッフが業務をまるごとサポート。採用活動も、社会保険料も、PCの支給も必要ありません。
         </motion.p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">

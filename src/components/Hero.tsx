@@ -53,7 +53,7 @@ export default function Hero() {
           transition={{ duration: 1, delay: 1.4, ease }}
           className="font-noto text-offwhite text-base md:text-lg mb-2"
         >
-          人材不足を解決する、新しいデジタルの働き手。
+          採用なしで、人手不足を解決する。AI活用型業務支援サービス。
         </motion.p>
         <motion.p
           initial={{ opacity: 0 }}
@@ -61,7 +61,7 @@ export default function Hero() {
           transition={{ duration: 1, delay: 1.6, ease }}
           className="font-noto text-offwhite text-sm"
         >
-          AI-powered back-office support for modern SMBs.
+          中小企業の経営者に選ばれる業務支援。1タスク3,000円〜
         </motion.p>
       </div>
 

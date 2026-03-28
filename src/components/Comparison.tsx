@@ -14,22 +14,22 @@ const rows = [
   {
     label: "月額人件費 / 委託費",
     traditional: "約25万円+社保等",
-    sona: "5.5万円〜",
+    sona: "1タスク3,000円〜",
   },
   {
     label: "教育・オンボーディング",
     traditional: "1〜3ヶ月の社内リソース消費",
-    sona: "不要（即戦力）",
+    sona: "不要（マニュアル不要）",
   },
   {
     label: "離職リスク",
     traditional: "常にあり（32%が3年以内離職）",
-    sona: "なし",
+    sona: "なし（採用・教育コスト0円）",
   },
   {
     label: "年間総コスト",
-    traditional: "約500万円〜",
-    sona: "66万円〜",
+    traditional: "約516万円〜",
+    sona: "36,000円〜",
   },
 ];
 
