@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 158 120">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #5d5a55;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2, .cls-4 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+
+      .cls-2 {
+        stroke: #c7161d;
+      }
+
+      .cls-3, .cls-5 {
+        stroke-width: 0px;
+      }
+
+      .cls-5 {
+        fill: #c7161d;
+      }
+
+      .cls-4 {
+        stroke: #231815;
+      }
+    </style>
+  </defs>
+  <g id="_レイヤー_1-2" data-name="レイヤー 1">
+    <g>
+      <rect class="cls-3" x="19" y="-19" width="120" height="158" transform="translate(139 -19) rotate(90)"/>
+      <g>
+        <rect class="cls-5" x="46.74" y="16.52" width="80.05" height="12.28"/>
+        <g>
+          <g>
+            <polyline class="cls-4" points="48.47 72.82 48.47 85.7 56.92 94.15"/>
+            <line class="cls-2" x1="48.47" y1="66.58" x2="48.47" y2="66.58"/>
+            <line class="cls-2" x1="48.47" y1="103.79" x2="48.47" y2="103.79"/>
+            <line class="cls-2" x1="67.07" y1="85.23" x2="67.07" y2="85.23"/>
+            <line class="cls-2" x1="29.98" y1="85.23" x2="29.98" y2="85.23"/>
+          </g>
+          <circle class="cls-1" cx="48.47" cy="85.23" r="23.61"/>
+        </g>
+        <polyline class="cls-1" points="46.59 52.47 46.59 16.94 127.14 16.94 127.14 85.23 79.98 85.23"/>
+        <line class="cls-1" x1="63.88" y1="21.18" x2="63.88" y2="11.15"/>
+        <line class="cls-1" x1="86.39" y1="21.18" x2="86.39" y2="11.15"/>
+        <line class="cls-1" x1="108.89" y1="21.18" x2="108.89" y2="11.15"/>
+        <line class="cls-1" x1="47.02" y1="28.52" x2="126.71" y2="28.52"/>
+        <polyline class="cls-1" points="113.87 61.85 103.91 61.85 103.91 68.7"/>
+        <polyline class="cls-1" points="92.29 61.85 82.34 61.85 82.34 68.7"/>
+        <line class="cls-1" x1="69.79" y1="61.85" x2="67.07" y2="61.85"/>
+        <polyline class="cls-1" points="92.29 41.09 82.34 41.09 82.34 47.95"/>
+        <polyline class="cls-1" points="113.87 41.09 103.91 41.09 103.91 47.95"/>
+        <polyline class="cls-1" points="69.79 41.09 59.84 41.09 59.84 47.95"/>
+      </g>
+    </g>
+  </g>
+</svg>
