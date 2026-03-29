@@ -45,6 +45,14 @@
     gtag('config', 'AW-17922920559');
   </script>
   <!-- End Google tag -->
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w3eq1degov");
+  </script>
   <!-- Google Ads Conversion Tracking (LINE登録) -->
   <script>
     function gtag_report_conversion(url) {
@@ -2688,6 +2696,7 @@
         }).then(function(){
           $('#contactForm')[0].reset();
           $btn.text('送信完了しました');
+          gtag_report_conversion();
           setTimeout(function(){ $btn.prop('disabled', false).text('送信する'); }, 3000);
         }).catch(function(){
           $btn.prop('disabled', false).text('送信する');
