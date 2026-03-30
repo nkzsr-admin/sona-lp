@@ -99,8 +99,8 @@ function ContactForm() {
   if (submitted) {
     return (
       <div className="text-center py-10">
-        <p className="font-syne font-[800] text-2xl text-teal mb-3">Thank you!</p>
-        <p className="font-noto text-offwhite/80">送信完了しました。担当者よりご連絡いたします。</p>
+        <p className="font-syne font-[800] text-2xl text-teal mb-3">お問い合わせありがとうございます</p>
+        <p className="font-noto text-offwhite/80">内容を確認のうえ、担当者よりご連絡いたします。</p>
       </div>
     );
   }
