@@ -81,9 +81,14 @@ function ContactForm() {
     e.preventDefault();
     setSubmitting(true);
     const form = e.currentTarget;
-    const data = new FormData(form);
+    const fd = new FormData(form);
+    const data = Object.fromEntries(fd.entries());
     try {
-      await fetch(APPS_SCRIPT_URL, { method: "POST", body: data, mode: "no-cors" });
+      await fetch(APPS_SCRIPT_URL, {
+        method: "POST",
+        body: JSON.stringify(data),
+        mode: "no-cors",
+      });
       setSubmitted(true);
     } catch {
       alert("送信に失敗しました。もう一度お試しください。");
