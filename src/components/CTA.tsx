@@ -5,7 +5,7 @@ import { useRef, useEffect, useState, FormEvent } from "react";
 
 const ease = [0.16, 1, 0.3, 1] as [number, number, number, number];
 
-const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzhV1MpXieQ4rL6Lq2o1T_qUwLurjZNKEqz1VIrFZ4Oo5NUBTObJxiSCpDPtgOeVWiu/exec";
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby6SMKWLiesnkRKyA--YUIoxz1MDZPtnABINs-oeUac98RaiaQ4exHLTAh0sCJzcPBq/exec";
 
 declare global {
   interface Window {
