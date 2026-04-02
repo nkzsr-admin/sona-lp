@@ -10,7 +10,7 @@ const rows = [
   { label: "代表者名", value: "仲座 空良" },
   { label: "所在地", value: "【住所はお問い合わせいただいた方に個別にお知らせいたします】" },
   { label: "電話番号", value: "【お問い合わせいただいた方に個別にお知らせいたします】" },
-  { label: "メールアドレス", value: "sona.jp.support@gmail.com" },
+  { label: "メールアドレス", value: "nakaza@sona-jp.com" },
   { label: "お支払方法", value: "銀行振込（振込手数料はお客様負担となります）" },
   { label: "お支払時期", value: "原則として前払い" },
   { label: "消費税", value: "表示価格は税込です。" },

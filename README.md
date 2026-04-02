@@ -114,7 +114,7 @@ sona-lp/
 | バックエンド | Google Apps Script |
 | デプロイURL | `https://script.google.com/macros/s/AKfycbzhV1MpXieQ4rL6Lq2o1T_qUwLurjZNKEqz1VIrFZ4Oo5NUBTObJxiSCpDPtgOeVWiu/exec` |
 | 送信方式 | `fetch` + `mode: 'no-cors'` |
-| 通知先 | sona.jp.support@gmail.com |
+| 通知先 | nakaza@sona-jp.com |
 | 設置箇所 | HP（CTA.tsx）/ LP（#contact） |
 
 ## レスポンシブ対応（LP）
