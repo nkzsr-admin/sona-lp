@@ -1,0 +1,98 @@
+@charset "shift-jis";
+
+/**
+ *
+ * Column07 Style css
+ *
+ **/
+
+.column-box h4.h-w20{
+	padding:0.4em 0.5em;
+}
+
+
+.column-sentence p.bg-img{
+	background:url(../column/gaihekicolumn007/img/syuzen.png) no-repeat top right 8%;
+	background-size:42%;
+	padding:30px 50% 20px 0;
+}
+
+
+.column-box .inner ul li:before{
+	content:none;
+}
+.column-box .inner ul{
+	padding:0;
+}
+
+.column-box .inner01 ul.li-box{
+	width:50%;
+	margin:0 auto;
+}
+
+.column-box .inner02 ul li{
+	border-bottom:3px double #fa9b03;
+}
+.column-box .inner02 ul.li-dbl01{
+	width:68%;
+	padding-top:30px;
+}
+.column-box .inner02 ul.li-dbl02{
+	width:50%;
+	padding:10px 0 0;
+}
+
+.column-box .inner-w .img-right img{
+	padding-left:0;
+}
+.inner02 .inner-w .img01 img{
+	max-width:166px;
+	height:auto;
+}
+.inner02 .inner-w .img02 img{
+	max-width:187px;
+	height:auto;
+	padding-right:5%;
+}
+.inner02 .inner-w .img-right:after{
+	content:"";
+	clear:both;
+	display:block;
+}
+
+
+
+@media(max-width:480px){
+h2.column-title{
+	font-size:16px;
+}
+
+.column-sentence p.bg-img{
+	background:url(../column/gaihekicolumn007/img/syuzen.png) no-repeat top center;
+	background-size:70%;
+	padding:100px 0 0;
+}
+
+.column-box h3{
+	font-size:16px;
+	padding:0.5em;
+}
+
+.column-box .inner01 ul.li-box{
+	width:80%;
+}
+
+.inner02 .inner-w .img-right img{
+	float:none;
+	padding:0;
+}
+.inner02 .inner-w .img01 img{
+	max-width:176px;
+	height:auto;
+}
+.column-box .inner02 ul.li-dbl01,
+.column-box .inner02 ul.li-dbl02{
+	width:100%;
+	padding:0 0 10px;
+}
+}

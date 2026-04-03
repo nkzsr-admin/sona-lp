@@ -1,0 +1,1150 @@
+@charset "utf-8";
+
+/**
+ *
+ * Base css
+ *
+ * Extract normalize.css 2011-06-21T18:23 UTC
+ *  http://github.com/necolas/normalize.css
+ *
+ * Modify reset.css ver 1.4 with jQuery [2009/04/24]
+ *  This document validates as CSS level 2.1
+ *  GNU General Public License v3
+ *  http://higash.net/labo/
+ * Modify basic.css ver 1.2 with jQuery [2009/04/24]
+ *  This document validates as CSS level 2.1
+ *  GNU General Public License v3
+ *  http://higash.net/labo/
+ *
+ * Modify YUI Reset CSS, YUI Fonts CSS
+ *  Copyright (c) 2008, Yahoo! Inc. All rights reserved.
+ *  http://developer.yahoo.com/yui/license.html
+ *
+ */
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+
+/*
+ * html InitialStyle
+ */
+html {
+	background: #FFF;
+	color: #333;
+	height: 100%;
+	margin-bottom: 1px;
+}
+
+/*
+ * body InitialStyle
+ */
+body {
+	font-family: 'Hiragino Kaku Gothic ProN', Meiryo, 'MS PGothic', Sans-serif;
+	font-size: 62.5%;
+	line-height: 150%;
+	text-align: center;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	height: 100%;
+	line-height: 1.5;
+}
+
+/*
+ * All InitialStyle
+ */
+body,
+div,
+pre,
+p,
+blockquote,
+form,
+fieldset,
+input,
+textarea,
+select,
+option,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h2,
+h4,
+h5,
+h6,
+embed,
+object {
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+a {
+	background-color: transparent;
+	border: 0;
+	color: #333333;
+	cursor: pointer;
+	outline: none;
+	overflow: hidden;
+	text-decoration: none;
+}
+
+a:link {
+	background-color: transparent;
+	color: #333333;
+}
+
+a:visited {
+	background-color: transparent;
+	color: #333333;
+}
+
+a:hover {
+	text-decoration: underline;
+	background-color: transparent;
+	color: #333333;
+}
+
+a:active {
+	background-color: transparent;
+	color: #333333;
+}
+
+/*
+ * Addresses outline displayed oddly in Chrome
+ */
+a:focus {
+	outline: thin dotted;
+}
+
+
+/*
+ * Improves readability when focused and also mouse hovered in all browsers
+ * people.opera.com/patrickl/experiments/keyboard/test
+ */
+a:hover,
+a:active {
+	outline: 0;
+}
+
+a {
+	overflow: hidden;
+}
+
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+
+/*
+ * Addresses styling not present in IE7/8/9, S5, Chrome
+ */
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+
+/*
+ * Addresses styling not present in S5, Chrome
+ */
+dfn {
+	font-style: italic;
+}
+
+/*
+ * Addresses styling not present in IE6/7/8/9
+ */
+mark {
+	background: #ff0;
+	color: #000;
+}
+
+/*
+ * Improves readability of pre-formatted text in all browsers
+ */
+pre {
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+/*
+ * Prevents sub and sup affecting line-height in all browsers
+ * gist.github.com/413930
+ */
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+q {
+	quotes: none;
+}
+
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+button,
+fieldset,
+form,
+input,
+label,
+legend,
+select,
+textarea {
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+	*vertical-align: middle;
+}
+
+/*
+ * 1. Corrects color not being inherited in IE6/7/8/9
+ * 2. Corrects text not wrapping in FF3
+ * 3. Corrects alignment displayed oddly in IE6/7
+ */
+legend {
+	border: 0;
+	/* 1 */
+	padding: 0;
+	white-space: normal;
+	/* 2 */
+	*margin-left: -7px;
+	/* 3 */
+}
+
+/*
+ * Addresses FF3/4 setting line-height on 'input' using !important in the UA stylesheet
+ */
+
+button,
+input {
+	line-height: normal;
+	/* 1 */
+}
+
+input {
+	padding: 0.1em;
+	vertical-align: middle;
+}
+
+
+/*
+ * 1. Improves usability and consistency of cursor style between image-type 'input' and others
+ * 2. Corrects inability to style clickable 'input' types in iOS
+ * 3. Removes inner spacing in IE7 without affecting normal text inputs
+ *    Known issue: inner spacing remains in IE6
+ */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	cursor: pointer;
+	/* 1 */
+	-webkit-appearance: button;
+	/* 2 */
+	*overflow: visible;
+	/* 3 */
+}
+
+/*
+ * Re-set default cursor for disabled elements
+ */
+button[disabled],
+input[disabled] {
+	cursor: default;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+/*
+ * 1. Addresses appearance set to searchfield in S5, Chrome
+ * 2. Addresses box-sizing set to border-box in S5, Chrome (include -moz to future-proof)
+ */
+input[type="search"] {
+	-webkit-appearance: textfield;
+	/* 1 */
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	/* 2 */
+	box-sizing: content-box;
+}
+
+/*
+ * Removes inner padding and search cancel button in S5, Chrome on OS X
+ */
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+	-webkit-appearance: none;
+}
+
+/*
+ * Removes inner padding and border in FF3+
+ * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+legend {
+	background: #FFF;
+	color: #333;
+	padding: 0.3em;
+}
+
+select {
+	padding: 0;
+	vertical-align: baseline;
+}
+
+/* for IE6 */
+* html select {
+	vertical-align: middle;
+}
+
+/* for IE7 */
+*:first-child+html select {
+	vertical-align: -0.2em;
+}
+
+textarea {
+	line-height: 1.4;
+	padding: 0.1em;
+	vertical-align: middle;
+}
+
+/*
+ * 1. Removes default vertical scrollbar in IE6/7/8/9
+ * 2. Improves readability and alignment in all browsers
+ */
+textarea {
+	overflow: auto;
+	/* 1 */
+	vertical-align: top;
+	/* 2 */
+}
+
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	font-size: 100%;
+}
+
+
+/* =============================================================================
+   Image
+   ========================================================================== */
+img {
+	border: 0;
+}
+
+img {
+	vertical-align: bottom;
+	line-height: 0px;
+}
+
+/*
+ * Improves image quality when scaled in IE7
+ * code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+img {
+	-ms-interpolation-mode: bicubic;
+}
+
+
+/* =============================================================================
+   Others
+   ========================================================================== */
+
+ing,
+abbr,
+acronym,
+fieldset {
+	border: 0;
+}
+
+/*
+ * Define consistent border, margin, and padding
+ */
+fieldset {
+	margin: 0 2px;
+	padding: 0.35em 0.625em 0.75em;
+}
+
+/*
+ * Corrects overflow displayed oddly in IE9
+ */
+svg:not(:root) {
+	overflow: hidden;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+	font-style: normal;
+	font-weight: normal;
+}
+
+caption,
+th {
+	text-align: left;
+}
+
+code,
+kbd,
+pre,
+samp,
+tt {
+	font-family: monospace;
+	_font-family: 'courier new', monospace;
+	line-height: 100%;
+}
+
+/* for IE7 */
+*:first-child+html code,
+*:first-child+html kbd,
+*:first-child+html pre,
+*:first-child+html samp,
+*:first-child+html tt {
+	font-size: 108%;
+}
+
+
+/* =============================================================================
+   Common Style
+   ========================================================================== */
+
+h1,
+h2,
+h2,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+
+hr,
+legend {
+	display: none;
+}
+
+object,
+embed {
+	vertical-align: top;
+}
+
+ol,
+ul {
+	list-style-type: none;
+}
+
+abbr,
+acronym {
+	cursor: help;
+}
+
+caption {
+	text-align: center;
+}
+
+b,
+em,
+strong {
+	font-weight: bold;
+}
+
+/* ※For Debug*/
+.db {
+	border: 1px solid #FF0000;
+}
+
+
+
+/**
+ *
+ * library css
+ *  Copyright (c) 2012, Dai Yosinaga All rights reserved.
+ *
+ */
+
+/* =============================================================================
+   text
+   ========================================================================== */
+.ac {
+	text-align: center !important;
+}
+
+.ar {
+	text-align: right !important;
+}
+
+.al {
+	text-align: left !important;
+}
+
+.aj {
+	text-align: justify;
+	/* for modern browser */
+	text-justify: inter-ideograph;
+	/* IE6～8 */
+}
+
+.bold {
+	font-weight: bold !important;
+}
+
+.vertical-middle {
+	display: -moz-inline-box;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/* for IE6 */
+* html .vertical-middle {
+	display: inline;
+	zoom: 1;
+}
+
+/* for IE7 */
+*:first-child+html .vertical-middle {
+	display: inline;
+	zoom: 1;
+}
+
+a:hover.decoration-none {
+	text-decoration: none;
+}
+
+.red-text {
+	color: #e60012;
+}
+
+.yellow-bg {
+	background-color: #fff100;
+}
+
+.indent {
+	margin-left: 1em;
+	text-indent: -1em;
+}
+
+.font10 {
+	font-size: 1em !important;
+}
+
+.font11 {
+	font-size: 1.1em !important;
+}
+
+.font12 {
+	font-size: 1.2em !important;
+}
+
+.font13 {
+	font-size: 1.3em !important;
+}
+
+.font14 {
+	font-size: 1.4em !important;
+}
+
+.font15 {
+	font-size: 1.5em !important;
+}
+
+.font16 {
+	font-size: 1.6em !important;
+}
+
+.font17 {
+	font-size: 1.7em !important;
+}
+
+.font18 {
+	font-size: 1.8em !important;
+}
+
+.font19 {
+	font-size: 1.9em !important;
+}
+
+.font20 {
+	font-size: 2em !important;
+}
+
+.font21 {
+	font-size: 2.1em !important;
+}
+
+.font22 {
+	font-size: 2.2em !important;
+}
+
+.font23 {
+	font-size: 2.3em !important;
+}
+
+.font24 {
+	font-size: 2.4em !important;
+}
+
+/* =============================================================================
+   image
+   ========================================================================== */
+.original-height {
+	line-height: 0;
+	font-size: 0px;
+	/* for IE's Bug? */
+}
+
+a.opacity-img:hover img {
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+	-ms-filter: "alpha( opacity=70 )";
+}
+
+/* =============================================================================
+   float
+   ========================================================================== */
+.fr {
+	float: right !important;
+}
+
+.fl {
+	float: left !important;
+}
+
+.clear {
+	clear: both;
+}
+
+/*
+ * clearfix
+ */
+.clearfix:after {
+	content: url(clearfix.png);
+	/*start*/
+	/*content: ".";
+	visibility: hidden;
+	height: 0.1px;
+	font-size: 0.1em;
+	line-height: 0;*/
+	/* end */
+	display: block;
+	clear: both;
+	height: 0;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+/* Hides from IE-mac \*/
+* html .clearfix {
+	height: 1%;
+}
+
+.clearfix {
+	display: block;
+}
+
+/* End hide from IE-mac */
+
+/* =============================================================================
+   margin
+   ========================================================================== */
+.mt00 {
+	margin-top: 0px !important;
+}
+
+.mt05 {
+	margin-top: 5px !important;
+}
+
+.mt10 {
+	margin-top: 10px !important;
+}
+
+.mt15 {
+	margin-top: 15px !important;
+}
+
+.mt20 {
+	margin-top: 20px !important;
+}
+
+.mt25 {
+	margin-top: 25px !important;
+}
+
+.mt30 {
+	margin-top: 30px !important;
+}
+
+.mt35 {
+	margin-top: 35px !important;
+}
+
+.mt40 {
+	margin-top: 40px !important;
+}
+
+.mt45 {
+	margin-top: 45px !important;
+}
+
+.mt50 {
+	margin-top: 50px !important;
+}
+
+.mr00 {
+	margin-right: 0px !important;
+}
+
+.mr05 {
+	margin-right: 5px !important;
+}
+
+.mr10 {
+	margin-right: 10px !important;
+}
+
+.mr15 {
+	margin-right: 15px !important;
+}
+
+.mr20 {
+	margin-right: 20px !important;
+}
+
+.mr25 {
+	margin-right: 25px !important;
+}
+
+.mr30 {
+	margin-right: 30px !important;
+}
+
+.mr35 {
+	margin-right: 35px !important;
+}
+
+.mr40 {
+	margin-right: 40px !important;
+}
+
+.mr45 {
+	margin-right: 45px !important;
+}
+
+.mr50 {
+	margin-right: 50px !important;
+}
+
+.mb00 {
+	margin-bottom: 0px !important;
+}
+
+.mb05 {
+	margin-bottom: 5px !important;
+}
+
+.mb10 {
+	margin-bottom: 10px !important;
+}
+
+.mb15 {
+	margin-bottom: 15px !important;
+}
+
+.mb20 {
+	margin-bottom: 20px !important;
+}
+
+.mb25 {
+	margin-bottom: 25px !important;
+}
+
+.mb30 {
+	margin-bottom: 30px !important;
+}
+
+.mb35 {
+	margin-bottom: 35px !important;
+}
+
+.mb40 {
+	margin-bottom: 40px !important;
+}
+
+.mb45 {
+	margin-bottom: 45px !important;
+}
+
+.mb50 {
+	margin-bottom: 50px !important;
+}
+
+.ml00 {
+	margin-left: 0px !important;
+}
+
+.ml05 {
+	margin-left: 5px !important;
+}
+
+.ml10 {
+	margin-left: 10px !important;
+}
+
+.ml15 {
+	margin-left: 15px !important;
+}
+
+.ml20 {
+	margin-left: 20px !important;
+}
+
+.ml25 {
+	margin-left: 25px !important;
+}
+
+.ml30 {
+	margin-left: 30px !important;
+}
+
+.ml35 {
+	margin-left: 35px !important;
+}
+
+.ml40 {
+	margin-left: 40px !important;
+}
+
+.ml45 {
+	margin-left: 45px !important;
+}
+
+.ml50 {
+	margin-left: 50px !important;
+}
+
+/* =============================================================================
+   padding
+   ========================================================================== */
+.pt00 {
+	padding-top: 0px !important;
+}
+
+.pt05 {
+	padding-top: 5px !important;
+}
+
+.pt10 {
+	padding-top: 10px !important;
+}
+
+.pt15 {
+	padding-top: 15px !important;
+}
+
+.pt20 {
+	padding-top: 20px !important;
+}
+
+.pt25 {
+	padding-top: 25px !important;
+}
+
+.pt30 {
+	padding-top: 30px !important;
+}
+
+.pt35 {
+	padding-top: 35px !important;
+}
+
+.pt40 {
+	padding-top: 40px !important;
+}
+
+.pt45 {
+	padding-top: 45px !important;
+}
+
+.pt50 {
+	padding-top: 50px !important;
+}
+
+.pr00 {
+	padding-right: 0px !important;
+}
+
+.pr05 {
+	padding-right: 5px !important;
+}
+
+.pr10 {
+	padding-right: 10px !important;
+}
+
+.pr15 {
+	padding-right: 15px !important;
+}
+
+.pr20 {
+	padding-right: 20px !important;
+}
+
+.pr25 {
+	padding-right: 25px !important;
+}
+
+.pr30 {
+	padding-right: 30px !important;
+}
+
+.pr35 {
+	padding-right: 35px !important;
+}
+
+.pr40 {
+	padding-right: 40px !important;
+}
+
+.pr45 {
+	padding-right: 40px !important;
+}
+
+.pr50 {
+	padding-right: 40px !important;
+}
+
+.pb00 {
+	padding-bottom: 0px !important;
+}
+
+.pb05 {
+	padding-bottom: 5px !important;
+}
+
+.pb10 {
+	padding-bottom: 10px !important;
+}
+
+.pb15 {
+	padding-bottom: 15px !important;
+}
+
+.pb20 {
+	padding-bottom: 20px !important;
+}
+
+.pb25 {
+	padding-bottom: 25px !important;
+}
+
+.pb30 {
+	padding-bottom: 30px !important;
+}
+
+.pb35 {
+	padding-bottom: 35px !important;
+}
+
+.pb40 {
+	padding-bottom: 40px !important;
+}
+
+.pb45 {
+	padding-bottom: 40px !important;
+}
+
+.pb50 {
+	padding-bottom: 40px !important;
+}
+
+.pl00 {
+	padding-left: 0px !important;
+}
+
+.pl05 {
+	padding-left: 5px !important;
+}
+
+.pl10 {
+	padding-left: 10px !important;
+}
+
+.pl15 {
+	padding-left: 15px !important;
+}
+
+.pl20 {
+	padding-left: 20px !important;
+}
+
+.pl25 {
+	padding-left: 25px !important;
+}
+
+.pl30 {
+	padding-left: 30px !important;
+}
+
+.pl35 {
+	padding-left: 35px !important;
+}
+
+.pl40 {
+	padding-left: 40px !important;
+}
+
+.pl45 {
+	padding-left: 45px !important;
+}
+
+.pl50 {
+	padding-left: 50px !important;
+}
+
+a:hover img {
+	opacity: 0.80;
+	filter: alpha(opacity=80);
+}
+
+.trust .flow-box {
+	display: block;
+}
+
+.flow-boxlist01 {
+	background-image: url(../images/top/flow-box01.png);
+	background-repeat: no-repeat;
+	float: left;
+	height: 114px;
+	width: 162px;
+	margin-right: 7px;
+}
+
+.flow-boxtitle {
+	font-size: 16px;
+	font-weight: bold;
+	color: #166897;
+	margin-top: 31px;
+	margin-left: 10px;
+}
+
+.flow-box-txt {
+	font-size: 10px;
+	color: #000;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.flow-boxlist02 {
+	background-image: url(../images/top/flow-box02.png);
+	background-repeat: no-repeat;
+	float: left;
+	height: 114px;
+	width: 162px;
+	margin-right: 7px;
+}
+
+.flow-boxlist03 {
+	background-image: url(../images/top/flow-box03.png);
+	background-repeat: no-repeat;
+	float: left;
+	height: 114px;
+	width: 162px;
+	margin-right: 7px;
+}
+
+#side-premium-area {
+	width: 245px;
+	float: right;
+	margin-top: 10px;
+	margin-right: 30px;
+}
+
+#side-premium-area li {
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.mitsumori-table {
+	font-size: 13px;
+	width: 98%;
+	margin-bottom: 15px;
+}
+
+.mitsumori-table th {
+	background-color: #d3f9cd;
+	padding-left: 10px;
+}
+
+.mitsumori-table td {
+	padding-left: 10px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.mitsumori-table table,
+.mitsumori-table td,
+.mitsumori-table th {
+	border: 1px solid #D6D6D6;
+}
+
+.mitsumori-p {
+	font-size: 14px;
+	margin-bottom: 3px;
+	margin-top: 15px;
+}

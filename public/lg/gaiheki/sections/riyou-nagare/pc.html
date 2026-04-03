@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../../css/ikkatsu/slick.css">
+<link rel="stylesheet" href="../../css/ikkatsu/style.css">
+<!-- inview アニメーション無効化 -->
+<style>
+  .inview_l, .inview_r { opacity: 1 !important; transform: none !important; }
+</style>
+</head>
+<body>
+
+<section id="top_howto">
+<div class="res inview_l">
+  <h3><strong>HOW TO USE</strong>ご利用の流れ</h3>
+  <h2><span>かんたん3ステップで見積り比較！</span></h2>
+  <p><img src="../../img/ikkatsu/top005.gif" class="sm_hide" alt="フォームからご連絡。優良業者3〜5社をご紹介。気に入った業者に現地調査を依頼"><img src="../../img/ikkatsu/top005s.gif" alt="フォームからご連絡。優良業者3〜5社をご紹介。気に入った業者に現地調査を依頼"></p>
+  <a href="#" onclick="event.preventDefault();window.parent.postMessage({type:'scrollToForm'},'*');">無料で見積りを比べてみる</a>
+</div>
+</section>
+
+<script>window.addEventListener('load',function(){var id='iframe-riyou-pc';function send(){window.parent.postMessage({type:'iframeHeight',id:id,height:document.documentElement.scrollHeight},'*');}setTimeout(send,300);setTimeout(send,1000);});</script>
+</body>
+</html>

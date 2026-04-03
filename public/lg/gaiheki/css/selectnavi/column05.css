@@ -1,0 +1,262 @@
+@charset "shift-jis";
+
+/**
+ *
+ * Column05 Style css
+ *
+ **/
+
+.column-box h4.h-w20 {
+    padding: 0.4em 0.5em;
+    /**color:#009944;
+	background:none;**/
+}
+
+
+.column-sentence p.bg-img01 {
+    padding-left: 40%;
+    background: url(../column/gaihekicolumn005/img/panic.png) no-repeat top left;
+    background-size: 35%;
+}
+
+.column-sentence div.bg-img02 {
+    padding: 3em 30% 0 0;
+    background: url(../column/gaihekicolumn005/img/hakase01.png) no-repeat top right;
+    background-size: 25%;
+}
+
+
+
+
+/**
+.column-box .inner01 .read-li{
+	width: 100%;
+	padding:1em;
+	background:url(../column/gaihekicolumn005/img/sippai.png) no-repeat top right 13px;
+}
+.column-box .inner02 .read-li{
+	background:url(../column/gaihekicolumn005/img/seiko01.png) no-repeat top right 13px;
+}
+**/
+
+.column-box .inner ul {
+    padding: 0.75em 1em 1.25em;
+    font-weight: 700;
+    font-size: 1.1em;
+    line-height: 150%;
+}
+
+.column-box .inner01 ul.inner-p-bg01 {
+    padding-left: 40%;
+    background: url(../column/gaihekicolumn005/img/interphone.jpg) no-repeat top left;
+    background-size: 40%;
+}
+
+.column-box .inner01 ul li {
+    border-bottom: 1px solid #055fc4;
+}
+
+.column-box .inner01 p.inner-p-bg02 {
+    padding-right: 40%;
+    background: url(../column/gaihekicolumn005/img/abunai.jpg) no-repeat top right;
+    background-size: 40%;
+}
+
+.column-box .inner01 .inner-w p.p-btm {
+    padding: 1em;
+    font-size: 15px;
+    color: #025125;
+}
+
+.column-box .inner01 p.inner-p-bg03 {
+    padding-right: 40%;
+    background: url(../column/gaihekicolumn005/img/konwaku.png) no-repeat top right 10%;
+    background-size: 20%;
+}
+
+.column-box .inner01 p.inner-p-bg04 {
+    padding-left: 25%;
+    background: url(../column/gaihekicolumn005/img/hakase02.png) no-repeat top left;
+    background-size: 20%;
+}
+
+.column-box .inner02 p.inner-p-bg05 {
+    padding-right: 40%;
+    background: url(../column/gaihekicolumn005/img/mitumorisho.jpg) no-repeat top right 10%;
+    background-size: 30%;
+}
+
+.column-box .inner02 p.inner-p-bg06 {
+    padding-left: 40%;
+    background: url(../column/gaihekicolumn005/img/koreihuhu.png) no-repeat top left;
+    background-size: 30%;
+}
+
+.column-box .inner02 p.inner-p-bg07 {
+    padding-right: 40%;
+    background: url(../column/gaihekicolumn005/img/inkan.jpg) no-repeat top right 10%;
+    background-size: 30%;
+}
+
+.column-box .inner02 p.inner-p-bg08 {
+    padding-right: 40%;
+    background: url(../column/gaihekicolumn005/img/komarigao.png) no-repeat top right 10%;
+    background-size: 30%;
+}
+
+.column-box .inner02 p.inner-p-bg09 {
+    padding-right: 35%;
+    background: url(../column/gaihekicolumn005/img/tosogenba.jpg) no-repeat top right 10%;
+    background-size: 40%;
+}
+
+.column-box .inner02 p.inner-p-bg10 {
+    padding-right: 40%;
+    background: url(../column/gaihekicolumn005/img/sale.png) no-repeat top right 10%;
+    background-size: 30%;
+}
+
+.column-box .inner03 ul.li-1 {
+    /**	background:none;
+	padding-left:40%;**/
+}
+
+.column-box .inner03 ul.inner-p-bg11 {
+    padding-top: 0;
+    padding-left: 50%;
+    background: url(../column/gaihekicolumn005/img/ashiba.jpg) no-repeat top left;
+    background-size: 50%;
+}
+
+.column-box .inner03 .inner-btm {
+    font-size: 15px;
+    text-align: left;
+}
+
+
+/** List Box ----**/
+.column-box .inner ul#li-box li p {
+    text-align: center;
+}
+
+
+.column-box .inner02 ul {
+    width: 50%;
+}
+
+.column-box .inner01 ul li:before {
+    color: #055fc4;
+}
+
+.column-box .inner02 ul li:before {
+    color: #fa9b03;
+}
+
+.column-box .inner01 ul li span {
+    border-bottom: 1px solid #055fc4;
+}
+
+.column-box .inner02 ul li span {
+    border-bottom: 1px solid #fa9b03;
+}
+
+.inner02 .inner-w .img-left img {
+    max-width: 90px;
+    height: auto;
+}
+
+.column-box .inner-w:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+
+@media(max-width:480px) {
+    .column-box .inner01 .read-li,
+    .column-box .inner02 .read-li {
+        padding: 180px 0 1em;
+        background-size: contain;
+    }
+
+    .column-sentence p.bg-img01 {
+        padding: 70vw 0 0;
+        background-size: contain;
+    }
+
+    .column-sentence p.bg-img01 span {
+        background: #fff;
+    }
+
+    .column-sentence div.bg-img02 {
+        padding: 100px 0 0;
+        background: url(../column/gaihekicolumn005/img/hakase01.png) no-repeat top right;
+        background-size: 30%;
+    }
+
+    .column-sentence div.bg-img02 p {
+        background: #fff;
+    }
+
+    .column-box .inner01 ul.inner-p-bg01 {
+        padding: 150px 0 0;
+        background-size: contain;
+    }
+
+    .column-box .inner01 p.inner-p-bg02,
+    .column-box .inner02 p.inner-p-bg05,
+    .column-box .inner02 p.inner-p-bg09,
+    .column-box .inner03 ul.inner-p-bg11 {
+        padding: 0;
+        background: none;
+    }
+
+    .column-box .inner01 p.inner-p-bg03,
+    .column-box .inner01 p.inner-p-bg04 {
+        padding: 40vw 0 0;
+        background-size: 30%;
+    }
+
+    .column-box .inner01 ul.inner-p-bg01 li,
+    .column-box .inner01 p.inner-p-bg03 span,
+    .column-box .inner01 p.inner-p-bg04 span {
+        background: #fff;
+    }
+
+    .column-box .inner02 p.inner-p-bg06,
+    .column-box .inner02 p.inner-p-bg07,
+    .column-box .inner02 p.inner-p-bg08,
+    .column-box .inner02 p.inner-p-bg10 {
+        padding: 100px 0 0;
+    }
+
+
+    .column-box .inner01 ul,
+    .column-box .inner02 ul {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .column-box .inner ul li span {
+        border-bottom: none;
+    }
+
+    .column-box .inner01 ul li {
+        border-bottom: 1px solid #055fc4;
+    }
+
+    .column-box .inner02 ul li {
+        border-bottom: 1px solid #fa9b03;
+    }
+}
+
+@media (max-width: 599px) {
+    .column-box .inner02 p.inner-p-bg06,
+    .column-box .inner02 p.inner-p-bg07,
+    .column-box .inner02 p.inner-p-bg08,
+    .column-box .inner02 p.inner-p-bg10 {
+        padding: 30vw 0 0;
+        background-size: 40%;
+    }
+}

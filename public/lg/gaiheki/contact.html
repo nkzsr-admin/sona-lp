@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>お問い合わせ｜外壁塗装ナビ</title>
+<meta name="robots" content="noindex,nofollow">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K3SGDF3JEG"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-K3SGDF3JEG');</script>
+<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","w5sbv520kg");</script>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', sans-serif; color: #333; line-height: 1.8; margin: 0; padding: 0; background: #fff; }
+.container { max-width: 600px; margin: 0 auto; padding: 40px 20px; }
+h1 { font-size: 24px; color: #572e12; border-bottom: 3px solid #f26522; padding-bottom: 12px; margin-bottom: 24px; }
+p { font-size: 15px; margin-bottom: 16px; }
+label { display: block; font-size: 14px; font-weight: bold; color: #572e12; margin-bottom: 4px; margin-top: 16px; }
+input, textarea, select { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px; box-sizing: border-box; margin-bottom: 4px; }
+textarea { height: 150px; resize: vertical; }
+.required { color: #f26522; font-size: 12px; margin-left: 4px; }
+.btn-submit { display: block; width: 100%; background: #f26522; color: #fff; font-weight: bold; font-size: 18px; padding: 16px; border: none; border-radius: 50px; cursor: pointer; margin-top: 24px; }
+.btn-submit:hover { opacity: 0.9; }
+.note { font-size: 13px; color: #888; margin-top: 16px; }
+.footer-back { text-align: center; margin-top: 48px; padding-top: 24px; border-top: 1px solid #ddd; }
+.footer-back a { color: #f26522; text-decoration: none; font-weight: bold; }
+</style>
+</head>
+<body>
+<header style="background:linear-gradient(to bottom, #f8d0d8 0%, rgba(248,208,216,0) 100%); text-align:center; padding:12px 0;">
+  <a href="lp.html" style="display:inline-block; padding:8px 20px; filter:drop-shadow(0 0 15px #fff) drop-shadow(0 0 30px #fff) drop-shadow(0 0 50px #fff) drop-shadow(0 0 80px #fff);">
+    <img src="img/logo.png" alt="外壁塗装ナビ" style="height:40px; width:auto; display:block;">
+  </a>
+</header>
+<div class="container">
+
+<h1>お問い合わせ</h1>
+
+<p>外壁塗装ナビへのご質問・ご相談は、以下のフォームよりお気軽にお問い合わせください。通常1営業日以内にご返信いたします。</p>
+
+<form id="contactFormInquiry" method="post" action="#" novalidate>
+
+  <label>お名前<span class="required">必須</span></label>
+  <input type="text" name="name" placeholder="例：山田 太郎" required>
+
+  <label>メールアドレス<span class="required">必須</span></label>
+  <input type="email" name="email" placeholder="例：example@email.com" required>
+
+  <label>電話番号</label>
+  <input type="tel" name="phone" placeholder="例：090-1234-5678">
+
+  <label>お問い合わせ種別<span class="required">必須</span></label>
+  <select name="type" required>
+    <option value="" disabled selected>選択してください</option>
+    <option value="見積り比較について">見積り比較について</option>
+    <option value="サービス内容について">サービス内容について</option>
+    <option value="業者の掲載について">業者の掲載について</option>
+    <option value="その他">その他</option>
+  </select>
+
+  <label>お問い合わせ内容<span class="required">必須</span></label>
+  <textarea name="message" placeholder="お問い合わせ内容をご記入ください" required></textarea>
+
+  <button type="submit" class="btn-submit">送信する</button>
+
+  <p class="note">※お問い合わせ内容によっては、回答にお時間をいただく場合がございます。<br>※個人情報の取扱いについては<a href="privacy.html" style="color:#f26522;">プライバシーポリシー</a>をご確認ください。</p>
+
+</form>
+
+<div class="footer-back">
+<a href="lp.html">← トップへ戻る</a>　|　<a href="privacy.html">プライバシーポリシー</a>　|　<a href="tokushoho.html">特定商取引法</a>　|　<a href="terms.html">利用規約</a>
+</div>
+
+</div>
+<script>
+var DEPLOY_URL = 'https://script.google.com/macros/s/AKfycbwyH3ig8iaWb1xIWis4piZE2brsRTrJCIFZm8Bc6AxH1szKDq4diUQz7jDQqmvYKhT0_Q/exec';
+var form = document.getElementById('contactFormInquiry');
+if (form) {
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var btn = form.querySelector('button[type="submit"]');
+    var nv = form.querySelector('input[name="name"]').value.trim();
+    var ev = form.querySelector('input[name="email"]').value.trim();
+    var pv = form.querySelector('input[name="phone"]').value.trim();
+    var tv = form.querySelector('select[name="type"]');
+    var mv = form.querySelector('textarea[name="message"]').value.trim();
+    if (!nv) { alert('お名前を入力してください。'); return; }
+    if (!ev || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(ev)) { alert('メールアドレスを正しく入力してください。'); return; }
+    if (pv && !/^[0-9\-]{10,13}$/.test(pv)) { alert('電話番号を正しく入力してください。'); return; }
+    if (!tv || !tv.value) { alert('お問い合わせ種別を選択してください。'); return; }
+    if (!mv) { alert('お問い合わせ内容を入力してください。'); return; }
+    btn.disabled = true; btn.textContent = '送信中...';
+    var data = {
+      formType: 'inquiry',
+      name: nv, email: ev, phone: pv,
+      type: tv.value, message: mv
+    };
+    fetch(DEPLOY_URL, { method: 'POST', mode: 'no-cors', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(data) })
+    .then(function() { form.reset(); btn.textContent = '送信完了しました'; setTimeout(function(){ window.location.href = 'thank-you.html'; }, 1000); })
+    .catch(function() { btn.disabled = false; btn.textContent = '送信する'; alert('送信に失敗しました。お手数ですが、もう一度お試しください。'); });
+  });
+}
+</script>
+</body>
+</html>

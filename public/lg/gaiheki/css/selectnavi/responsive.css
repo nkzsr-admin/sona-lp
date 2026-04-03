@@ -1,0 +1,2357 @@
+@charset "utf-8";
+
+/*area*/
+#main #area.contents-wrap {
+    padding-top: 50px;
+}
+
+.mb5 {
+    margin-bottom: 5% !important;
+}
+
+.mb8 {
+    margin-bottom: 8% !important;
+}
+
+.p_style {
+    display: block;
+}
+
+.s_style {
+    display: none;
+}
+
+#header_sp {
+    display: none;
+}
+
+.tel_bnr {
+    display: none;
+}
+
+.page_top {
+    display: none;
+}
+
+.sp-price-list {
+    display: none;
+}
+
+.sp-choose-list {
+    display: none;
+}
+
+#footer ul.footer-navi li.last-el-child.s_style {
+    display: none;
+}
+
+#footer ul.footer-navi li.last-el-child.p_style {
+    display: inline-block;
+}
+
+
+@media screen and (min-width: 741px) {
+    #main.home .side-contents2.sp-only {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 740px) {
+    .p_style {
+        display: none;
+    }
+
+    .s_style {
+        display: block;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .sp_mt3 {
+        margin-top: 3% !important;
+    }
+
+    .sp_mb8 {
+        margin-bottom: 8% !important;
+    }
+
+    .sp_ms3 {
+        margin: 0 3% 0 !important;
+    }
+
+    .sp_w5 {
+        width: 50% !important;
+    }
+
+
+    #wrapper {
+        min-width: 100%;
+        margin-bottom: 18.60vw;
+        /* for "sp-phone-banner" @ 18.08.23 */
+    }
+
+    #footer {
+        height: auto;
+    }
+
+    /* for "sp-phone-banner" @ 18.08.23 */
+
+    #main .contents-wrap {
+        padding-top: 15px;
+    }
+
+    .box {
+        padding: 0 3%;
+    }
+
+    .crumb-area {
+        display: none;
+    }
+
+    /***header***/
+    #header2 {
+        width: 98%;
+        height: 30px;
+        padding: 0 0 0 2%;
+        color: #fff;
+        background: #fea700;
+    }
+
+    #header2.delete {
+        display: none;
+    }
+
+    #header2 img.dial {
+        width: 43%;
+        float: right;
+        margin: 1% 1% 0 0;
+    }
+
+    .head-tel2.last-el-child {
+        display: none;
+    }
+
+    #header2-inner ul {
+        display: none;
+    }
+
+    #header2-inner {
+        width: 100%;
+    }
+
+    #header2.none {
+        display: none;
+    }
+
+    #header3 {
+        display: none;
+    }
+
+    #header_sp {
+        width: 100%;
+        display: block;
+        overflow: hidden;
+        margin: 0 0 3%;
+        border-bottom: 1px solid #ccc;
+        background: #fff;
+        z-index: 999;
+    }
+
+    .h_area {
+        background: #fff;
+    }
+
+    #header_sp .h_logo {
+        width: 80%;
+        float: left;
+        margin: 0 0 0 2%;
+    }
+
+    .op_btn {
+        width: 14%;
+        float: right;
+        margin: 4% 2% 0 0;
+        position: relative;
+    }
+
+    #hg_btn_cl {
+        display: none;
+        position: absolute;
+        right: 0;
+    }
+
+    /* fixed */
+    .fixed {
+        position: fixed;
+        top: 0;
+    }
+
+    body.hg_fixed {
+        height: 100%;
+        overflow: hidden;
+    }
+
+    /* hg_menu */
+    #hg_btn_sp a {
+        display: block;
+        text-decoration: none;
+    }
+
+    #hg_btn_sp a:hover {
+        text-decoration: none;
+    }
+
+    /*hg_menu*/
+    .hg_menu {
+        height: 600px;
+        display: none;
+        overflow: scroll;
+        margin: 21% 0 0;
+        padding: 5% 0 10%;
+        background: rgba(197, 226, 133, 0.84);
+    }
+
+    .hg_map table {
+        width: 94%;
+        margin: 0 3% 5%;
+    }
+
+    .hg_map tr {
+        border: 1px solid #ccc;
+    }
+
+    .hg_map th {
+        width: 37%;
+        vertical-align: middle;
+        font-size: 160%;
+        color: #fff;
+        text-align: center;
+        background-color: #f9b13f;
+    }
+
+    .hg_map td {
+        padding: 3% 2% 0;
+        background: #fff5e5;
+    }
+
+    .hg_map td ul {
+        margin: 0;
+        text-align: left;
+    }
+
+    .hg_map td li {
+        width: 18.6%;
+        display: inline-block;
+        margin: 0 0 3% 0;
+        padding: 2% 0 2%;
+        font-size: 120%;
+        text-align: center;
+        border: 1px solid #090;
+        border-radius: 5px;
+        background: #c3e8c3;
+    }
+
+    li.price-banner {
+        width: 46.5%;
+        display: inline-block;
+    }
+
+    #hg-ranking li a p {
+        height: 272px;
+        text-decoration: underline;
+    }
+
+    .hg_menu .close_btn {
+        width: 15%;
+        margin: 0 auto;
+    }
+
+    ul#hg-button-list {
+        margin: 0 0 10px;
+    }
+
+    h2.title_map {
+        margin: 0 3% 0;
+        padding: 3%;
+        font-size: 160%;
+        color: #fff;
+        border: 3px solid #067114;
+        background: #068616;
+    }
+
+    /***menu***/
+    #menu {
+        display: none;
+    }
+
+
+    /***top_img***/
+    .page_top {
+        display: block;
+        margin: 0 0 3%;
+    }
+
+
+    /***main***/
+    .common-section {
+        width: 100%;
+    }
+
+    .side-contents {
+        display: none;
+    }
+
+    p.tel_bnr {
+        display: block;
+        margin: 0 3.5% 10px;
+    }
+
+    .common-title {
+        width: 83%;
+        height: 51px;
+        margin: 0 auto 5%;
+        padding: 4% 0 0 12%;
+        font-size: 200%;
+        line-height: 1.2;
+        border-top: 1px solid #82d0a4;
+        border-bottom: 2px solid #094;
+        background: url(h2_back.png) top left no-repeat;
+        background-size: 100%;
+    }
+
+    .banner2 {
+        display: none;
+    }
+
+    /*@20190828 START ----------------------------*/
+    .hg_map h2 span {
+        display: block;
+    }
+
+    #main.home .contents-wrap.common-section {
+        width: 100%;
+    }
+
+    #main.home .main-contents {
+        width: 100%;
+        float: none;
+    }
+
+    /*#main.home .side-contents { width:201px; float:left; margin-right:10px; }*/
+    #main.home .side-contents2.pc-only {
+        display: none;
+    }
+
+    #main.home .side-contents2 {
+        width: 96%;
+        float: none;
+        padding: 3% 2% 0;
+    }
+
+    #main.home .main-contents .common-title-case {
+        height: 48px;
+    }
+
+    #main.home .main-contents ul.case-new-list {
+        margin: 0 2.5% 30px;
+        padding: 5px;
+    }
+
+    #main.home .main-contents ul.case-new-list>li {
+        margin: 5px;
+    }
+
+    #main.home .main-contents .common-title-case img,
+    #main.home .main-contents ul.case-new-list>li .rib-box {
+        z-index: 1;
+    }
+
+    /*
+#main.home .side-contents .inner { width:181px; margin:0 auto; padding:10px 0; }
+#main.home .side-contents .side-achievement { background-size:100%; height:95px; margin-bottom:0; }
+#main.home .side-contents .side-banner li { margin-bottom:5px; }
+#main.home .side-contents .side-banner li:last-child { margin-bottom:0; }
+#main.home .side-contents .side-banner li img { width:100%; height:auto; }
+*/
+    /*@20190828 END ------------------------------*/
+
+
+    /***********index.html***********/
+    .map-contents {
+        display: none;
+    }
+
+    #main .main-contents {
+        width: 100%;
+        float: right;
+    }
+
+    /*jirei*/
+    #top-jirei {
+        width: 96%;
+        margin: 3% auto;
+    }
+
+    #top-jirei .top-jirei-box {
+        width: 100%;
+        height: auto;
+        float: left;
+        margin-bottom: 18px;
+        padding: 0% 0 6%;
+        background-image: url(top-jirei-bk3.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    #top-jirei .top-jirei-box .top-jirei-number {
+        width: 12%;
+        height: auto !important;
+        margin: 2% 3% 0;
+    }
+
+    .top-jirei-box h3 {
+        width: 70%;
+        margin: 1% 0 0 0;
+        font-size: 150%;
+        line-height: 1.5;
+    }
+
+    .top-jirei-image {
+        width: auto;
+        display: block;
+        margin: 5% auto 5%;
+        padding-left: 0;
+    }
+
+    .top-jirei-box .down {
+        width: auto;
+        margin: 3% 0 0 0;
+    }
+
+    .top-jirei-kome {
+        float: none;
+        margin: 0;
+        padding: 0 3%;
+        font-size: 100%;
+        line-height: 1.5;
+    }
+
+    .btn-price-list {
+        display: none;
+    }
+
+    .sp-price-list {
+        display: block;
+        margin: 3% 0 8%;
+    }
+
+    .top-jirei-p {
+        font-size: 130%;
+    }
+
+    .top-jirei-p span {
+        font-size: 130%;
+    }
+
+    /*point*/
+    .top .point h4 {
+        top: -4px;
+    }
+
+    .top .point {
+        margin: 0 0 8%;
+        padding: 16% 3% 0;
+    }
+
+    .top .point dl {
+        margin: 0 0 5%;
+    }
+
+    .sp-choose-list {
+        display: block;
+    }
+
+
+
+    /*flow*/
+    .top .quotation-step .flow.flow-list-sp-flex {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .top .quotation-step .flow li {
+        width: 45%;
+        height: auto;
+        padding: 0 0 3% 3%;
+    }
+
+    .top .quotation-step .flow.flow-list-sp-flex li dl {
+        height: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .top .quotation-step .flow.flow-list-sp-flex li dl dd {
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+    }
+
+    .top .quotation-step .flow li dl dd {
+        height: auto;
+        padding: 0 0 8% 0;
+        background-size: 100% 100%;
+    }
+
+    .top .quotation-step .flow li dl dd p {
+        padding: 0 13px;
+        font-size: 123%;
+        line-height: 1.6;
+    }
+
+    .top .quotation-step .flow li.last-el-child {
+        width: 45%;
+    }
+
+    .top .quotation-step .step-next02 {
+        width: 28%;
+        height: 27px;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+    }
+
+    .top .quotation-step .step-next02 img {
+        margin: 0;
+        position: static;
+    }
+
+    .top .quotation-step .flow-detail {
+        width: 35%;
+        font-size: 130%;
+        text-align: right;
+    }
+
+    .top .quotation-step .step05 {
+        margin: 0;
+        padding: 0 3%;
+    }
+
+
+
+    /*feature*/
+    .top .feature .feature-box li {
+        width: 100%;
+    }
+
+    .feature01 dl {
+        margin: 0 3%;
+        background: url(/images/sp/feature01-title.png) no-repeat;
+        background-size: 100%;
+    }
+
+    .feature02 dl {
+        margin: 0 3%;
+        background: url(/images/sp/feature02-title.png) no-repeat;
+        background-size: 100%;
+    }
+
+    .feature03 dl {
+        margin: 0 3%;
+        background: url(/images/sp/feature03-title.png) no-repeat;
+        background-size: 100%;
+    }
+
+    .feature04 dl {
+        margin: 0 3%;
+        background: url(/images/sp/feature04-title.png) no-repeat;
+        background-size: 100%;
+    }
+
+    .top .feature .feature-box li.feature01 dd,
+    .top .feature .feature-box li.feature02 dd,
+    .top .feature .feature-box li.feature03 dd,
+    .top .feature .feature-box li.feature04 dd {
+        height: auto;
+        background: none;
+    }
+
+    .top .feature .feature-box li dd p {
+        padding: 22% 3% 3%;
+        font-size: 140%;
+        line-height: 1.6;
+    }
+
+    .bnr-new {
+        display: none;
+    }
+
+
+    /* page-top */
+    #page-top_sp {
+        font-size: 77%;
+        position: fixed;
+        bottom: 7px;
+        right: 10px;
+        z-index: 998;
+    }
+
+    #page-top_sp a {
+        display: block;
+        text-decoration: none;
+    }
+
+    #page-top_sp a:hover {
+        text-decoration: none;
+    }
+
+    #page-top_sp_aug15_2018 {
+        display: none;
+    }
+
+    /***********type***********/
+    #type-main-image {
+        display: none;
+    }
+
+    .common-sentence {
+        padding: 0 3%;
+        font-size: 140%;
+        line-height: 1.7;
+    }
+
+    .type .contents01 {
+        padding: 0 3%;
+        font-size: 135%;
+    }
+
+    .type .contents01 .box01 .left-contents {
+        width: 49%;
+        float: left;
+        margin: 0 2% 0 0;
+    }
+
+    .type .contents01 .box01 .right-contents {
+        width: 100%;
+        float: none;
+        margin: 0 0 0 0;
+    }
+
+    .type .contents02 {
+        padding: 0 3% 8%;
+        font-size: 135%;
+    }
+
+    .type .contents03 .box01 {
+        padding: 0 3%;
+    }
+
+    .type .contents03 p {
+        padding: 0 3%;
+        font-size: 135%;
+    }
+
+    .type .contents04 {
+        padding: 0 3%;
+    }
+
+    .type .contents05 {
+        padding: 0 3%;
+    }
+
+
+    /***********cost***********/
+    .cost .cost-title01 {
+        height: 77px;
+        margin: 18px 2% 23px;
+        background: url("/images/sp/cost-title01.png") top left no-repeat;
+    }
+
+    .cost .cost-title01 span {
+        padding: 18px 3% 0 83px;
+        font-size: 160%;
+    }
+
+    .cost .contents01 table.cost-table {
+        width: 96%;
+        float: none;
+        margin: 0 auto;
+    }
+
+    .cost .contents01 .char {
+        display: none;
+    }
+
+    .cost .contents01 .sentence01 {
+        padding: 0 3%;
+    }
+
+    .common-title02 {
+        height: 60px;
+        margin: 10% 2% 0%;
+        padding: 2% 3%;
+        font-weight: bold;
+        font-size: 160%;
+        line-height: 1.5;
+        background: url("/images/sp/title02.png") top left no-repeat;
+    }
+
+    .cost .contents01 .sentence02 {
+        padding: 0 3%;
+        font-size: 150%;
+    }
+
+    .cost .contents02 .sentence01 {
+        padding: 0 3%;
+        font-size: 150%;
+    }
+
+    .cost .contents02 table.cost-table tr,
+    .cost .contents02 table.cost-table th,
+    .cost .contents02 table.cost-table td {
+        display: list-item;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .cost .contents02 table.cost-table td:before {
+        width: 30%;
+        float: left;
+        margin: 3%;
+        padding: 2%;
+        text-align: center;
+        background: #ccc;
+    }
+
+    .cost .contents02 table.cost-table td:nth-of-type(1):before {
+        content: "アクリル系塗料";
+    }
+
+    .cost .contents02 table.cost-table td:nth-of-type(2):before {
+        content: "ウレタン系塗料";
+    }
+
+    .cost .contents02 table.cost-table td:nth-of-type(3):before {
+        content: "シリコン系塗料";
+    }
+
+    .cost .contents02 table.cost-table td:nth-of-type(4):before {
+        content: "フッ素系塗料";
+    }
+
+    .cost .contents02 table.cost-table tr.h {
+        display: none;
+    }
+
+    .cost table.cost-table th,
+    .cost table.cost-table td {
+        overflow: hidden;
+        margin: 0;
+        border: 0px;
+    }
+
+    .cost table.cost-table td span {
+        float: left;
+        margin: 3% 0 0;
+    }
+
+    .cost .contents02 table.cost-table th,
+    .cost table.cost-table tr.gray th {
+        margin: 0 0 3%;
+        padding: 2% 0 2% 5%;
+        font-size: 160%;
+        background: #ffe4ad;
+    }
+
+    .cost table.cost-table {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .cost .graph {
+        padding: 0 3%;
+    }
+
+    .cost .contents03 {
+        padding: 0 3%;
+    }
+
+    .cost .contents03 .left-contents {
+        width: 100%;
+    }
+
+    .cost .contents03 .right-contents {
+        width: 60%;
+        float: none;
+        margin: 0 auto 8%;
+    }
+
+    /*color*/
+    .point-color .contents01 .sentence01 {
+        padding: 0 3%;
+        font-size: 150%;
+    }
+
+    /*performance*/
+    .performance .performance01,
+    .performance .performance02,
+    .performance .performance03,
+    .performance .performance04 {
+        width: 94%;
+        height: auto;
+        margin: 0 auto 5%;
+        border: 3px solid #29a861;
+        border-radius: 8px;
+        background: none;
+    }
+
+    .performance h2:before {
+        display: block;
+        font-size: 80%;
+        color: #fff;
+        text-align: center;
+        background: #29a861;
+    }
+
+    .performance .performance01 h2.performance-h2:before {
+        content: "ご成約事例01";
+    }
+
+    .performance .performance02 h2.performance-h2:before {
+        content: "ご成約事例02";
+    }
+
+    .performance .performance03 h2.performance-h2:before {
+        content: "ご成約事例03";
+    }
+
+    .performance .performance04 h2.performance-h2:before {
+        content: "ご成約事例04";
+    }
+
+
+    .performance .performance-box .inner .photo {
+        width: 40%;
+        margin: 0 auto;
+        position: static;
+    }
+
+    .performance .performance-box table {
+        width: 100%;
+    }
+
+    .performance .performance-box .inner {
+        padding: 3%;
+    }
+
+
+    /*point*/
+    .point .point01 .inner,
+    .point .point03 .inner,
+    .point .point05 .inner,
+    .point .point07 .inner {
+        padding: 3%;
+    }
+
+    .point .point02 .inner,
+    .point .point04 .inner,
+    .point .point06 .inner,
+    .point .point08 .inner {
+        padding: 3%;
+    }
+
+    .point .point01,
+    .point .point02,
+    .point .point03,
+    .point .point04,
+    .point .point05,
+    .point .point06,
+    .point .point07,
+    .point .point08 {
+        height: auto;
+        margin: 0 3% 5%;
+        margin-top: 26px;
+        border: 2px solid #079558;
+        border-radius: 8px;
+        background: none;
+    }
+
+    .point .point-box h3 {
+        padding: 2% 2% 2% 18%;
+        font-size: 180%;
+        line-height: 1.3;
+    }
+
+    .point .point-box p {
+        width: 100%;
+        overflow: hidden;
+        font-size: 140%;
+    }
+
+    .point .point-box p img {
+        width: 40%;
+        float: left;
+        margin: 0 2% 0 0;
+    }
+
+
+    /*service*/
+    .service-life .box01 ul {
+        padding: 0 3%;
+    }
+
+    .service-life .contents02 p {
+        padding: 0 3%;
+    }
+
+    .service-life ul.green-list li {
+        font-size: 140%;
+    }
+
+    /*useful*/
+    .useful-contents .useful-common {
+        padding: 0 3%;
+    }
+
+    .useful-contents .useful-common p {
+        width: 100%;
+    }
+
+    .useful-contents .useful-common .char {
+        width: 13%;
+        top: -88px;
+        right: 11px;
+    }
+
+    .useful-contents .useful-box {
+        height: auto;
+        margin: 2%;
+        padding: 2%;
+        background: url("/images/sp/gimp-tutorial-slashesBackground-ex-4.png");
+    }
+
+    .useful-contents .useful-box ul {
+        padding: 9% 3%;
+        background: #fff;
+    }
+
+    .useful-contents .useful-box ul li {
+        width: 100%;
+        margin-bottom: 24px;
+        /* @180921 */
+    }
+
+    .useful-contents .useful-box ul li:last-child {
+        margin-bottom: 0;
+    }
+
+    .useful-contents .useful-box ul li dl {
+        width: 100%;
+    }
+
+    .useful-contents .useful-box ul li dl dd {
+        /* font-size: 150%; */
+        /* @180921 */
+        font-size: 140%;
+        /* @180921 */
+        line-height: 1.65;
+        /* @180921 */
+    }
+
+    .useful-contents .useful-box ul li dl dd img {
+        /* width: 15%; */
+        /* @180921 */
+        width: 14%;
+        /* @180921 */
+    }
+
+    .useful-contents .useful-box ul li dl dt {
+        /* @180921 */
+        margin-bottom: 14px;
+        padding-left: 0;
+        font-size: 180%;
+        background: none;
+        /* @180921 */
+    }
+
+    .useful-contents .useful-box ul li dl dt:before {
+        content: "■";
+        margin-right: 0.25em;
+        /* top: 16px; */
+        /* @180921 */
+        /* left: -27px; */
+        /* @180921 */
+        /* font-size: 180%; */
+        /* @180921 */
+        color: #108b47;
+        position: relative;
+        /* @180921 */
+    }
+
+
+
+    /* useful 下層ページ (WordPress) @180921 */
+    .useful-contents .useful-category-banner {
+        padding-top: 0px;
+    }
+
+    .useful-contents .category-contents ul {
+        margin-bottom: 0;
+    }
+
+    .useful-contents .category-contents ul li,
+    .useful-contents .category-contents ul li.second {
+        margin: 14px auto;
+    }
+
+    .useful-contents .category-contents ul li,
+    .useful-contents .category-contents ul li.first-el-child,
+    .useful-contents .category-contents ul li.last-el-child {
+        float: none;
+    }
+
+    .useful-contents .category-contents ul li {
+        width: 310px;
+        /* x0.9480 */
+        height: 142px;
+        background-size: contain;
+        background-position: center center;
+    }
+
+    .useful-contents .category-contents ul li dl dt {
+        margin-bottom: 6px;
+        line-height: 1.55;
+    }
+
+    #main.useful-contents .contents-wrap.answer-contents-wrap {
+        padding-top: 0 !important;
+    }
+
+    .useful-contents .question-title {
+        height: auto;
+        padding: 13px 10px 13px 57px;
+        line-height: 1.35;
+        border: 1px solid #b2b2b2;
+        border-left: none;
+        border-right: none;
+        background-image: url(../images/useful-contents/question-title-bg-sp.png), url(../images/useful-contents/question-title-bg-tile-sp.png);
+        background-size: auto auto, auto 100%;
+        background-repeat: no-repeat, repeat-x;
+        background-position: 12px center, left top;
+    }
+
+    .useful-contents .question-contents .answer .inner {
+        padding: 12px 0 20px 0;
+    }
+
+    .useful-contents .question-contents .answer .inner .sentence {
+        padding-left: 52px;
+        background-position: 8px 0px;
+    }
+
+    .useful-contents .question-other dl {
+        padding: 0 3%;
+    }
+
+    .useful-contents .question-other dl dt {
+        min-height: 31px;
+        margin-bottom: 0.25em;
+        line-height: 1.35;
+    }
+
+    /* ここまで : useful 下層ページ (WordPress) */
+
+    /* words ページ (WordPress) @180921 */
+    .words .category-title {
+        width: 93%;
+        margin: 0 auto 20px;
+        border: 1px solid #094;
+        border-top: none;
+        border-bottom: none;
+        background-position: center top;
+    }
+
+    .words .words-list {
+        width: 98%;
+        margin: 0 auto;
+    }
+
+    .words .words-list li {
+        width: 44%;
+        margin: 0 3%;
+    }
+
+    .words .words-list li.last {
+        margin-right: 3%;
+    }
+
+    /* ここまで : words ページ (WordPress) @180921 */
+
+
+
+
+
+    /*advertising*/
+    .advertising .contents01 {
+        padding: 0 3%;
+    }
+
+
+    /*cash-contribution*/
+    .cash-contribution .contents01 {
+        margin-top: 8px;
+        margin-bottom: 36px;
+        padding: 0 3%;
+    }
+
+    .cash-contribution .contents01 .flow {
+        height: auto;
+    }
+
+    .cash-contribution .contents01 .flow img {
+        width: 100%;
+        position: static;
+    }
+
+    .cash-contribution .contents01 .sentence01 {
+        margin-top: 15px;
+        font-size: 150%;
+        text-align: left;
+    }
+
+    .cash-contribution .contents01 .btn-wrap {
+        width: 100%;
+    }
+
+    .cash-contribution .contents01 .btn-wrap img {
+        margin: 0 !important;
+    }
+
+
+    /**area**/
+    .area .banner-area .common-section {
+        height: auto;
+    }
+
+    .area .banner-area .main-banner {
+        width: 100%;
+        height: auto;
+        margin-top: 15%;
+        padding: 63% 0 0 0;
+        background-image: url(/images/top/sp_main_v.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+
+    .area .banner-area {
+        height: auto;
+        background: none;
+    }
+
+    #catch-area {
+        width: 100%;
+        margin: 0;
+        font-size: 7vw;
+        text-align: center;
+        -webkit-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+        position: absolute;
+        top: -11%;
+        left: 50%;
+    }
+
+    #catch-area span {
+        margin: 0 3% 0 0;
+        font-size: 100%;
+    }
+
+    .area .banner-area .main-banner .btn-entry {
+        display: block;
+        margin: 26% 0 0;
+        padding-top: 15%;
+        background-image: url(/images/sp/top_04.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .area .area-contents .map-area {
+        width: 70%;
+        float: none;
+        margin: 0 auto;
+    }
+
+    .area .area-contents table tr,
+    .area .area-contents table th,
+    .area .area-contents table td {
+        display: list-item;
+        list-style: none;
+    }
+
+    .area .area-contents .right-contents {
+        width: 100%;
+        float: none;
+        margin: 0;
+    }
+
+    .area .area-contents {
+        min-height: auto;
+    }
+
+    .area .area-contents table {
+        width: 95%;
+        margin: 0 auto;
+        font-size: 150%;
+    }
+
+    .area .area-contents table th {
+        width: 95%;
+        padding: 1% 3%;
+        border: 0;
+        background: #ccc;
+    }
+
+    .area .area-contents table td {
+        width: 100%;
+        border: 0;
+    }
+
+    .area .area-contents table td ul.state li {
+        width: 23%;
+        display: inline-block;
+        margin: 0 0 1%;
+        padding: 2% 0 2%;
+        font-size: 76%;
+        text-align: center;
+        border: 1px solid #090;
+        border-radius: 5px;
+        background: #c3e8c3;
+    }
+
+    .area .area-contents table td ul.state {
+        margin-bottom: 2%;
+        border: 0;
+    }
+
+    .area img.seiyaku {
+        width: 96%;
+        margin: 0 auto;
+    }
+
+    .area img.point {
+        width: 96%;
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    #voice-div h3 {
+        padding-left: 3% !important;
+        font-size: 170% !important;
+    }
+
+    ul#voice-data {
+        margin-left: 3% !important;
+        padding: 0;
+    }
+
+    #voice-data li dl {
+        display: inline-block;
+        vertical-align: -5px;
+    }
+
+    .area .other-cities {
+        padding: 0 3%;
+    }
+
+    .area .other-cities table td ul.state li {
+        display: inline-block;
+        margin: 0 0 3%;
+        font-size: 140%;
+    }
+
+    #top-jirei5 {
+        height: auto;
+    }
+
+    #voice-data2 {
+        width: 100%;
+        margin-top: 0;
+        padding-left: 3%;
+        font-size: 140%;
+    }
+
+    #voice-data2 li dd,
+    #voice-data2 li dt {
+        margin: -17px 0 0;
+        font-size: 118%;
+    }
+
+    .history {
+        display: none;
+    }
+
+    #main.area {
+        margin: 3% 0 0;
+    }
+
+    .area .major-companies {
+        margin: 0 0 5%;
+        padding: 0 3%;
+        font-size: 140%;
+    }
+
+    .area .city-overview {
+        padding: 0 3%;
+        font-size: 140%;
+    }
+
+    #voice #header2 {
+        height: 42px;
+    }
+
+    /***case***/
+    .case-box {
+        padding: 0 1em 1em;
+    }
+
+    .case-multi {
+        padding: 150px 1em 1em;
+    }
+
+    .case-box h4 span,
+    .case-multi h5 span {
+        display: block;
+    }
+
+    .case-box h4,
+    .case-multi h5 {
+        padding: 0;
+    }
+
+    .case-multi h4 span {
+        display: inline;
+    }
+
+    .case-multi h4 {
+        padding: 5px 0;
+    }
+
+    p.case-list-back {
+        padding: 0 15px;
+        font-size: 14px;
+        text-align: right;
+    }
+
+    p.case-list-back a {
+        text-decoration: underline;
+    }
+
+    p.case-list-back.case-list-back-last {
+        padding: 0 15px 15px;
+    }
+
+    /** detail **/
+    #detail-basic img {
+        width: 94%;
+        display: block;
+        margin: 0 auto 3%;
+    }
+
+    #detail-t {
+        width: 94%;
+        margin: 0 auto 0;
+    }
+
+    .main-contents iframe {
+        width: 94%;
+        display: block;
+        margin: 0 auto !important;
+    }
+
+    /** mitsumori **/
+    .mitsumori-p {
+        padding: 0 3%;
+        font-size: 160%;
+    }
+
+    .mitsumori-table {
+        width: 95%;
+        margin: 0 auto;
+        font-size: 130%;
+    }
+
+    .mitsumori-table tr:first-child {
+        display: none;
+    }
+
+    .mitsumori-table td,
+    .mitsumori-table th {
+        display: list-item;
+        list-style-type: none;
+        padding: 2%;
+        font-size: 120%;
+    }
+
+    .mitsumori-table td:nth-child(2):before {
+        content: "仕様 :";
+        margin: 0 2% 0 0;
+        color: #227b29;
+    }
+
+    .mitsumori-table td:nth-child(3):before {
+        content: "数量単位 :";
+        margin: 0 2% 0 0;
+        color: #227b29;
+    }
+
+    .mitsumori-table td:nth-child(4):before {
+        content: "単価 :";
+        margin: 0 2% 0 0;
+        color: #227b29;
+    }
+
+    .mitsumori-table td:nth-child(5):before {
+        content: "金額 :";
+        margin: 0 2% 0 0;
+        color: #227b29;
+    }
+
+
+    /** gift **/
+    table#gift-table {
+        width: 96%;
+        margin: 0 auto;
+    }
+
+    #gift-table tr,
+    #gift-table tr td {
+        display: list-item;
+        list-style-type: none;
+    }
+
+    #gift-table tr td {
+        width: 100% !important;
+        overflow: hidden;
+    }
+
+    #gift-table tr td p {
+        width: 100% !important;
+        padding: 0;
+    }
+
+    #gift-table tr td input,
+    #gift-table tr td textarea {
+        margin: 0 0 5% 0;
+    }
+
+    .apply-comp {
+        margin: 0 0 30%;
+    }
+
+    .apply-comp p {
+        padding: 5% 3% 0 !important;
+    }
+
+    .company table.company-table {
+        width: 94%;
+        margin: 0 auto 10%;
+    }
+
+    .company table.company-table th,
+    .company table.company-table td {
+        width: 100%;
+        display: list-item;
+        list-style: none;
+    }
+
+    .company table.company-table td .jimu {
+        width: 46%;
+    }
+
+    .privacy h2 {
+        height: auto;
+        margin: 0 3%;
+        font-size: 140%;
+        background: url("/images/sp/privacy-title.png") top left no-repeat;
+        background-size: 100%;
+    }
+
+    .privacy .sentence {
+        margin: 0 3%;
+        font-size: 150%;
+    }
+
+    .thanks-detail {
+        margin: 0 3% 5%;
+        font-size: 150%;
+    }
+
+    .select-thanks {
+        width: 94%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .thanks-attention {
+        margin: 0 3%;
+        font-size: 140%;
+    }
+
+    .mitumori-thanks {
+        margin: 3% 3%;
+        font-size: 150%;
+    }
+
+    .flow-contract .contents01 .step dl.step01 dd,
+    .flow-contract .contents01 .step dl.step02 dd,
+    .flow-contract .contents01 .step dl.step03 dd,
+    .flow-contract .contents01 .step dl.step04 dd,
+    .flow-contract .contents01 .step dl.step05 dd,
+    .flow-contract .contents01 .step dl.step06 dd {
+        height: auto;
+        margin: 0 0 5%;
+        background: none;
+    }
+
+    .flow-contract .contents01 .sentence01 {
+        margin-top: 8px;
+        background: none;
+    }
+
+    .flow-contract .flow_top_img {
+        width: 30%;
+        float: left;
+    }
+
+    ul.step.last-el-child {
+        margin: 0 3%;
+    }
+
+    .flow-contract .contents01 .step dl.step01 dd,
+    .flow-contract .contents01 .step dl.step02 dd,
+    .flow-contract .contents01 .step dl.step03 dd,
+    .flow-contract .contents01 .step dl.step04 dd,
+    .flow-contract .contents01 .step dl.step05 dd,
+    .flow-contract .contents01 .step dl.step06 dd {
+        overflow: hidden;
+    }
+
+    .flow-contract .contents01 .step dl.step01 dd img,
+    .flow-contract .contents01 .step dl.step02 dd img,
+    .flow-contract .contents01 .step dl.step03 dd img,
+    .flow-contract .contents01 .step dl.step04 dd img,
+    .flow-contract .contents01 .step dl.step05 dd img,
+    .flow-contract .contents01 .step dl.step06 dd img {
+        width: 20%;
+        float: left;
+        margin: 0 2% 0 0;
+    }
+
+    /** form*/
+    .mitsu {
+        padding: 3%;
+    }
+
+    #mail-form .mi_tb tr {
+        width: 100%;
+    }
+
+    #mail-form .mi_tb th,
+    #mail-form .mi_tb td {
+        display: list-item;
+    }
+
+    #mail-form .mi_tb th {
+        width: 92%;
+        padding: 3%;
+        font-size: 120%;
+        border: 0;
+    }
+
+    #mail-form .mi_tb td {
+        width: 94%;
+    }
+
+    #mail-form input.text-box {
+        width: 100%;
+    }
+
+    #mail-form .mi_tb td textarea.text-box.first-el-child {
+        width: 100% !important;
+    }
+
+    #mail-form .btn-area {
+        width: 96%;
+        margin: 0 auto;
+    }
+
+    #mail-form .btn-area .btn-confirm2 {
+        width: 79%;
+        height: auto;
+        margin: 0 auto;
+        padding: 10% 0;
+        background-size: 100% 100%;
+    }
+
+    .bm_select {
+        width: 100%;
+    }
+
+    .textAgreementDiv {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #mitsumori-index {
+        font-size: 150%;
+    }
+
+    #mitsumori-index li {
+        margin: 0 3% 3%;
+    }
+
+    .history2 {
+        display: none;
+    }
+
+    /*footer*/
+    #footer .common-section {
+        padding-top: 4%;
+        text-align: center;
+        border-top: 1px solid #ccc;
+    }
+
+    #footer img {
+        width: 90%;
+    }
+
+    #footer ul.footer-navi li a {
+        font-size: 110%;
+        color: #164dd8;
+    }
+
+    #footer ul.footer-navi li,
+    #footer ul.footer-navi li.last-el-child {
+        width: 42%;
+        display: inline-block;
+        margin: 0 0 1%;
+        padding: 3%;
+        border: 1px solid #ccc;
+        background: #f0f6fb;
+    }
+
+    #footer ul.footer-navi li.first-el-child {
+        margin: 0 0 1%;
+        padding: 3%;
+    }
+
+    #footer .common-section p {
+        margin-bottom: 0;
+        padding: 3% 0 23%;
+        color: #fff;
+        background: #848484;
+    }
+
+    #footer ul.footer-navi li.last-el-child.p_style {
+        display: none;
+    }
+
+    #footer ul.footer-navi li.last-el-child.s_style {
+        display: inline-block;
+    }
+
+    .btn-bulkquote01 {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+
+    /*@20191109 ADD*/
+    #main.home .main-contents ul.case-new-list>li {
+        width: 250px;
+        float: none;
+        margin: 10px auto;
+    }
+
+    /*@20191109 END*/
+
+    #main.home .side-contents2 {
+        margin-top: 10px;
+    }
+
+    #main.home .side-contents2 .achv-box {
+        padding: 15px;
+    }
+
+    #main.home .side-contents2 .achv-box ul li,
+    #main.home .side-contents2 .achv-box ul li:last-child {
+        margin-bottom: 15px;
+    }
+
+    #main.home .side-contents2 .achv-box ul li p {
+        padding: 5px 20px;
+        font-size: 13px;
+    }
+
+    .bnr-quote {
+        margin-top: 15px;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    h2.top-column-title {
+        font-size: 18px;
+    }
+
+    .top-column {
+        margin: 0 3%;
+    }
+
+    .top-column .column-box-top {
+        padding: 1em;
+    }
+
+    .top-column .column-box-top h4.supple span {
+        line-height: 175%;
+    }
+
+    .top-column-01 .top-bg-img1 {
+        padding: 120px 0 0;
+        background-size: 40%;
+        background-position: top center;
+    }
+
+    .top-column-01 .top-bg-img2 {
+        padding: 100px 0 0;
+        background-size: 60%;
+        background-position: top center;
+    }
+
+    .top-column-01 .top-bg-img1 p,
+    .top-column-01 .top-bg-img2 p {
+        background: #fff;
+    }
+
+    .top-column-01 .column-box-top-last ul {
+        padding: 1em 0;
+    }
+
+    .top-column-02 ul li p {
+        width: 80%;
+    }
+
+    .top-column-02 .top-bg-img3 {
+        padding: 100px 0 0;
+        background-size: 50%;
+        background-position: top center;
+    }
+
+    .top-column-02 table td:nth-child(2),
+    .top-column-02 table td:nth-child(3),
+    .top-column-02 table td:nth-child(4) {
+        padding: 3px;
+    }
+
+    .top-column-03 table.tbl01 th:first-child {
+        width: 6em;
+    }
+
+    .top-column-03 table.tbl01 th:nth-child(2) {
+        width: 5em;
+    }
+
+    .top-column-03 div.tbl02-bg {
+        padding: 180px 0 0;
+        background-size: 40%;
+        background-position: top center;
+    }
+
+    .top-column-03 ul.li-blu {
+        width: 100%;
+        padding: 100px 0 0;
+        background-size: 50%;
+        background-position: top center;
+    }
+
+    .top-column-03 ul.li-blu li {
+        padding: 10px 0;
+        border-bottom: 1px solid #055fc4;
+        background: #fff;
+    }
+
+    .top-column-03 ul.li-blu li:first-child {
+        padding: 0;
+    }
+
+    .top-column-03 ul.li-blu li span {
+        border-bottom: none;
+    }
+
+    .top-column-03 .column-box-top-last .inner-btm {
+        padding: 2em 1em;
+    }
+
+    .top-column-03 .column-box-top-last>div>div p {
+        padding-top: 0;
+    }
+
+    /**case --------------**/
+    .case-box {
+        padding: 0 3% 1em;
+    }
+
+    .case-multi {
+        padding: 100px 3% 1em;
+    }
+
+    ul.li-case-link {
+        text-align: center;
+    }
+
+    ul.li-case-link li {
+        width: 90%;
+    }
+
+    .case-box .case-multi-data table th {
+        border-left: none;
+    }
+
+    .case-box .case-multi-data table td {
+        border-right: none;
+    }
+
+    .case-box .inner-point ul li {
+        display: block;
+    }
+
+    .case-box .inner-point ul li:nth-child(2),
+    .case-box .inner-point ul li:nth-child(3) {
+        padding-left: 0;
+    }
+
+    .case-box .inner-point ul li:nth-child(1),
+    .case-box .inner-point ul li:nth-child(2) {
+        padding-bottom: 1em;
+    }
+
+    .case-box .bg-img1,
+    .case-box .bg-img2,
+    .case-box .bg-img3 {
+        padding: 130px 0 0;
+        background-position: top center;
+    }
+
+    .case-box .bg-img1 {
+        padding: 150px 0 0;
+        background-size: 40%;
+    }
+
+    .case-box .bg-img1 table {
+        width: 100%;
+    }
+
+    .case-multi .bg-img1 {
+        background-position: top 20px center;
+    }
+
+    /***case state ***/
+    .case-aichi-7 .bg-img2,
+    .case-aichi-8 .bg-img2,
+    .case-kanagawa-15 .bg-img2,
+    .case-kanagawa-19 .bg-img1,
+    .case-nigata-1 .bg-img2,
+    .case-saitama-6 .bg-img1 {
+        background-size: 60%;
+    }
+
+    .case-hyogo-5 .bg-img2 {
+        background-size: 60%;
+        background-position: top 20px center;
+    }
+
+    .case-kanagawa-2 .bg-img1 {
+        background-size: 50%;
+        background-position: top center;
+    }
+
+    .case-kumamoto .bg-img1 {
+        padding: 130px 0 0;
+        background-size: 50%;
+    }
+
+    .case-chiba-4 .bg-img1,
+    .case-gunma-3 .bg-img1,
+    .case-hyogo-6 .bg-img2,
+    .case-hyogo-10 .bg-img2,
+    .case-kanagawa-7 .bg-img1,
+    .case-kanagawa-8 .bg-img1,
+    .case-kanagawa-11 .bg-img1,
+    .case-kanagawa-11 .bg-img2,
+    .case-kanagawa-15 .bg-img1,
+    .case-kanagawa-17 .bg-img1,
+    .case-mie-1 .bg-img2,
+    .case-nagano-1 .bg-img1,
+    .case-nagasaki-2 .bg-img1,
+    .case-nara-1 .bg-img1,
+    .case-nigata-1 .bg-img1,
+    .case-nigata-2 .bg-img2,
+    .case-osaka-3 .bg-img2,
+    .case-osaka-8 .bg-img2,
+    .case-saitama-7 .bg-img1,
+    .case-tokyo-8 .bg-img1,
+    .case-tokyo-8 .bg-img2 {
+        background-size: 50%;
+    }
+
+    .case-chiba-3 .bg-img2,
+    .case-kagawa-1 .bg-img2,
+    .case-hyogo-5 .bg-img1,
+    .case-hyogo-10 .bg-img1,
+    .case-osaka-4 .bg-img2,
+    .case-osaka-5 .bg-img1,
+    .case-osaka-6 .bg-img1,
+    .case-saitama-8 .bg-img2 {
+        background-size: 45%;
+    }
+
+    .case-aichi-6 .bg-img2,
+    .case-hyogo-2 .bg-img2,
+    .case-kanagawa-7 .bg-img2,
+    .case-kanagawa-16 .bg-img3,
+    .case-kanagawa-18 .bg-img2,
+    .case-kanagawa-19 .bg-img2,
+    .case-nagano-1 .bg-img2,
+    .case-nagasaki-1 .bg-img2,
+    .case-oita-3 .bg-img2,
+    .case-saitama-8 .bg-img1,
+    .case-shizuoka-2 .bg-img2,
+    .case-tokyo-7 .bg-img2 {
+        background-size: 40%;
+    }
+
+    .case-aichi-1 .bg-img1,
+    .case-aichi-2 .bg-img1,
+    .case-aichi-3 .bg-img1,
+    .case-aichi-4 .bg-img1,
+    .case-aichi-5 .bg-img1,
+    .case-aichi-5 .bg-img2,
+    .case-chiba-5 .bg-img1,
+    .case-ehime-1 .bg-img2,
+    .case-gifu-3 .bg-img2,
+    .case-gunma-1 .bg-img2,
+    .case-gunma-3 .bg-img2,
+    .case-hokkaido-1 .bg-img2,
+    .case-hokkaido-2 .bg-img2,
+    .case-kagawa-1 .bg-img2,
+    .case-kanagawa-1 .bg-img2,
+    .case-kanagawa-8 .bg-img2,
+    .case-kanagawa-9 .bg-img1,
+    .case-kanagawa-9 .bg-img2,
+    .case-kanagawa-12 .bg-img2,
+    .case-kanagawa-14 .bg-img1,
+    .case-kanagawa-14 .bg-img2,
+    .case-kanagawa-14 .bg-img3,
+    .case-mie-1 .bg-img1,
+    .case-mie-2 .bg-img2,
+    .case-nagasaki-2 .bg-img2,
+    .case-nigata-2 .bg-img1,
+    .case-oita-3 .bg-img1,
+    .case-oita-4 .bg-img1,
+    .case-okayama-1 .bg-img1,
+    .case-osaka-5 .bg-img2,
+    .case-osaka-6 .bg-img2,
+    .case-saitama-5 .bg-img2,
+    .case-saitama-9 .bg-img1,
+    .case-saitama-9 .bg-img2,
+    .case-shizuoka-1 .bg-img1,
+    .case-tottori-1 .bg-img1,
+    .case-tottori-1 .bg-img2,
+    .case-wakayama-1 .bg-img1 {
+        background-size: 35%;
+    }
+
+    .case-aichi-6 .bg-img1,
+    .case-gunma-2 .bg-img1,
+    .case-kanagawa-5 .bg-img1,
+    .case-kanagawa-6 .bg-img1,
+    .case-hyogo-7 .bg-img2,
+    .case-tokyo-2 .bg-img1,
+    .case-tokyo-2 .bg-img2,
+    .case-tokyo-3 .bg-img1,
+    .case-tokyo-3 .bg-img2,
+    .case-tokyo-5 .bg-img1,
+    .case-yamanashi-1 .bg-img1 {
+        background-size: 30%;
+    }
+
+    .case-chiba-4 .bg-img2 {
+        background-size: 25%;
+    }
+
+    .case-osaka-4 .bg-img1 {
+        background-size: 20%;
+    }
+
+    .case-osaka-1 .bg-img2 {
+        padding: 100px 0 0;
+    }
+
+    .case-chiba-4 .bg-img2,
+    .case-kanagawa-2 .bg-img2,
+    .case-kanagawa-6 .bg-img1,
+    .case-kanagawa-6 .bg-img2,
+    .case-kanagawa-6 .bg-img3,
+    .case-hyogo-4 .bg-img2,
+    .case-nagasaki-1 .bg-img2,
+    .case-oita-1 .bg-img2,
+    .case-saitama-9 .bg-img2,
+    .case-tokyo-7 .bg-img2,
+    .case-wakayama-1 .bg-img2 {
+        padding: 150px 0 0;
+    }
+
+    .case-gifu-3 .bg-img2,
+    .case-tokyo-1 .bg-img3,
+    .case-tokyo-4 .bg-img2,
+    .case-ibaraki-1 .bg-img2,
+    .case-shizuoka-2 .bg-img2 {
+        padding: 150px 0 0;
+        background-position: top 20px center;
+    }
+
+    .case-aichi-2 .bg-img2,
+    .case-hyogo-8 .bg-img2,
+    .case-hyogo-10 .bg-img2,
+    .case-kanagawa-16 .bg-img2,
+    .case-kanagawa-17 .bg-img3,
+    .case-saitama-8 .bg-img2 {
+        padding: 160px 0 0;
+        background-position: top 20px center;
+    }
+
+    .case-aichi-5 .bg-img1,
+    .case-aichi-6 .bg-img1,
+    .case-gifu-1 .bg-img2,
+    .case-kanagawa-5 .bg-img3,
+    .case-okayama-1 .bg-img2,
+    .case-okayama-1 .bg-img3,
+    .case-osaka-7 .bg-img1,
+    .case-tokyo-3 .bg-img1,
+    .case-tokyo-4 .bg-img1,
+    .case-tokyo-4 .bg-img2,
+    .case-yamanashi-1 .bg-img1 {
+        padding: 170px 0 0;
+    }
+
+    .case-kagawa-1 .bg-img2,
+    .case-kanagawa-9 .bg-img2,
+    .case-kanagawa-12 .bg-img2,
+    .case-nagasaki-2 .bg-img2,
+    .case-nigata-1 .bg-img2,
+    .case-oita-2 .bg-img2 {
+        padding: 170px 0 0;
+        background-position: top 20px center;
+    }
+
+    .case-aichi-1 .bg-img1,
+    .case-aichi-2 .bg-img1,
+    .case-aichi-3 .bg-img1,
+    .case-aichi-4 .bg-img1,
+    .case-aichi-6 .bg-img1,
+    .case-kanagawa-5 .bg-img1,
+    .case-kanagawa-8 .bg-img2,
+    .case-kanagawa-13 .bg-img1,
+    .case-tokyo-6 .bg-img2 {
+        padding: 180px 0 0;
+    }
+
+    .case-osaka-6 .bg-img2 {
+        padding: 180px 0 0;
+        background-position: top 20px center;
+    }
+
+    .case-kanagawa-9 .bg-img1,
+    .case-kanagawa-12 .bg-img1,
+    .case-osaka-4 .bg-img1,
+    .case-osaka-5 .bg-img1,
+    .case-osaka-6 .bg-img1,
+    .case-saitama-6 .bg-img2,
+    .case-saitama-7 .bg-img2,
+    .case-tokyo-5 .bg-img1 {
+        padding: 200px 0 0;
+    }
+
+    .case-chiba-5 ul.li-gre li.bg-img2 {
+        padding: 130px 0 10px 1.2em;
+        background-size: 45%;
+        background-position: top 10px center;
+    }
+
+    .case-gunma-2 ul.li-gre li.bg-img2 {
+        padding: 10px 0 110px 1.2em;
+        background-position: bottom 10px center;
+    }
+
+    .case-kanagawa-6 .bg-img3,
+    .case-oita-3 .bg-img2 {
+        background-position: top 20px center;
+    }
+
+    .case-kanagawa-13 ul.li-gre li.bg-img2 {
+        padding: 160px 0 10px 1.2em;
+        background-size: 35%;
+        background-position: top 20px center;
+    }
+}
+
+
+@media screen and (max-width: 430px) {}
+
+@media screen and (max-width: 375px) {
+    .hg_menu {
+        height: 540px;
+    }
+
+
+    .top-column-01 .top-bg-img1 {
+        padding: 100px 0 0;
+        background-size: 50%;
+    }
+
+    .top-column-01 .top-bg-img2 {
+        background-size: 65%;
+    }
+
+    .top-column-02 .top-bg-img3 {
+        padding: 100px 0 0;
+    }
+
+    .top-column-03 table.tbl01 th:first-child {
+        width: 4em;
+    }
+
+    .top-column-03 table.tbl01 th:nth-child(2) {
+        width: 4em;
+    }
+
+    .top-column-03 table.tbl01 th,
+    .top-column-03 table.tbl01 td,
+    .top-column-03 table.tbl03 th,
+    .top-column-03 table.tbl03 td {
+        padding: 3px;
+    }
+
+    .top-column-03 div.tbl02-bg {
+        padding: 150px 0 0;
+    }
+
+    .top-column-03 .column-box-top-last>div>div p {
+        width: 70%;
+    }
+
+    /**case --------------**/
+    .case-box {
+        padding: 0 3% 1em;
+    }
+
+    .case-multi {
+        padding: 80px 3% 1em;
+    }
+
+    .case-box .inner-in {
+        padding: 1em 0;
+    }
+
+    .case-box .inner-in-last {
+        padding: 1em 0 0;
+    }
+
+    .case-box .tb-line {
+        padding: 20px 0 0;
+    }
+
+    .case-box .bg-img1 {
+        padding: 130px 0 0;
+    }
+
+    .case-kumamoto .bg-img1 {
+        padding: 110px 0 0;
+        background-size: 60%;
+    }
+
+    .case-chiba-2 .bg-img2,
+    .case-miyagi-1 .bg-img2,
+    .case-osaka-3 .bg-img2,
+    .case-shizuoka-3 .bg-img2 {
+        background-size: 60%;
+    }
+
+    .case-kanagawa-1 .bg-img1,
+    .case-kanagawa-1 .bg-img2,
+    .case-mie-3 .bg-img1,
+    .case-osaka-1 .bg-img1,
+    .case-chiba-1 .bg-img1,
+    .case-chiba-3 .bg-img1,
+    .case-fukuoka-1 .bg-img1,
+    .case-ibaraki-1 .bg-img1,
+    .case-kyoto-1 .bg-img1,
+    .case-tokyo-4 .bg-img1,
+    .case-saitama-1 .bg-img1,
+    .case-okayama-2 .bg-img1,
+    .case-oita-1 .bg-img1,
+    .case-osaka-3 .bg-img1,
+    .case-tochigi-1 .bg-img1 {
+        background-size: 50%;
+    }
+
+    .case-aichi-2 .bg-img1,
+    .case-aichi-3 .bg-img1,
+    .case-fukuoka-1 .bg-img2,
+    .case-hyogo-3 .bg-img1,
+    .case-miyagi-2 .bg-img2,
+    .case-tokyo-2 .bg-img2,
+    .case-yamanashi-1 .bg-img1 {
+        background-size: 40%;
+    }
+
+    .case-gifu-3 .bg-img1,
+    .case-kyoto-1 .bg-img2,
+    .case-kyoto-2 .bg-img1,
+    .case-kyoto-2 .bg-img2,
+    .case-tochigi-1 .bg-img2,
+    .case-tokyo-3 .bg-img2,
+    .case-saitama-10 .bg-img1 {
+        background-size: 35%;
+    }
+
+    .case-okayama-2 .bg-img2,
+    .case-saitama-10 .bg-img2 {
+        background-size: 30%;
+    }
+
+    .case-kanagawa-15 .bg-img2,
+    .case-saitama-5 .bg-img2 {
+        padding: 110px 0 0;
+    }
+
+    .case-hokkaido-1 .bg-img1,
+    .case-kanagawa-1 .bg-img1,
+    .case-kanagawa-19 .bg-img2,
+    .case-kyoto-2 .bg-img1,
+    .case-nagano-1 .bg-img2,
+    .case-nagasaki-1 .bg-img1,
+    .case-saitama-3 .bg-img1,
+    .case-shizuoka-3 .bg-img2,
+    .case-tokyo-7 .bg-img1 {
+        padding: 140px 0 0;
+    }
+
+    .case-gifu-1 .bg-img1,
+    .case-gifu-2 .bg-img1,
+    .case-gifu-3 .bg-img1,
+    .case-hokkaido-2 .bg-img1,
+    .case-hyogo-1 .bg-img1,
+    .case-hyogo-2 .bg-img1,
+    .case-hyogo-10 .bg-img1,
+    .case-mie-1 .bg-img1,
+    .case-nigata-2 .bg-img1,
+    .case-okayama-1 .bg-img1,
+    .case-oita-2 .bg-img1,
+    .case-oita-4 .bg-img1,
+    .case-osaka-1 .bg-img1,
+    .case-osaka-2 .bg-img1,
+    .case-osaka-3 .bg-img1,
+    .case-osaka-7 .bg-img1,
+    .case-saitama-1 .bg-img1,
+    .case-saitama-2 .bg-img1,
+    .case-saitama-4 .bg-img1,
+    .case-saitama-6 .bg-img1,
+    .case-saitama-7 .bg-img1,
+    .case-saitama-8 .bg-img1,
+    .case-saitama-9 .bg-img1,
+    .case-saitama-10 .bg-img1,
+    .case-saitama-10 .bg-img2,
+    .case-shizuoka-1 .bg-img2,
+    .case-tochigi-1 .bg-img1,
+    .case-tochigi-1 .bg-img2,
+    .case-tokyo-1 .bg-img1,
+    .case-tokyo-2 .bg-img1,
+    .case-tokyo-3 .bg-img1,
+    .case-tokyo-5 .bg-img1,
+    .case-tokyo-5 .bg-img2,
+    .case-tottori-1 .bg-img1,
+    .case-yamanashi-1 .bg-img1,
+    .case-aichi-1 .bg-img1 {
+        padding: 150px 0 0;
+    }
+
+    .case-gifu-2 .bg-img2,
+    .case-hyogo-9 .bg-img1,
+    .case-kanagawa-14 .bg-img1,
+    .case-kyoto-2 .bg-img2,
+    .case-oita-3 .bg-img1,
+    .case-oita-3 .bg-img2,
+    .case-shizuoka-1 .bg-img1,
+    .case-tokyo-4 .bg-img1,
+    .case-yamanashi-1 .bg-img1 {
+        padding: 160px 0 0;
+    }
+
+    .case-hyogo-8 .bg-img1 {
+        padding: 170px 0 0;
+    }
+}
+
+
+@media screen and (max-width: 320px) {
+    .top .quotation-step .flow li {
+        height: 320px;
+    }
+
+    .top .quotation-step .flow li dl dd p {
+        font-size: 118%;
+    }
+
+    .hg_menu {
+        height: 460px;
+    }
+
+
+    .useful-contents .useful-common .char {
+        top: -46px;
+    }
+}
+
+/********** 2021-04-05追記 **********/
+@media only screen and (max-width: 740px) {
+    #button-area .btn-entry.opacity-img img {
+        visibility: hidden;
+    }
+
+    #main #area.contents-wrap {
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 599px) {
+    .new-bnr-item {
+        width: 100% !important;
+    }
+}

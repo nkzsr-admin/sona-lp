@@ -1,0 +1,105 @@
+@charset "shift-jis";
+
+/**
+ *
+ * Column18 Style css
+ *
+**/
+
+.column-box .inner p{
+	margin-bottom:20px;
+}
+.column-box .inner-w{
+	padding-bottom:0.6em;
+}
+.column-box h4.h-w20{
+	padding:0.4em 0.5em;
+}
+
+.column-box div.bg-img1{
+	background:url(../column/gaihekicolumn018/img/toryo.png) no-repeat top right 10%;
+	padding:15px 35% 20px 0;
+}
+.column-box div.bg-img2{
+	background:url(../column/gaihekicolumn018/img/zeinuki.png) no-repeat top 15px right 6%;
+	padding:0 35% 0 0;
+}
+.column-box div.bg-img3{
+	background:url(../column/gaihekicolumn018/img/taisaku.png) no-repeat top right 10%;
+	padding:15px 45% 20px 0;
+}
+
+.column-box table{
+	width:90%;
+	margin:0 5% 20px;
+}
+.column-box table thead{
+	background:#f9efdf;
+}
+.column-box table.tbl-1 tbody tr:last-child{
+	background:#e5f3fc;
+}
+
+.column-box .inner-last ol.ol-num li{
+	font-size:1.1em;
+	font-weight:700;
+	width:45%;
+	border-bottom:1px solid #055fc4;
+}
+.column-box .inner-last > div > div p{
+	padding:20px 0;
+}
+
+
+@media(max-width:480px){
+h2.column-title{
+	font-size:16px;
+}
+.column-box h3{
+	font-size:16px;
+	padding:0.5em;
+}
+
+.column-box div.bg-img1,
+.column-box div.bg-img2,
+.column-box div.bg-img3{
+	background-position:top center;
+	background-size:30%;
+	padding:120px 0 0;
+}
+.column-box div.bg-img3{
+	background-size:40%;
+}
+.column-box div.bg-img1 p,
+.column-box div.bg-img3 p{
+	background:#f0faec;
+}
+.column-box div.bg-img2 p{
+	background:#fff;
+}
+
+.column-box table{
+	width:100%;
+	margin:0 0 20px;
+}
+.column-box table th,
+.column-box table td{
+	padding:3px;
+}
+.column-box table td{
+	text-align:left;
+}
+
+.column-box .inner-last ol.ol-num li{
+	width:90%;
+}
+.column-box .inner-last > div > div p{
+	padding:20px 0 0;
+}
+}
+
+@media(max-width:375px){
+.column-box div.bg-img2{
+	background-size:40%;
+}
+}
