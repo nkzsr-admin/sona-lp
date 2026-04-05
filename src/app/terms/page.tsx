@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "利用規約 | sona",
+  robots: "noindex, nofollow",
 };
 
 const articles = [

@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "特定商取引法に基づく表記 | sona",
+  robots: "noindex, nofollow",
 };
 
 const rows = [

@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "プライバシーポリシー | sona",
+  robots: "noindex, nofollow",
 };
 
 export default function PrivacyPage() {
