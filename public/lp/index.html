@@ -2694,11 +2694,7 @@
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data)
         }).then(function(){
-          $('#contactForm')[0].reset();
-          $btn.text('送信完了しました');
-          gtag_report_conversion();
-          $('#contactForm').hide();
-          $('<div id="formThankYou" style="text-align:center;padding:40px 20px;"><p style="font-size:24px;font-weight:bold;color:#1a73e8;margin-bottom:12px;">お問い合わせありがとうございます</p><p style="color:#666;">内容を確認のうえ、担当者よりご連絡いたします。</p></div>').insertAfter('#contactForm');
+          window.location.href = '/lp/thank-you.html';
         }).catch(function(){
           $btn.prop('disabled', false).text('送信する');
           alert('送信に失敗しました。お手数ですが、もう一度お試しください。');

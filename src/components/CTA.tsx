@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState, FormEvent } from "react";
+import { useRouter } from "next/navigation";
 
 const ease = [0.16, 1, 0.3, 1] as [number, number, number, number];
 
@@ -74,8 +75,8 @@ function MagneticButton({ children }: { children: React.ReactNode }) {
 }
 
 function ContactForm() {
-  const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const router = useRouter();
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -89,21 +90,12 @@ function ContactForm() {
         body: JSON.stringify(data),
         mode: "no-cors",
       });
-      setSubmitted(true);
+      router.push("/thank-you");
     } catch {
       alert("送信に失敗しました。もう一度お試しください。");
+      setSubmitting(false);
     }
-    setSubmitting(false);
   };
-
-  if (submitted) {
-    return (
-      <div className="text-center py-10">
-        <p className="font-syne font-[800] text-2xl text-teal mb-3">お問い合わせありがとうございます</p>
-        <p className="font-noto text-offwhite/80">内容を確認のうえ、担当者よりご連絡いたします。</p>
-      </div>
-    );
-  }
 
   const inputClass = "w-full bg-white/10 border border-offwhite/20 rounded-lg px-4 py-3 text-offwhite placeholder-offwhite/30 font-noto text-sm focus:outline-none focus:border-teal transition-colors";
   const labelClass = "block font-noto text-sm text-offwhite/70 mb-2";
