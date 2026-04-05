@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function ThankYouPage() {
   return (
-    <div className="!cursor-auto [&_a]:!cursor-pointer [&_button]:!cursor-pointer">
+    <div className="!cursor-auto [&_a]:!cursor-pointer [&_button]:!cursor-pointer min-h-screen flex flex-col">
       <header className="bg-navy py-4 px-6 md:px-[4vw]">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <Link href="/" className="font-syne font-[800] text-2xl text-offwhite no-underline tracking-tighter">
