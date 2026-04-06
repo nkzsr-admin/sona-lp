@@ -64,14 +64,14 @@ export default function RootLayout({
 
         {/* Google Ads + GA4 */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-0G6DJZMGLW"
+          src="https://www.googletagmanager.com/gtag/js?id=G-ME4W925TCL"
           strategy="afterInteractive"
         />
         <Script id="gtag-init" strategy="afterInteractive">{`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-0G6DJZMGLW');
+          gtag('config', 'G-ME4W925TCL');
           gtag('config', 'AW-17922920559');
           function gtag_report_conversion(url) {
             var callback = function () {

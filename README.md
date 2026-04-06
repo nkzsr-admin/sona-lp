@@ -101,7 +101,7 @@ sona-lp/
 
 | サービス | ID | 設定場所 |
 |---|---|---|
-| Google Analytics (GA4) | `G-0G6DJZMGLW` | `layout.tsx` / LP `<head>` |
+| Google Analytics (GA4) | `G-ME4W925TCL` | `layout.tsx` / LP `<head>` |
 | Google Ads | `AW-17922920559` | `layout.tsx` / LP `<head>` |
 | Google Ads CV | `CjeSCNes340cEO-gqOJC` | `layout.tsx` / LP `<head>` |
 | Meta Pixel | `936399392096992` | `layout.tsx` / LP `<head>` |
