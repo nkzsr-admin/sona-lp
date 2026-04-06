@@ -489,8 +489,8 @@ Syne:wght@400;600;800
 - `data-cursor-theme="dark"`
 
 **実装注意:**
-- CTAクリック時にコンバージョントラッキング発火（Meta Pixel + Google Ads）
-- `onclick="gtag_report_conversion('https://lin.ee/xlPnjXK'); typeof fbq === 'function' && fbq('track', 'Lead');"`
+- CTAクリック時にコンバージョントラッキング発火（Google Ads）
+- `onclick="gtag_report_conversion('https://lin.ee/FYl4bJd')"`
 
 ---
 
@@ -572,8 +572,10 @@ Syne:wght@400;600;800
   - 比較テーブル: 横スクロールまたは縦スタック
 
 ### トラッキングコード（`<head>` に追加）
-- Meta Pixel: `936399392096992`
-- Google Ads: `AW-17922920559`
+- GA4: `G-ME4W925TCL`（LPのみ）
+- Google Ads: `AW-17922920559`（LPのみ）
+- Clarity: `w3eq1degov`（LPのみ）
+- ※ Meta Pixel は削除済み（FBアカウント永久停止）
 - コンバージョン: LINE CTA クリック時に `gtag_report_conversion()` + `fbq('track', 'Lead')` 発火
 
 ---
@@ -587,7 +589,7 @@ Syne:wght@400;600;800
 | **Animation** | Framer Motion | スクロールアニメーション、ホバーエフェクト |
 | **3D/WebGL** | 生WebGL（ライブラリ不使用） | ヒーローのネビュラシェーダー |
 | **Analytics** | Google Analytics 4 | PV・滞在時間・流入経路 |
-| **広告トラッキング** | Meta Pixel + Google Ads | コンバージョン計測（LINE CTAクリック） |
+| **広告トラッキング** | Google Ads | コンバージョン計測（LINE CTAクリック） |
 | **Deploy** | GitHub Pages | `sona-lp` リポジトリ、push で自動反映 |
 | **Domain** | sona-jp.com | GitHub Pagesにカスタムドメイン接続済み |
 

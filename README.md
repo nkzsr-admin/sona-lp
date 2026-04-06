@@ -63,7 +63,7 @@ sona-lp/
 │           └── feature_04.svg
 ├── src/
 │   ├── app/
-│   │   ├── layout.tsx     # 共通レイアウト（OGP・gtag・Meta Pixel）
+│   │   ├── layout.tsx     # 共通レイアウト（OGP・Google Fonts）
 │   │   ├── page.tsx       # ページ構成（コンポーネントの並び順）
 │   │   └── globals.css    # グローバルCSS
 │   └── components/        # セクション別コンポーネント
@@ -101,10 +101,10 @@ sona-lp/
 
 | サービス | ID | 設定場所 |
 |---|---|---|
-| Google Analytics (GA4) | `G-ME4W925TCL` | `layout.tsx` / LP `<head>` |
-| Google Ads | `AW-17922920559` | `layout.tsx` / LP `<head>` |
-| Google Ads CV | `CjeSCNes340cEO-gqOJC` | `layout.tsx` / LP `<head>` |
-| Meta Pixel | `936399392096992` | `layout.tsx` / LP `<head>` |
+| Google Analytics (GA4) | `G-ME4W925TCL` | LP `<head>` のみ（HPは削除済み） |
+| Google Ads | `AW-17922920559` | LP `<head>` のみ（HPは削除済み） |
+| Google Ads CV | `CjeSCNes340cEO-gqOJC` | LP `<head>` のみ |
+| Microsoft Clarity | `w3eq1degov` | LP `<head>` のみ（HPは削除済み） |
 | LINE公式 | `https://lin.ee/FYl4bJd` | `CTA.tsx` / LP各CTAボタン |
 
 ## お問い合わせフォーム
