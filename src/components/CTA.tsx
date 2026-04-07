@@ -116,7 +116,7 @@ function ContactForm() {
       </div>
       <div>
         <label className={labelClass}>電話番号</label>
-        <input type="tel" name="phone" placeholder="例）03-0000-0000" className={inputClass} />
+        <input type="tel" name="tel" placeholder="例）03-0000-0000" className={inputClass} />
       </div>
       <div>
         <label className={labelClass}>お問い合わせ理由</label>
@@ -131,6 +131,28 @@ function ContactForm() {
           <option value="見積り・料金について">見積り・料金について</option>
           <option value="その他">その他</option>
         </select>
+      </div>
+      <div>
+        <label className={labelClass}>
+          ご相談希望日時
+          <span className="bg-offwhite/10 text-offwhite/40 text-xs ml-2 px-2 py-0.5 rounded">任意</span>
+        </label>
+        <p className="font-noto text-offwhite/30 text-xs mb-3">オンラインでのご相談をご希望の場合、候補日時をお選びください。</p>
+        {[1, 2, 3].map((n) => (
+          <div key={n} className="mb-3">
+            <span className="block font-noto text-offwhite/40 text-xs mb-1">第{n}希望</span>
+            <div className="flex gap-2">
+              <input type="date" name={`date${n}`} className={`${inputClass} flex-1`} />
+              <select name={`time${n}`} className={`${inputClass} flex-1 appearance-none`}>
+                <option value="">時間帯</option>
+                <option value="9:00〜12:00">9:00〜12:00</option>
+                <option value="12:00〜15:00">12:00〜15:00</option>
+                <option value="15:00〜18:00">15:00〜18:00</option>
+                <option value="18:00以降">18:00以降</option>
+              </select>
+            </div>
+          </div>
+        ))}
       </div>
       <div>
         <label className={labelClass}>お問い合わせ内容</label>

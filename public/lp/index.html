@@ -1186,6 +1186,7 @@
     .form-group input[type="text"],
     .form-group input[type="email"],
     .form-group input[type="tel"],
+    .form-group input[type="date"],
     .form-group select,
     .form-group textarea {
       width: 100%;
@@ -2560,6 +2561,49 @@
           </select>
         </div>
         <div class="form-group">
+          <label>ご相談希望日時 <span style="display:inline-block; background:#4a5568; color:#ccc; padding:2px 8px; border-radius:3px; font-size:11px; font-weight:700; margin-left:8px;">任意</span></label>
+          <p style="font-size:13px; color:#999; margin-bottom:12px;">オンラインでのご相談をご希望の場合、候補日時をお選びください。</p>
+          <div style="margin-bottom:12px;">
+            <label style="font-size:13px; font-weight:400; color:#ccc; margin-bottom:4px;">第1希望</label>
+            <div style="display:flex; gap:10px;">
+              <input type="date" name="date1" id="f-date1" style="flex:1;">
+              <select name="time1" id="f-time1" style="flex:1;">
+                <option value="">時間帯</option>
+                <option value="9:00〜12:00">9:00〜12:00</option>
+                <option value="12:00〜15:00">12:00〜15:00</option>
+                <option value="15:00〜18:00">15:00〜18:00</option>
+                <option value="18:00以降">18:00以降</option>
+              </select>
+            </div>
+          </div>
+          <div style="margin-bottom:12px;">
+            <label style="font-size:13px; font-weight:400; color:#ccc; margin-bottom:4px;">第2希望</label>
+            <div style="display:flex; gap:10px;">
+              <input type="date" name="date2" id="f-date2" style="flex:1;">
+              <select name="time2" id="f-time2" style="flex:1;">
+                <option value="">時間帯</option>
+                <option value="9:00〜12:00">9:00〜12:00</option>
+                <option value="12:00〜15:00">12:00〜15:00</option>
+                <option value="15:00〜18:00">15:00〜18:00</option>
+                <option value="18:00以降">18:00以降</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label style="font-size:13px; font-weight:400; color:#ccc; margin-bottom:4px;">第3希望</label>
+            <div style="display:flex; gap:10px;">
+              <input type="date" name="date3" id="f-date3" style="flex:1;">
+              <select name="time3" id="f-time3" style="flex:1;">
+                <option value="">時間帯</option>
+                <option value="9:00〜12:00">9:00〜12:00</option>
+                <option value="12:00〜15:00">12:00〜15:00</option>
+                <option value="15:00〜18:00">15:00〜18:00</option>
+                <option value="18:00以降">18:00以降</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
           <label>お問い合わせ内容</label>
           <textarea name="message" id="f-message" placeholder="お気軽にご記入ください"></textarea>
         </div>
@@ -2669,6 +2713,12 @@
           email: $('#f-email').val(),
           tel: $('#f-tel').val(),
           reason: $('#f-reason').val(),
+          date1: $('#f-date1').val(),
+          time1: $('#f-time1').val(),
+          date2: $('#f-date2').val(),
+          time2: $('#f-time2').val(),
+          date3: $('#f-date3').val(),
+          time3: $('#f-time3').val(),
           message: $('#f-message').val()
         };
         fetch('https://script.google.com/macros/s/AKfycby6SMKWLiesnkRKyA--YUIoxz1MDZPtnABINs-oeUac98RaiaQ4exHLTAh0sCJzcPBq/exec', {

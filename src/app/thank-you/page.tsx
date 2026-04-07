@@ -36,6 +36,9 @@ export default function ThankYouPage() {
           <p className="font-noto text-navy/70 text-base mb-4 leading-relaxed">
             内容を確認のうえ、担当者より<br />1営業日以内にご連絡いたします。
           </p>
+          <p className="font-noto text-navy/50 text-sm mb-4 leading-relaxed">
+            ご相談希望日時をいただいた場合は、<br />ご希望に沿ってオンライン相談の日程を調整し、メールにてご案内いたします。
+          </p>
           <p className="font-noto text-navy/40 text-sm mb-12">
             ※ nakaza@sona-jp.com からご連絡いたします。<br />迷惑メールフォルダもご確認ください。
           </p>
