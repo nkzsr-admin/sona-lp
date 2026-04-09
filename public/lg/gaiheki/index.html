@@ -863,8 +863,9 @@ var DEPLOY_URL = 'https://script.google.com/macros/s/AKfycbwyH3ig8iaWb1xIWis4piZ
     var emailVal = form.querySelector('input[name="email"]').value.trim();
     // バリデーション
     if (!prefSelect || prefSelect.selectedIndex <= 0) { alert('都道府県を選択してください。'); return; }
-    if (!nameVal) { alert('お名前を入力してください。'); return; }
-    if (!phoneVal || !/^[0-9\-]{10,13}$/.test(phoneVal)) { alert('電話番号を正しく入力してください。（例: 090-1234-5678）'); return; }
+    if (!nameVal || nameVal.length < 2) { alert('お名前を入力してください。'); return; }
+    var phoneDigits = phoneVal.replace(/[-\s]/g, '');
+    if (!phoneDigits || !/^0\d{9,10}$/.test(phoneDigits)) { alert('電話番号を正しく入力してください。（例: 090-1234-5678）'); return; }
     if (!emailVal || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) { alert('メールアドレスを正しく入力してください。'); return; }
     btn.disabled = true;
     btn.textContent = '送信中...';

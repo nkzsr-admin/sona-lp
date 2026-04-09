@@ -82,9 +82,10 @@ if (form) {
     var pv = form.querySelector('input[name="phone"]').value.trim();
     var tv = form.querySelector('select[name="type"]');
     var mv = form.querySelector('textarea[name="message"]').value.trim();
-    if (!nv) { alert('お名前を入力してください。'); return; }
+    if (!nv || nv.length < 2) { alert('お名前を入力してください。'); return; }
     if (!ev || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(ev)) { alert('メールアドレスを正しく入力してください。'); return; }
-    if (pv && !/^[0-9\-]{10,13}$/.test(pv)) { alert('電話番号を正しく入力してください。'); return; }
+    var phoneDigits = pv.replace(/[-\s]/g, '');
+    if (pv && !/^0\d{9,10}$/.test(phoneDigits)) { alert('電話番号を正しく入力してください。'); return; }
     if (!tv || !tv.value) { alert('お問い合わせ種別を選択してください。'); return; }
     if (!mv) { alert('お問い合わせ内容を入力してください。'); return; }
     btn.disabled = true; btn.textContent = '送信中...';
