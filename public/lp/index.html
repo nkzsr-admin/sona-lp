@@ -719,6 +719,10 @@
       overflow: hidden;
       text-align: center;
       transition: transform 0.3s, box-shadow 0.3s;
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
     }
     .pricing-card:hover {
       transform: translateY(-5px);
@@ -2167,7 +2171,7 @@
       </div>
 
       <div class="pricing-cards" style="display:grid; grid-template-columns:1fr 1fr; gap:20px; max-width:900px; margin:0 auto;">
-        <div class="pricing-card">
+        <a href="#contact" class="pricing-card">
           <div class="pricing-head">
             <h3>スポットプラン</h3>
             <p class="period">まず1つ試したい方に</p>
@@ -2185,8 +2189,8 @@
               <li>契約期間の縛りなし</li>
             </ul>
           </div>
-        </div>
-        <div class="pricing-card">
+        </a>
+        <a href="#contact" class="pricing-card">
           <div class="pricing-head">
             <h3>おまかせライト</h3>
             <p class="period">手軽に始めたい方に</p>
@@ -2205,8 +2209,8 @@
               <li>契約期間：1ヶ月〜</li>
             </ul>
           </div>
-        </div>
-        <div class="pricing-card recommended">
+        </a>
+        <a href="#contact" class="pricing-card recommended">
           <div class="pricing-head">
             <h3>おまかせスタンダード</h3>
             <p class="period">丸投げしたい方に</p>
@@ -2226,8 +2230,8 @@
               <li>契約期間：1ヶ月〜</li>
             </ul>
           </div>
-        </div>
-        <div class="pricing-card">
+        </a>
+        <a href="#contact" class="pricing-card">
           <div class="pricing-head">
             <h3>セルフプラン</h3>
             <p class="period">AI環境を自分で使いたい方に</p>
@@ -2247,7 +2251,7 @@
               <li>月次活用レポート</li>
             </ul>
           </div>
-        </div>
+        </a>
       </div>
 
     </div>
