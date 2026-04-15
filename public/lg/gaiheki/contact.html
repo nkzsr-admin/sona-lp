@@ -84,8 +84,16 @@ if (form) {
     var mv = form.querySelector('textarea[name="message"]').value.trim();
     if (!nv || nv.length < 2) { alert('お名前を入力してください。'); return; }
     if (!ev || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(ev)) { alert('メールアドレスを正しく入力してください。'); return; }
-    var phoneDigits = pv.replace(/[-\s]/g, '');
-    if (pv && !/^0\d{9,10}$/.test(phoneDigits)) { alert('電話番号を正しく入力してください。'); return; }
+    // 電話番号（任意）: 入力された場合のみ緩やかにバリデーション
+    if (pv) {
+      var phoneDigits = pv.replace(/[^\d]/g, '');
+      if (phoneDigits.length === 11 && phoneDigits.startsWith('81')) { phoneDigits = '0' + phoneDigits.substring(2); }
+      if (phoneDigits.length === 12 && phoneDigits.startsWith('81')) { phoneDigits = '0' + phoneDigits.substring(2); }
+      if (phoneDigits.length === 10 && !phoneDigits.startsWith('0')) { phoneDigits = '0' + phoneDigits; }
+      if (phoneDigits.length < 10 || phoneDigits.length > 11 || !phoneDigits.startsWith('0')) {
+        alert('電話番号を正しく入力してください。'); return;
+      }
+    }
     if (!tv || !tv.value) { alert('お問い合わせ種別を選択してください。'); return; }
     if (!mv) { alert('お問い合わせ内容を入力してください。'); return; }
     btn.disabled = true; btn.textContent = '送信中...';

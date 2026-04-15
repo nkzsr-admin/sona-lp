@@ -864,8 +864,14 @@ var DEPLOY_URL = 'https://script.google.com/macros/s/AKfycbwyH3ig8iaWb1xIWis4piZ
     // バリデーション
     if (!prefSelect || prefSelect.selectedIndex <= 0) { alert('都道府県を選択してください。'); return; }
     if (!nameVal || nameVal.length < 2) { alert('お名前を入力してください。'); return; }
-    var phoneDigits = phoneVal.replace(/[-\s]/g, '');
-    if (!phoneDigits || !/^0\d{9,10}$/.test(phoneDigits)) { alert('電話番号を正しく入力してください。（例: 090-1234-5678）'); return; }
+    // 電話番号: 数字以外を全除去し、+81や先頭0抜けにも柔軟対応
+    var phoneDigits = phoneVal.replace(/[^\d]/g, '');
+    if (phoneDigits.length === 11 && phoneDigits.startsWith('81')) { phoneDigits = '0' + phoneDigits.substring(2); }
+    if (phoneDigits.length === 12 && phoneDigits.startsWith('81')) { phoneDigits = '0' + phoneDigits.substring(2); }
+    if (phoneDigits.length === 10 && !phoneDigits.startsWith('0')) { phoneDigits = '0' + phoneDigits; }
+    if (!phoneDigits || phoneDigits.length < 10 || phoneDigits.length > 11 || !phoneDigits.startsWith('0')) {
+      alert('電話番号を正しく入力してください。（例: 090-1234-5678）'); return;
+    }
     if (!emailVal || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) { alert('メールアドレスを正しく入力してください。'); return; }
     btn.disabled = true;
     btn.textContent = '送信中...';
