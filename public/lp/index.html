@@ -1209,6 +1209,23 @@
       outline: none;
       border-color: #2a6bc6;
     }
+    /* iOS Safari: date input placeholder visibility fix */
+    .form-group input[type="date"]::-webkit-datetime-edit,
+    .form-group input[type="date"]::-webkit-datetime-edit-year-field,
+    .form-group input[type="date"]::-webkit-datetime-edit-month-field,
+    .form-group input[type="date"]::-webkit-datetime-edit-day-field,
+    .form-group input[type="date"]::-webkit-datetime-edit-text,
+    .form-group input[type="date"]::-webkit-datetime-edit-fields-wrapper {
+      color: rgba(255, 255, 255, 0.75);
+    }
+    .form-group input[type="date"]:focus::-webkit-datetime-edit,
+    .form-group input[type="date"]:focus::-webkit-datetime-edit-year-field,
+    .form-group input[type="date"]:focus::-webkit-datetime-edit-month-field,
+    .form-group input[type="date"]:focus::-webkit-datetime-edit-day-field,
+    .form-group input[type="date"]:focus::-webkit-datetime-edit-text,
+    .form-group input[type="date"]:focus::-webkit-datetime-edit-fields-wrapper {
+      color: #fff;
+    }
     .form-group textarea {
       height: 150px;
       resize: vertical;
