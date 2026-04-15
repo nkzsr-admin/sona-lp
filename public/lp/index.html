@@ -1209,13 +1209,23 @@
       outline: none;
       border-color: #2a6bc6;
     }
+    /* iOS Safari date input: reset appearance for consistent layout */
+    .form-group input[type="date"] {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      min-height: 52px;
+      line-height: 1.4;
+    }
     /* iOS Safari date input placeholder: label overlay method */
     .form-group .date-wrap {
       position: relative;
       flex: 1;
+      min-width: 0;
     }
     .form-group .date-wrap .date-input {
       width: 100%;
+      box-sizing: border-box;
       color: transparent;
     }
     .form-group .date-wrap .date-input.has-value,
@@ -1231,6 +1241,7 @@
       pointer-events: none;
       font-size: 15px;
       font-family: "Noto Sans JP", sans-serif;
+      line-height: 1;
     }
     .form-group .date-wrap .date-input.has-value ~ .date-placeholder,
     .form-group .date-wrap .date-input:focus ~ .date-placeholder {
