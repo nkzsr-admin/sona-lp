@@ -58,7 +58,7 @@ export default function HowItWorks() {
               initial={{ opacity: 0, y: 40 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 1, delay: 0.1 + i * 0.1, ease }}
-              className="relative bg-white rounded-2xl p-6 md:p-8 md:hover:-translate-y-2 transition-transform duration-500"
+              className="relative bg-white rounded-2xl p-6 md:p-8 transition-transform duration-500"
               data-hover
             >
               <div className="flex items-center gap-4 mb-6">

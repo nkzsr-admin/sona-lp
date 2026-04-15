@@ -139,7 +139,7 @@ export default function Pricing() {
               initial={{ opacity: 0, y: 40 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 1, delay: 0.2 + i * 0.1, ease }}
-              className={`bg-white rounded-2xl p-6 md:p-8 border-2 ${plan.border} relative hover:shadow-[0_0_30px_rgba(43,138,126,0.1)] md:hover:scale-[1.02] md:hover:-translate-y-1 transition-all duration-500 flex flex-col`}
+              className={`bg-white rounded-2xl p-6 md:p-8 border-2 ${plan.border} relative hover:shadow-[0_0_30px_rgba(43,138,126,0.1)] transition-all duration-500 flex flex-col`}
               data-hover
             >
               {plan.popular && (
