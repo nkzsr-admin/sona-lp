@@ -139,9 +139,29 @@ select.fvform-sm-control { height: auto !important; min-height: 48px !important;
 #js-fixedright .fvform-sm-control { padding: 8px; margin-bottom: 4px; }
 #js-fixedright .fvform-sm_btng { margin-top: 4px; margin-bottom: 0; }
 #js-fixedright .px1-sm { padding-top: 4px; padding-bottom: 2px; }
+
+/* ===== 送信中オーバーレイ ===== */
+.submit-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 9999; display: none; align-items: center; justify-content: center; }
+.submit-overlay.active { display: flex; }
+.submit-overlay__box { background: #fff; border-radius: 12px; padding: 32px 24px; text-align: center; max-width: 320px; width: 85%; box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
+.submit-overlay__spinner { width: 48px; height: 48px; border: 4px solid #f26522; border-top-color: transparent; border-radius: 50%; animation: spinner-rotate 0.8s linear infinite; margin: 0 auto 16px; }
+.submit-overlay__text { font-size: 16px; font-weight: bold; color: #333; margin: 0; }
+.submit-overlay__subtext { font-size: 13px; color: #666; margin: 8px 0 0; }
+.submit-overlay.success .submit-overlay__spinner { border: 4px solid #4CAF50; border-top-color: transparent; animation: none; position: relative; }
+.submit-overlay.success .submit-overlay__spinner::after { content: '✓'; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: #4CAF50; font-size: 32px; font-weight: bold; }
+@keyframes spinner-rotate { to { transform: rotate(360deg); } }
 </style>
 </head>
 <body>
+
+<!-- ===== 送信中オーバーレイ ===== -->
+<div id="submitOverlay" class="submit-overlay" role="alert" aria-live="polite">
+  <div class="submit-overlay__box">
+    <div class="submit-overlay__spinner"></div>
+    <p class="submit-overlay__text" id="submitOverlayText">送信中です...</p>
+    <p class="submit-overlay__subtext" id="submitOverlaySubtext">ページを閉じずにお待ちください</p>
+  </div>
+</div>
 
 <div class="l-fixedright">
 
@@ -873,12 +893,34 @@ document.querySelectorAll('a[href="#sp-form"]').forEach(function(a) {
 // ===== フォーム送信処理 =====
 var DEPLOY_URL = 'https://script.google.com/macros/s/AKfycbwyH3ig8iaWb1xIWis4piZE2brsRTrJCIFZm8Bc6AxH1szKDq4diUQz7jDQqmvYKhT0_Q/exec';
 
+// ===== 送信中オーバーレイ制御 =====
+var submitOverlay = document.getElementById('submitOverlay');
+var submitOverlayText = document.getElementById('submitOverlayText');
+var submitOverlaySubtext = document.getElementById('submitOverlaySubtext');
+function showOverlayLoading() {
+  submitOverlay.classList.remove('success');
+  submitOverlayText.textContent = '送信中です...';
+  submitOverlaySubtext.textContent = 'ページを閉じずにお待ちください';
+  submitOverlay.classList.add('active');
+}
+function showOverlaySuccess() {
+  submitOverlay.classList.add('success');
+  submitOverlayText.textContent = '送信完了しました！';
+  submitOverlaySubtext.textContent = '確認ページに移動します...';
+}
+function hideOverlay() {
+  submitOverlay.classList.remove('active');
+  submitOverlay.classList.remove('success');
+}
+
 // 見積りフォーム共通処理（SP/PC/メイン 3フォーム）
+var isSubmitting = false;
 ['contactForm', 'contactFormPC', 'contactFormMain'].forEach(function(formId) {
   var form = document.getElementById(formId);
   if (!form) return;
   form.addEventListener('submit', function(e) {
     e.preventDefault();
+    if (isSubmitting) return; // 多重送信防止（複数フォーム間でもガード）
     var btn = form.querySelector('button[type="submit"]');
     var prefSelect = form.querySelector('select[name="prefecture"]');
     var nameVal = form.querySelector('input[name="name"]').value.trim();
@@ -896,8 +938,11 @@ var DEPLOY_URL = 'https://script.google.com/macros/s/AKfycbwyH3ig8iaWb1xIWis4piZ
       alert('電話番号を正しく入力してください。（例: 090-1234-5678）'); return;
     }
     if (!emailVal || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) { alert('メールアドレスを正しく入力してください。'); return; }
-    btn.disabled = true;
+    isSubmitting = true;
+    // 全フォームの送信ボタンを無効化
+    document.querySelectorAll('form button[type="submit"]').forEach(function(b) { b.disabled = true; });
     btn.textContent = '送信中...';
+    showOverlayLoading();
     var prefText = prefSelect.options[prefSelect.selectedIndex].text;
     var data = {
       formType: 'estimate',
@@ -913,11 +958,15 @@ var DEPLOY_URL = 'https://script.google.com/macros/s/AKfycbwyH3ig8iaWb1xIWis4piZ
       body: JSON.stringify(data)
     }).then(function() {
       form.reset();
-      btn.textContent = '送信完了しました';
-      setTimeout(function() { window.location.href = 'thank-you.html'; }, 1000);
+      showOverlaySuccess();
+      setTimeout(function() { window.location.href = 'thank-you.html'; }, 500);
     }).catch(function() {
-      btn.disabled = false;
-      btn.textContent = '無料見積りを依頼する';
+      isSubmitting = false;
+      hideOverlay();
+      document.querySelectorAll('form button[type="submit"]').forEach(function(b) {
+        b.disabled = false;
+        b.textContent = '無料見積りを依頼する';
+      });
       alert('送信に失敗しました。お手数ですが、もう一度お試しください。');
     });
   });
