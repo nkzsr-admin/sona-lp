@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>sona（ソナ）| AI活用型 業務支援サービス</title>
+  <title>sona（ソナ）｜ひとり社長のための業務代行</title>
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/favicon.png">
-  <meta name="description" content="採用・教育・離職の手間なく、事務・経理・広報をまとめて任せられる。中小企業のためのデジタルスタッフ配置サービス。">
+  <meta name="description" content="ひとり社長の業務を、専属スタッフがまるごと代行。経理・議事録・顧客メール・SNS運用・リサーチ・資料作成など、面倒な業務・毎回同じ業務・緊急の業務を依頼できます。1タスクから依頼OK・契約期間の縛りなし。">
   <!-- OGP -->
-  <meta property="og:title" content="sona（ソナ） | 採用せずに、人手不足を解決する。">
-  <meta property="og:description" content="採用・教育・離職の手間なく、事務・経理・広報をまとめて任せられる。中小企業のためのデジタルスタッフ配置サービス。">
+  <meta property="og:title" content="sona（ソナ）｜ひとり社長のための業務代行">
+  <meta property="og:description" content="ひとり社長の業務を、専属スタッフがまるごと代行。経理・議事録・顧客メール・SNS運用・リサーチ・資料作成など、面倒な業務・毎回同じ業務・緊急の業務を依頼できます。1タスクから依頼OK・契約期間の縛りなし。">
   <meta property="og:image" content="https://sona-jp.com/ogp.png">
   <meta property="og:url" content="https://sona-jp.com/lp">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="sona（ソナ）">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="sona（ソナ） | 採用せずに、人手不足を解決する。">
-  <meta name="twitter:description" content="採用・教育・離職の手間なく、事務・経理・広報をまとめて任せられる。中小企業のためのデジタルスタッフ配置サービス。">
+  <meta name="twitter:title" content="sona（ソナ）｜ひとり社長のための業務代行">
+  <meta name="twitter:description" content="ひとり社長の業務を、専属スタッフがまるごと代行。経理・議事録・顧客メール・SNS運用・リサーチ・資料作成など、面倒な業務・毎回同じ業務・緊急の業務を依頼できます。1タスクから依頼OK・契約期間の縛りなし。">
   <meta name="twitter:image" content="https://sona-jp.com/ogp.png">
   <!-- Google tag (gtag.js) — GA4 + Google Ads -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ME4W925TCL"></script>
@@ -250,8 +250,10 @@
       max-width: 580px;
     }
     .point-badge {
+      flex: 1;
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 8px;
       padding: 10px 16px;
       background: rgba(255,255,255,0.95);
@@ -261,6 +263,8 @@
       font-weight: 700;
       line-height: 1.3;
       color: #333;
+      white-space: nowrap;
+      text-align: center;
     }
     .point-badge .badge-num {
       color: #F49B4D;
@@ -305,9 +309,11 @@
     }
     .sec-problem .lead-text {
       text-align: center;
-      font-size: 18px;
-      margin-bottom: 10px;
-      opacity: 0.9;
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      opacity: 1;
+      letter-spacing: 0.05em;
     }
     .sec-problem h2 {
       text-align: center;
@@ -1923,7 +1929,7 @@
   <header id="hd">
     <div class="inner-hd">
       <h1 class="logo-hd">
-        <span class="logo-sub">AI活用型 業務支援サービス</span>
+        <span class="logo-sub">ひとり社長のための業務代行</span>
         <span class="logo-main">sona</span>
       </h1>
       <div class="menu-btn" id="menuBtn">
@@ -1933,16 +1939,13 @@
         <a href="#service">サービスの特徴</a>
         <a href="#reasons">選ばれる理由</a>
         <a href="#pricing">料金プラン</a>
-        <a href="#cases">導入事例</a>
+        <a href="#cases">使い方例</a>
         <a href="#flow">ご利用の流れ</a>
         <a href="#faq">FAQ</a>
       </nav>
       <div class="hd-right" style="display:flex; gap:10px;">
         <div class="hd-cta">
-          <a href="https://lin.ee/FYl4bJd" class="btn-contact" target="_blank" rel="noopener">無料相談はこちら</a>
-        </div>
-        <div class="hd-cta">
-          <a href="#contact" class="btn-contact" style="background:#fff; color:#263290; border:2px solid #263290;">お問い合わせフォーム</a>
+          <a href="#contact" class="btn-contact">無料で相談する</a>
         </div>
       </div>
     </div>
@@ -1956,18 +1959,17 @@
       <div class="kv-inner">
         <div class="kv-cont">
           <h2 class="kv-ttl">
-            <span class="copy-sub">先着5社限定 — 月額1万円で全機能お試し ✓</span>
-            <span class="copy-main">採用なしで、<br class="sp-only">人手不足を解決する<br>AI活用型業務支援サービス</span>
+            <span class="copy-sub">今だけ・先着5社限定 — 3タスク無料お試し ✓</span>
+            <span class="copy-main">ひとり社長のための、<br class="sp-only">業務代行</span>
           </h2>
-          <p class="kv-catch"><span class="catch-line1">初期費用0円・</span><span class="catch-line2">採用・教育不要</span></p>
+          <p class="kv-catch"><span class="catch-line1">面倒な業務、毎回同じ業務、緊急の業務を、専属スタッフが代行。</span><span class="catch-line2">本業に集中する時間を取り戻します。</span></p>
           <div class="point-badges">
-            <div class="point-badge"><span><span class="badge-num">1</span>タスク<span class="badge-num">3,000</span>円～</span></div>
-            <div class="point-badge"><span>マニュアル不要</span></div>
-            <div class="point-badge"><span>採用・教育コスト<span class="badge-num">0</span>円</span></div>
+            <div class="point-badge"><span>1タスクから依頼OK</span></div>
+            <div class="point-badge"><span>月単位でも対応OK</span></div>
+            <div class="point-badge"><span>24時間以内返信</span></div>
           </div>
           <div class="btn-wrapper">
-            <div class="btn btn-primary"><a href="#contact">月1万円キャンペーンに申し込む</a></div>
-            <div class="btn btn-secondary"><a href="https://lin.ee/FYl4bJd" target="_blank" rel="noopener" onclick="gtag_report_conversion('https://lin.ee/FYl4bJd')">LINEで無料相談</a></div>
+            <div class="btn btn-primary"><a href="#contact">無料で相談する</a></div>
           </div>
         </div>
       </div>
@@ -1979,24 +1981,25 @@
        ======================================== -->
   <section class="sec-problem">
     <div class="container">
-      <p class="lead-text">経理・人事・Web・各業務で<br class="sp-only">毎日忙しいお客様へ</p>
-      <h2>こんな事でお困りでは<br class="sp-only">御座いませんか？</h2>
+      <p class="lead-text">忙しいひとり社長へ</p>
+      <h2>「雇うほどじゃない、でも自分ではやりたくない」<br class="sp-only">業務に追われて、<br>本業の判断時間が奪われていませんか？</h2>
+      <p style="text-align:center; margin: 30px 0 40px; font-size: 22px; font-weight: 700; color: #fff;">こんなお悩み、ありませんか？</p>
       <div class="problem-list">
         <div class="problem-item">
           <span class="check">✓</span>
-          <p>人手が足りないが、正社員を雇うほどの業務量ではない</p>
+          <p>正社員を雇うほどの業務量ではないけど、自分ひとりでは回らない</p>
         </div>
         <div class="problem-item">
           <span class="check">✓</span>
-          <p>採用・教育にかける時間もコストもない</p>
+          <p>資料作成・経理・SNS運用…面倒な業務に追われて本業の時間が削られる</p>
         </div>
         <div class="problem-item">
           <span class="check">✓</span>
-          <p>急な業務増加に対応できるスタッフがいない</p>
+          <p>急な対応が来ると、その日の予定が全部ズレる</p>
         </div>
         <div class="problem-item">
           <span class="check">✓</span>
-          <p>請求書や資料作成に追われて、本来の仕事に集中できない…</p>
+          <p>自分しか分からない業務が増えて、休めない</p>
         </div>
         <div class="problem-item">
           <span class="check">✓</span>
@@ -2004,7 +2007,7 @@
         </div>
         <div class="problem-item">
           <span class="check">✓</span>
-          <p>バックオフィスの属人化を解消したい</p>
+          <p>効率化ツールも試したけど、結局自分でやってしまっている</p>
         </div>
       </div>
       <div class="problem-connect">
@@ -2020,29 +2023,29 @@
     <div class="container">
       <div class="section-title">
         <span class="en">SERVICE</span>
-        <h2>忙しい経営者に代わり、AIと専属スタッフが<br>業務をまるごとサポート</h2>
+        <h2>忙しいひとり社長の業務を、<br>まるごと代行</h2>
         <span class="underline"></span>
       </div>
       <div class="service-benefits">
         <div class="benefit-card">
-          <div class="card-head">1タスクから、月額まで</div>
+          <div class="card-head">始めやすい</div>
           <div class="card-body">
-            <div class="card-icon"><img src="images/feature_02.svg" alt="時間の柔軟性" style="width:80px;height:60px;"></div>
-            <p>スポット1タスク3,000円から、月額プランまで。業務量に合わせて柔軟に選べるので、無駄なコストが発生しません。</p>
+            <div class="card-icon"><img src="images/feature_02.svg" alt="始めやすい" style="width:80px;height:60px;"></div>
+            <p>1タスクから依頼OK・契約期間の縛りなし。「合うかわからない」を、まずはお試しで判断できます。</p>
           </div>
         </div>
         <div class="benefit-card">
-          <div class="card-head">幅広い業務に対応</div>
+          <div class="card-head">任せやすい</div>
           <div class="card-body">
-            <div class="card-icon"><img src="images/feature_01.svg" alt="多様な業務" style="width:80px;height:60px;"></div>
-            <p>経理・人事・総務・Web更新・データ入力など、バックオフィス業務全般をカバー。複数業務をまとめて依頼できます。</p>
+            <div class="card-icon"><img src="images/feature_01.svg" alt="任せやすい" style="width:80px;height:60px;"></div>
+            <p>経理（請求書・領収書整理）、議事録・要約、顧客メール対応、SNS運用、市場リサーチなど、ひとり社長の手を奪う業務を幅広くカバー。専属スタッフが結果を納品します。</p>
           </div>
         </div>
         <div class="benefit-card">
-          <div class="card-head">AIで品質とスピードを両立</div>
+          <div class="card-head">続けやすい</div>
           <div class="card-body">
-            <div class="card-icon"><img src="images/feature_04.svg" alt="AI活用" style="width:80px;height:60px;"></div>
-            <p>AI技術を活用し、高品質な成果物を素早くお届け。人の目による品質チェックも全件実施しています。</p>
+            <div class="card-icon"><img src="images/feature_04.svg" alt="続けやすい" style="width:80px;height:60px;"></div>
+            <p>24時間以内に返信（土日祝も対応）。忙しいひとり社長のペースに合わせて、必要な時に依頼できます。</p>
           </div>
         </div>
       </div>
@@ -2060,127 +2063,51 @@
     <div class="container">
       <div class="section-title">
         <span class="en">REASON</span>
-        <h2>sonaが経営者に選ばれる<span>3つの理由</span></h2>
+        <h2>sonaがひとり社長に選ばれる<span>3つの理由</span></h2>
         <span class="underline"></span>
       </div>
 
       <div class="reason-block">
         <div class="reason-img">
-          <img src="images/reason-1-cost.png" alt="コスト削減：正社員と比べて75%のコスト削減">
+          <img src="images/reason-1-cost.png" alt="始めやすさ：1タスクから依頼OK">
         </div>
         <div class="reason-text">
           <p class="reason-label">REASON</p>
           <p class="reason-num">01</p>
-          <h3>パート1人分以下のコストで<br>バックオフィスをまるごと任せられる</h3>
-          <p>おまかせプランは月額11万円。正社員1人（年間約516万円）と比べて約75%のコスト削減。スポットなら1タスク3,000円から始められます。</p>
+          <h3>1タスクから始められる、<br>契約縛りなし</h3>
+          <p>単発のスポットから、月単位のおまかせプランまで。契約期間の縛りなく、必要な分だけ依頼できます。先着5社限定の3タスク無料お試しで、まずは合うかを判断できます。</p>
           <span class="reason-line"></span>
         </div>
       </div>
 
       <div class="reason-block">
         <div class="reason-img">
-          <img src="images/reason-2-chat.png" alt="簡単チャット注文：メッセージを送るだけで業務依頼">
+          <img src="images/reason-2-chat.png" alt="任せやすさ：メッセージで依頼するだけ">
         </div>
         <div class="reason-text">
           <p class="reason-label">REASON</p>
           <p class="reason-num">02</p>
-          <h3>チャットで依頼するだけ。<br>面倒な業務を丸ごとおまかせ</h3>
-          <p>「これやって」とメッセージを送るだけ。経理・資料作成・リサーチ・SNS投稿まで、バックオフィス業務をまとめてお任せいただけます。複数の外注先を管理する手間はもうありません。</p>
+          <h3>メッセージで依頼するだけ。<br>幅広い業務に対応</h3>
+          <p>「これやって」とメッセージを送るだけ。経理・議事録・顧客メール・SNS・リサーチ・資料作成まで、ひとり社長の手を奪う業務を専属スタッフが代行します。</p>
           <span class="reason-line"></span>
         </div>
       </div>
 
       <div class="reason-block">
         <div class="reason-img">
-          <img src="images/reason-3-ai-human.png" alt="AI×人間の品質チェック：ダブルチェックで安定した品質">
+          <img src="images/reason-3-ai-human.png" alt="続けやすさ：専属担当だから毎回説明不要">
         </div>
         <div class="reason-text">
           <p class="reason-label">REASON</p>
           <p class="reason-num">03</p>
-          <h3>AIと人のダブルチェックで<br>安定した品質を保証</h3>
-          <p>AI技術による高速処理と、担当スタッフによる全件品質チェックのダブル体制。毎月の活用レポートで、どれだけ業務が削減されたかを可視化します。</p>
+          <h3>専属担当だから、<br>毎回説明し直さなくていい</h3>
+          <p>業務の流れや背景を一度共有すれば、専属担当者がそれを覚えて対応します。「またあの説明から…」がなくなり、依頼するほど楽になります。</p>
           <span class="reason-line"></span>
         </div>
       </div>
 
       <div class="reason-cta">
-        <a href="https://lin.ee/FYl4bJd" class="btn-cta-red" target="_blank" rel="noopener">まずは無料相談してみる</a>
-        <a href="#contact" class="btn-midcta-secondary">お問い合わせフォーム</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================
-       6. MENU / SERVICES (SOURCE: CASTER BIZ)
-       ======================================== -->
-  <section class="sec-menu">
-    <div class="container">
-      <div class="menu-header">
-        <p class="menu-sub-title">対応業務</p>
-        <p class="menu-main-title">MENU</p>
-        <p class="menu-desc">依頼いただく業務の一例です。<br class="sp-only">記載がなくてもご相談いただけます。</p>
-      </div>
-    </div>
-    <div class="orange-bar"></div>
-    <div class="container">
-      <div class="menu-grid">
-        <div class="menu-grid-left">
-          <div class="menu-item">
-            <div class="menu-num">01</div>
-            <div class="menu-text">
-              <h3>秘書</h3>
-              <p>メール下書き / スケジュール調整<br class="sp-only"> / リサーチ / 議事録作成 / 各種手配</p>
-            </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-num">02</div>
-            <div class="menu-text">
-              <h3>経理</h3>
-              <p>記帳代行 / 請求書作成 / 経費精算<br class="sp-only"> / 売掛金管理 / 月次レポート</p>
-            </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-num">03</div>
-            <div class="menu-text">
-              <h3>人事・労務</h3>
-              <p>求人原稿作成 / スカウトメール<br class="sp-only"> / 面接日程調整 / 勤怠管理サポート</p>
-            </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-num">04</div>
-            <div class="menu-text">
-              <h3>資料作成</h3>
-              <p>提案書 / 企画書 / 報告書<br class="sp-only"> / プレゼン資料 / 事業計画書</p>
-            </div>
-          </div>
-        </div>
-        <div class="menu-grid-right">
-          <div class="menu-item">
-            <div class="menu-num">05</div>
-            <div class="menu-text">
-              <h3>Web・SNS</h3>
-              <p>Webサイト更新 / SNS運用代行<br class="sp-only"> / ブログ更新 / ECサイト管理 / アクセス分析</p>
-            </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-num">06</div>
-            <div class="menu-text">
-              <h3>営業サポート</h3>
-              <p>見積書・提案書作成 / 顧客リスト管理<br class="sp-only"> / CRM入力 / アポイント調整</p>
-            </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-num">07</div>
-            <div class="menu-text">
-              <h3>その他</h3>
-              <p>データ入力・整理 / 翻訳（日英）<br class="sp-only"> / 競合調査 / 補助金調査</p>
-            </div>
-          </div>
-          <div class="menu-cta-area">
-            <a href="https://lin.ee/FYl4bJd" class="btn-cta-menu" target="_blank" rel="noopener">無料相談はこちら</a>
-            <a href="#contact" class="btn-cta-menu btn-cta-menu-secondary">お問い合わせフォーム</a>
-          </div>
-        </div>
+        <a href="#contact" class="btn-cta-red">無料で相談する</a>
       </div>
     </div>
   </section>
@@ -2190,10 +2117,9 @@
        ======================================== -->
   <section class="sec-midcta">
     <div class="container">
-      <h2>忙しいあなたの代わりに<br>バックオフィスをまるごとサポートする<br>AI活用型 業務支援サービス</h2>
+      <h2>忙しいひとり社長の業務を、<br>専属スタッフが代行する sona</h2>
       <div class="midcta-buttons">
-        <a href="https://lin.ee/FYl4bJd" class="btn-midcta-primary" target="_blank" rel="noopener">無料相談はこちら</a>
-        <a href="#contact" class="btn-midcta-secondary">お問い合わせフォーム</a>
+        <a href="#contact" class="btn-midcta-primary">無料で相談する</a>
       </div>
     </div>
   </section>
@@ -2209,98 +2135,52 @@
         <span class="underline"></span>
       </div>
       <div class="pricing-campaign">
-        <h3>導入キャンペーン実施中！</h3>
+        <h3>🎁 今だけ・導入キャンペーン実施中！</h3>
         <p class="pricing-campaign-detail">
-          <span class="pricing-campaign-highlight">月額1万円でおまかせプラン全機能<br class="sp-only">（税込110,000円相当）</span>
+          <span class="pricing-campaign-highlight">スポット3タスク無料お試し</span>
           <span class="pricing-campaign-limited">※先着5社限定</span>
-          <span class="pricing-campaign-period">1ヶ月間の導入キャンペーン</span>
+          <span class="pricing-campaign-period">1ヶ月以内のご利用</span>
         </p>
-        <p class="pricing-campaign-note">おまかせスタンダード（月額110,000円）の全機能を月1万円でお試しいただけます。<br>1ヶ月後、どれだけ業務が楽になったかをレポートでお見せします。<br><span style="font-size:12px; color:#888;">※お申込みが殺到しております為、場合によってはサービスご提供が遅れる場合がございます。</span></p>
+        <p class="pricing-campaign-note">「合うかわからない」を、まずは無料で試せます。<br>ご相談 → 3タスクのご依頼内容を相談 → 試して判断、の流れです。</p>
         <div class="pricing-campaign-btn">
-          <a href="#contact">導入キャンペーンに申し込む</a>
+          <a href="#contact">無料で相談する</a>
         </div>
       </div>
 
-      <div class="pricing-cards" style="display:grid; grid-template-columns:1fr 1fr; gap:20px; max-width:900px; margin:0 auto;">
+      <!-- 2プランカード（金額非表示・横並び） -->
+      <div class="pricing-cards" style="display:grid; grid-template-columns:1fr 1fr; gap:24px; max-width:900px; margin:0 auto;">
         <a href="#contact" class="pricing-card">
           <div class="pricing-head">
-            <h3>スポットプラン</h3>
-            <p class="period">まず1つ試したい方に</p>
+            <h3>スポット</h3>
+            <p class="period">単発で試したい方に</p>
           </div>
           <div class="pricing-body">
-            <div class="pricing-price">
-              <span class="yen">1タスク</span>
-              <span class="amount">3,000</span>
-              <span class="unit">円〜（税込）</span>
-            </div>
             <ul class="pricing-features">
-              <li>月5タスクまで</li>
-              <li>チャット相談</li>
-              <li>納品目安：24時間以内</li>
+              <li>1タスクから依頼OK</li>
+              <li>専属スタッフ対応</li>
+              <li>24時間以内返信</li>
               <li>契約期間の縛りなし</li>
             </ul>
-          </div>
-        </a>
-        <a href="#contact" class="pricing-card">
-          <div class="pricing-head">
-            <h3>おまかせライト</h3>
-            <p class="period">手軽に始めたい方に</p>
-          </div>
-          <div class="pricing-body">
-            <div class="pricing-price">
-              <span class="yen">月額</span>
-              <span class="amount">55,000</span>
-              <span class="unit">円（税込）</span>
+            <div style="text-align:center; margin-top:24px;">
+              <span style="display:inline-block; padding:12px 32px; background:#fe4343; color:#fff; border-radius:6px; font-weight:700;">無料で相談する</span>
             </div>
-            <ul class="pricing-features">
-              <li>月15タスクまで</li>
-              <li>専属スタッフ対応</li>
-              <li>チャット相談</li>
-              <li>月次活用レポート</li>
-              <li>契約期間：1ヶ月〜</li>
-            </ul>
           </div>
         </a>
         <a href="#contact" class="pricing-card recommended">
           <div class="pricing-head">
-            <h3>おまかせスタンダード</h3>
-            <p class="period">丸投げしたい方に</p>
+            <h3>おまかせプラン</h3>
+            <p class="period">ひとり社長におすすめ</p>
           </div>
           <div class="pricing-body">
-            <div class="pricing-price">
-              <span class="yen">月額</span>
-              <span class="amount">110,000</span>
-              <span class="unit">円（税込）</span>
-            </div>
             <ul class="pricing-features">
-              <li>月30タスクまで</li>
-              <li>専属スタッフ対応</li>
-              <li>チャット相談</li>
-              <li>月次活用レポート</li>
-              <li>定期ヒアリング月1回</li>
-              <li>契約期間：1ヶ月〜</li>
+              <li>ひとり社長の業務をまるごと代行</li>
+              <li>専属スタッフが対応（毎回説明不要）</li>
+              <li>24時間以内返信（土日祝も対応）</li>
+              <li>契約期間：1ヶ月〜縛りなし</li>
             </ul>
-          </div>
-        </a>
-        <a href="#contact" class="pricing-card">
-          <div class="pricing-head">
-            <h3>セルフプラン</h3>
-            <p class="period">AI環境を自分で使いたい方に</p>
-          </div>
-          <div class="pricing-body">
-            <div class="pricing-price">
-              <span class="yen">月額</span>
-              <span class="amount">55,000</span>
-              <span class="unit">円（税込）</span>
+            <div style="text-align:center; margin-top:24px;">
+              <span style="display:inline-block; padding:12px 32px; background:#fe4343; color:#fff; border-radius:6px; font-weight:700;">無料で相談する</span>
             </div>
-            <p style="text-align:center; font-size:14px; color:#666; margin-top:5px;">+ 初期構築費 220,000円</p>
-            <ul class="pricing-features">
-              <li>業務に最適化したAI環境を構築</li>
-              <li>ハンズオン研修</li>
-              <li>月1回の定期チェックイン</li>
-              <li>チャット質問対応 無制限</li>
-              <li>月次活用レポート</li>
-            </ul>
           </div>
         </a>
       </div>
@@ -2314,82 +2194,76 @@
   <section id="cases" class="sec-cases">
     <div class="container">
       <div class="section-title">
-        <span class="en">CASE STUDY</span>
-        <h2>導入イメージ</h2>
+        <span class="en">USE CASES</span>
+        <h2>ひとり社長の方の使い方例</h2>
         <span class="underline"></span>
       </div>
+      <p style="text-align:center; font-size:14px; color:#888; margin-bottom:30px;">※ 下記は、ひとり社長の方からよくご依頼いただく業務の例です。<br>業種・規模に応じて柔軟にカスタマイズします。</p>
       <div class="case-grid">
-        <!-- Case 1 -->
+        <!-- 経営コンサル業 -->
         <div class="case-card">
           <div class="case-header">
             <div class="case-meta">
-              <span class="case-plan">おまかせスタンダード</span>
-              <p class="case-company">IT企業（従業員8名）の場合</p>
+              <p class="case-company"><strong>経営コンサル業の方</strong></p>
             </div>
           </div>
-          <h3>月30時間の事務作業を削減し、売上が1.5倍に</h3>
-          <p class="case-body">社長1人で経理・請求書・メール対応をしていたが、<em>コア業務に全く集中できなかった</em>。導入後は事務作業を丸ごと任せられるようになり、営業に集中できるように。結果として<em>半年で売上が1.5倍</em>に。</p>
+          <ul style="list-style:none; padding:0; margin:16px 0; line-height:1.9;">
+            <li>「来週のクライアント向け提案書、骨子だけ送るので20P資料化お願い」</li>
+            <li>「業界の競合5社の比較リサーチをまとめて」</li>
+            <li>「議事録の文字起こしから要点抽出まで」</li>
+            <li>「ChatGPTで使うプロンプトのテンプレート作って」</li>
+          </ul>
+          <p class="case-body">→ 提案資料作成・リサーチ・プロンプト設計など本業に集中する時間を取り戻せます</p>
         </div>
-        <!-- Case 2 -->
+        <!-- 士業・税理士事務所 -->
         <div class="case-card">
           <div class="case-header">
             <div class="case-meta">
-              <span class="case-plan">おまかせライト</span>
-              <p class="case-company">税理士事務所（従業員5名）の場合</p>
+              <p class="case-company"><strong>士業・税理士事務所の方</strong></p>
             </div>
           </div>
-          <h3>繁忙期の業務過多を解消。スタッフの残業がゼロに</h3>
-          <p class="case-body">確定申告シーズンに毎年残業が増えていたが、<em>データ入力や書類整理を外部に任せることで</em>、繁忙期でもスタッフが定時退社できるように。<em>品質も問題なく、安心して任せられる</em>。</p>
+          <ul style="list-style:none; padding:0; margin:16px 0; line-height:1.9;">
+            <li>「顧問先5社向けの月次お知らせメール、テンプレで一括作成して」</li>
+            <li>「最新の法改正情報を整理して、顧問先向け資料に落とし込んで」</li>
+            <li>「税務相談の議事録、要点だけ抽出してくれる？」</li>
+            <li>「確定申告期の問い合わせ対応の下書きをお願い」</li>
+          </ul>
+          <p class="case-body">→ 顧問先対応・繁忙期業務を裏方として支え、本業に集中できる体制に</p>
         </div>
-        <!-- Case 3 -->
+        <!-- コーポレートサイト運営 -->
         <div class="case-card">
           <div class="case-header">
             <div class="case-meta">
-              <span class="case-plan">おまかせスタンダード</span>
-              <p class="case-company">コンサルティング会社（従業員12名）の場合</p>
+              <p class="case-company"><strong>コーポレートサイト運営の方</strong></p>
             </div>
           </div>
-          <h3>採用に失敗し続けた事務職、もう悩む必要がなくなった</h3>
-          <p class="case-body">事務スタッフを3回採用して3回とも半年以内に退職。<em>採用・教育コストが本当に無駄だった</em>。今は即戦力のスタッフが対応してくれるので、<em>採用リスクがゼロ</em>に。</p>
+          <ul style="list-style:none; padding:0; margin:16px 0; line-height:1.9;">
+            <li>「お問い合わせフォームを新しく作りたい、自動返信メールも一緒に」</li>
+            <li>「社長ブログの校正とSEO最適化、お願いできる？」</li>
+            <li>「SNS用の投稿企画、3パターン作って」</li>
+            <li>「FAQページの構築、コンテンツも一緒に」</li>
+          </ul>
+          <p class="case-body">→ ITに詳しくなくてもサイト運用が止まらない、頼れる外部チームに</p>
         </div>
-        <!-- Case 4 -->
+        <!-- オンライン講師・コーチ業 -->
         <div class="case-card">
           <div class="case-header">
             <div class="case-meta">
-              <span class="case-plan">セルフプラン</span>
-              <p class="case-company">EC事業者（従業員15名）の場合</p>
+              <p class="case-company"><strong>オンライン講師・コーチ業の方</strong></p>
             </div>
           </div>
-          <h3>ECサイトの受注処理を完全委託。ミスが激減</h3>
-          <p class="case-body">自社スタッフで受注処理をしていたが、ミスが頻発して顧客クレームが増えていた。<em>専門チームに委託してからはミスが90%以上減少</em>。<em>顧客満足度も大幅に向上</em>。</p>
-        </div>
-        <!-- Case 5 -->
-        <div class="case-card">
-          <div class="case-header">
-            <div class="case-meta">
-              <span class="case-plan">おまかせライト</span>
-              <p class="case-company">法律事務所（弁護士3名）の場合</p>
-            </div>
-          </div>
-          <h3>秘書業務を外部化。弁護士が本来の業務に集中</h3>
-          <p class="case-body">スケジュール調整や書類手配を弁護士自身が行っていた。<em>秘書業務を丸ごと任せたところ</em>、案件処理のスピードが格段に上がり、<em>受任件数が月5件増えた</em>。</p>
-        </div>
-        <!-- Case 6 -->
-        <div class="case-card">
-          <div class="case-header">
-            <div class="case-meta">
-              <span class="case-plan">おまかせスタンダード</span>
-              <p class="case-company">デザイン事務所（従業員6名）の場合</p>
-            </div>
-          </div>
-          <h3>SNS運用とブログ更新を外注化。フォロワー数3倍に</h3>
-          <p class="case-body">SNSを始めたかったが社内にリソースがなく放置していた。<em>投稿の企画から運用まで一括で依頼</em>できたことで、開始3ヶ月でフォロワーが3倍に。<em>問い合わせも月10件以上増えた</em>。</p>
+          <ul style="list-style:none; padding:0; margin:16px 0; line-height:1.9;">
+            <li>「次月のSNS投稿、コーチング体験記ベースで月15本企画して」</li>
+            <li>「メルマガ登録者向けの月次ニュースレター、テンプレ＋本文お願い」</li>
+            <li>「セミナー資料の構成案を、過去の登壇内容ベースで作って」</li>
+            <li>「予約確認メール・リマインドメールの自動化を一緒に設計したい」</li>
+          </ul>
+          <p class="case-body">→ 集客・コンテンツ運用の手間を減らし、セッション時間を最大化</p>
         </div>
       </div>
       <div class="case-cta">
         <div class="btn-wrapper" style="margin-top: 0;">
-          <div class="btn btn-primary"><a href="https://lin.ee/FYl4bJd" target="_blank" rel="noopener" onclick="gtag_report_conversion('https://lin.ee/FYl4bJd')">無料相談はこちら</a></div>
-          <div class="btn btn-secondary"><a href="#contact">お問い合わせフォーム</a></div>
+          <div class="btn btn-primary"><a href="#contact">無料で相談する</a></div>
         </div>
       </div>
     </div>
@@ -2419,8 +2293,8 @@
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
           </div>
           <dl>
-            <dt>無料相談</dt>
-            <dd>Zoomで業務内容・ご要望を詳しくお伺いします（30分）</dd>
+            <dt>ご相談</dt>
+            <dd>メッセージで業務内容・ご要望を伺います（必要に応じてビデオ相談も可）</dd>
           </dl>
         </div>
         <div class="flow-step">
@@ -2428,8 +2302,8 @@
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM6 20V4h5v7h7v9H6z"/></svg>
           </div>
           <dl>
-            <dt>お試し（無料）</dt>
-            <dd>実際の業務を3件無料でお試しいただけます</dd>
+            <dt>3タスク無料お試し</dt>
+            <dd>先着5社限定。実際のご依頼業務を3タスク分、無料でお試しいただけます</dd>
           </dl>
         </div>
         <div class="flow-step">
@@ -2438,7 +2312,7 @@
           </div>
           <dl>
             <dt>ご契約</dt>
-            <dd>契約書を取り交わし、業務開始の準備を進めます</dd>
+            <dd>業務量・期間に合わせた契約形態（スポット or おまかせプラン）を決定</dd>
           </dl>
         </div>
         <div class="flow-step">
@@ -2447,7 +2321,7 @@
           </div>
           <dl>
             <dt>業務スタート</dt>
-            <dd>専属スタッフが業務を開始。チャットで依頼するだけ</dd>
+            <dd>専属スタッフが業務を開始。メッセージで依頼するだけ</dd>
           </dl>
         </div>
       </div>
@@ -2472,7 +2346,7 @@
             <span class="faq-toggle"></span>
           </div>
           <div class="faq-answer">
-            <p>経理、人事、総務、秘書、Web更新、SNS運用、データ入力、カスタマーサポートなど幅広い業務に対応しております。まずはお気軽にご相談ください。</p>
+            <p>資料作成、リサーチ、メール対応、SNS運用、議事録作成、経理サポートなど、ひとり社長の手を奪う業務を幅広く対応しています。記載のない業務でもまずはご相談ください。</p>
           </div>
         </div>
         <div class="faq-item">
@@ -2482,37 +2356,17 @@
             <span class="faq-toggle"></span>
           </div>
           <div class="faq-answer">
-            <p>お問い合わせから最短3営業日で業務を開始できます。おまかせプランは初回お試し3件（無料）で品質を確認いただけます。</p>
+            <p>お問い合わせから最短即日で業務を開始できます。先着5社限定の3タスク無料お試しから始めていただけます。</p>
           </div>
         </div>
         <div class="faq-item">
           <div class="faq-question">
             <span class="faq-q-mark">Q</span>
-            <h3>業務時間外の対応は可能ですか？</h3>
+            <h3>情報の取り扱いはどうなっていますか？</h3>
             <span class="faq-toggle"></span>
           </div>
           <div class="faq-answer">
-            <p>基本的な対応時間は平日9:00〜18:00となりますが、プランによっては時間外対応も可能です。詳しくはお問い合わせください。</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">
-            <span class="faq-q-mark">Q</span>
-            <h3>セキュリティ対策はどうなっていますか？</h3>
-            <span class="faq-toggle"></span>
-          </div>
-          <div class="faq-answer">
-            <p>秘密保持契約（NDA）を締結し、情報管理を徹底しています。スタッフのアクセス管理やデータの暗号化なども実施しています。</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">
-            <span class="faq-q-mark">Q</span>
-            <h3>途中でプラン変更はできますか？</h3>
-            <span class="faq-toggle"></span>
-          </div>
-          <div class="faq-answer">
-            <p>はい、契約更新のタイミングでプラン変更が可能です。業務量の増減に合わせて柔軟に対応いたします。</p>
+            <p>お預かりした情報は、業務上必要な範囲でのみ取り扱い、第三者への提供は行いません。ご要望に応じて秘密保持契約（NDA）の締結も可能です。</p>
           </div>
         </div>
         <div class="faq-item">
@@ -2528,41 +2382,31 @@
         <div class="faq-item">
           <div class="faq-question">
             <span class="faq-q-mark">Q</span>
-            <h3>担当スタッフは固定ですか？</h3>
+            <h3>3タスク無料お試しの後、自動的に有料プランになりますか？</h3>
             <span class="faq-toggle"></span>
           </div>
           <div class="faq-answer">
-            <p>はい、専属のチーム制で対応いたします。担当者が変わることによる引き継ぎコストは発生しません。</p>
+            <p>いいえ。3タスク無料お試しの後は、こちらから次のステップをご提案します。お客様のご判断で、スポットまたはおまかせプランをお選びいただけます。</p>
           </div>
         </div>
         <div class="faq-item">
           <div class="faq-question">
             <span class="faq-q-mark">Q</span>
-            <h3>月の途中から利用開始できますか？</h3>
+            <h3>他社との違いは何ですか？</h3>
             <span class="faq-toggle"></span>
           </div>
           <div class="faq-answer">
-            <p>はい、月の途中からでもご利用いただけます。初月は日割り計算で対応いたしますので、お好きなタイミングで開始可能です。</p>
+            <p>「ツール紹介で終わるコンサル」や「アドバイスで終わる相談業」とは違い、業務そのものを引き受け、結果だけ受け取れる形でお届けします。専属担当制で、毎回の説明し直しも不要です。</p>
           </div>
         </div>
         <div class="faq-item">
           <div class="faq-question">
             <span class="faq-q-mark">Q</span>
-            <h3>AIを使っているのですか？</h3>
+            <h3>業種・規模に制限はありますか？</h3>
             <span class="faq-toggle"></span>
           </div>
           <div class="faq-answer">
-            <p>はい、最先端のAI技術を活用しています。ただし全ての成果物は担当スタッフが品質チェックを行い、お客様にお届けしています。AIだけに任せることはありません。</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">
-            <span class="faq-q-mark">Q</span>
-            <h3>なぜこんなに安いのですか？</h3>
-            <span class="faq-toggle"></span>
-          </div>
-          <div class="faq-answer">
-            <p>AI技術を活用することで、人的コストを大幅に抑えています。その分をそのまま料金に反映しているためです。品質は担当スタッフの目でしっかり担保しています。</p>
+            <p>ひとり社長や個人事業主の方を中心に、士業・コンサル業・コーポレートサイト運営・オンライン講師業など幅広い方にご利用いただけます。</p>
           </div>
         </div>
       </div>
@@ -2578,12 +2422,9 @@
         <span class="en">CONTACT</span>
         <h2>お問い合わせ</h2>
       </div>
-      <div style="text-align:center; margin-bottom:50px;">
+      <div style="text-align:center; margin-bottom:40px;">
         <p class="contact-lead">「こういう事やってほしい」<br class="sp-only">「お試しで使いたい」など<br>どんな些細なことでもお気軽にご相談ください。</p>
-        <a href="https://lin.ee/FYl4bJd" target="_blank" rel="noopener" onclick="gtag_report_conversion('https://lin.ee/FYl4bJd')" style="display:inline-block; background:#06C755; color:#fff; font-size:18px; font-weight:700; padding:18px 50px; border-radius:8px; text-decoration:none; transition:0.2s;">無料相談はこちら</a>
-        <p style="font-size:13px; color:#999; margin-top:10px;">友だち追加で無料相談OK</p>
       </div>
-      <p style="text-align:center; color:#999; margin-bottom:30px;">── または、フォームからお問い合わせ ──</p>
       <form class="contact-form" id="contactForm">
         <div class="form-group">
           <label>会社名・屋号</label>
@@ -2605,71 +2446,14 @@
           <label>お問い合わせ理由</label>
           <select name="reason" id="f-reason">
             <option value="">選択してください</option>
-            <option value="導入キャンペーンに申し込みたい">導入キャンペーンに申し込みたい</option>
-            <option value="スポットプランに申し込みたい">スポットプランに申し込みたい</option>
-            <option value="おまかせライトに申し込みたい">おまかせライトに申し込みたい</option>
-            <option value="おまかせスタンダードに申し込みたい">おまかせスタンダードに申し込みたい</option>
-            <option value="セルフプランに申し込みたい">セルフプランに申し込みたい</option>
-            <option value="無料お試しを利用したい">無料お試しを利用したい</option>
-            <option value="見積り・料金について">見積り・料金について</option>
+            <option value="業務内容を相談したい">業務内容を相談したい</option>
+            <option value="3タスク無料お試しに申し込みたい">3タスク無料お試しに申し込みたい</option>
             <option value="その他">その他</option>
           </select>
         </div>
         <div class="form-group">
-          <label>ご相談希望日時 <span style="display:inline-block; background:#4a5568; color:#ccc; padding:2px 8px; border-radius:3px; font-size:11px; font-weight:700; margin-left:8px;">任意</span></label>
-          <p style="font-size:13px; color:#999; margin-bottom:12px;">オンラインでのご相談をご希望の場合、候補日時をお選びください。</p>
-          <div style="margin-bottom:12px;">
-            <label style="font-size:13px; font-weight:400; color:#ccc; margin-bottom:4px;">第1希望</label>
-            <div style="display:flex; gap:10px;">
-              <div class="date-wrap">
-                <input type="date" name="date1" id="f-date1" class="date-input">
-                <span class="date-placeholder">年/月/日</span>
-              </div>
-              <select name="time1" id="f-time1" style="flex:1;">
-                <option value="">時間帯</option>
-                <option value="9:00〜12:00">9:00〜12:00</option>
-                <option value="12:00〜15:00">12:00〜15:00</option>
-                <option value="15:00〜18:00">15:00〜18:00</option>
-                <option value="18:00以降">18:00以降</option>
-              </select>
-            </div>
-          </div>
-          <div style="margin-bottom:12px;">
-            <label style="font-size:13px; font-weight:400; color:#ccc; margin-bottom:4px;">第2希望</label>
-            <div style="display:flex; gap:10px;">
-              <div class="date-wrap">
-                <input type="date" name="date2" id="f-date2" class="date-input">
-                <span class="date-placeholder">年/月/日</span>
-              </div>
-              <select name="time2" id="f-time2" style="flex:1;">
-                <option value="">時間帯</option>
-                <option value="9:00〜12:00">9:00〜12:00</option>
-                <option value="12:00〜15:00">12:00〜15:00</option>
-                <option value="15:00〜18:00">15:00〜18:00</option>
-                <option value="18:00以降">18:00以降</option>
-              </select>
-            </div>
-          </div>
-          <div>
-            <label style="font-size:13px; font-weight:400; color:#ccc; margin-bottom:4px;">第3希望</label>
-            <div style="display:flex; gap:10px;">
-              <div class="date-wrap">
-                <input type="date" name="date3" id="f-date3" class="date-input">
-                <span class="date-placeholder">年/月/日</span>
-              </div>
-              <select name="time3" id="f-time3" style="flex:1;">
-                <option value="">時間帯</option>
-                <option value="9:00〜12:00">9:00〜12:00</option>
-                <option value="12:00〜15:00">12:00〜15:00</option>
-                <option value="15:00〜18:00">15:00〜18:00</option>
-                <option value="18:00以降">18:00以降</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="form-group">
           <label>お問い合わせ内容</label>
-          <textarea name="message" id="f-message" placeholder="お気軽にご記入ください"></textarea>
+          <textarea name="message" id="f-message" placeholder="依頼したい業務内容や、ご質問・ご相談を自由にご記入ください。&#10;ビデオ相談をご希望の場合は、候補日時もこちらにお書きください。"></textarea>
         </div>
         <div class="form-submit">
           <button type="submit" id="submitBtn">送信する</button>
@@ -2685,11 +2469,10 @@
     <a href="#service" class="sp-menu-link">サービスの特徴</a>
     <a href="#reasons" class="sp-menu-link">選ばれる理由</a>
     <a href="#pricing" class="sp-menu-link">料金プラン</a>
-    <a href="#cases" class="sp-menu-link">導入事例</a>
+    <a href="#cases" class="sp-menu-link">使い方例</a>
     <a href="#flow" class="sp-menu-link">ご利用の流れ</a>
     <a href="#faq" class="sp-menu-link">FAQ</a>
-    <a href="https://lin.ee/FYl4bJd" class="sp-menu-cta" target="_blank" rel="noopener">無料相談はこちら</a>
-    <a href="#contact" class="sp-menu-cta-secondary sp-menu-link">お問い合わせフォーム</a>
+    <a href="#contact" class="sp-menu-cta">無料で相談する</a>
   </div>
 
   <!-- ========================================
@@ -2699,14 +2482,14 @@
     <div class="container">
       <div class="footer-inner">
         <div class="footer-logo">
-          <span class="logo-sub">AI活用型 業務支援サービス</span>
+          <span class="logo-sub">ひとり社長のための業務代行</span>
           <span class="logo-main">sona</span>
         </div>
         <nav class="footer-nav">
           <a href="#service">サービスの特徴</a>
           <a href="#reasons">選ばれる理由</a>
           <a href="#pricing">料金プラン</a>
-          <a href="#cases">導入事例</a>
+          <a href="#cases">使い方例</a>
           <a href="#flow">ご利用の流れ</a>
           <a href="#faq">FAQ</a>
           <a href="#contact">お問い合わせ</a>
@@ -2731,10 +2514,10 @@
     <div class="caption-body" id="caption-body">
       <div class="caption-body-inner">
         <p class="limited">&nbsp;</p>
-        <h2 class="caption-ttl">月額1万円で全機能お試し!!<br>導入キャンペーン実施中!!</h2>
+        <h2 class="caption-ttl">先着5社限定!!<br>スポット3タスク無料お試し!!</h2>
         <p class="caption-txt">
-          <span class="txt-blue">おまかせプラン全機能</span>を<span class="txt-blue"><br>月額1万円</span>で<br>
-          <span class="txt-red">1ヶ月間お試し!!</span>
+          <span class="txt-blue">「合うかわからない」</span>を、<br>
+          <span class="txt-red">まずは無料で試せます。</span>
         </p>
         <p class="cp-cv-btn">
           <a href="#pricing">キャンペーン詳細はコチラ</a>
