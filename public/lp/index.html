@@ -196,11 +196,12 @@
       background-position: center top;
       margin-top: 70px;
     }
+    .kv-photo-sp { display: none; }
     .kv-upper::after {
       content: '';
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 40%, rgba(255,255,255,0.85) 55%, rgba(255,255,255,0.95) 100%);
+      background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 30%, rgba(245,247,250,0.92) 50%, rgba(245,247,250,1) 100%);
     }
     .kv-inner {
       width: 90%;
@@ -216,8 +217,8 @@
       text-align: center;
     }
     .kv-ttl {
-      color: #1B2F50;
-      font-weight: 700;
+      color: #0a1f3d;
+      font-weight: 900;
       text-align: center;
     }
     .kv-ttl .copy-sub {
@@ -228,20 +229,41 @@
     .kv-ttl .copy-main {
       display: block;
       padding-top: 10px;
-      font-size: 44px;
-      line-height: 1.2;
+      font-size: 64px;
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+    .kv-ttl .copy-emphasize {
+      position: relative;
+      display: inline-block;
+      color: #0a1f3d;
+    }
+    .kv-ttl .copy-emphasize::after {
+      content: "";
+      position: absolute;
+      left: 0; right: 0; bottom: 6px;
+      height: 12px;
+      background: #fe4343;
+      opacity: 0.85;
+      z-index: -1;
+      border-radius: 2px;
     }
     .kv-catch {
-      max-width: 580px;
-      margin: 20px auto 30px;
-      padding: 8px 16px;
-      background: #2a6bc6;
-      font-size: 22px;
-      font-weight: 700;
-      color: #fff;
+      max-width: 620px;
+      margin: 28px auto 40px;
+      padding: 0;
+      background: transparent;
+      font-size: 18px;
+      font-weight: 500;
+      color: #1a3a8a;
       text-align: center;
-      border-radius: 4px;
+      line-height: 1.9;
+      box-shadow: none;
+      border-radius: 0;
     }
+    .kv-catch .catch-line1,
+    .kv-catch .catch-line2 { display: block; }
     .point-badges {
       display: flex;
       justify-content: center;
@@ -1616,8 +1638,8 @@
       .kv-cont { width: 65%; padding: 120px 0 60px; }
       .kv-ttl .copy-sub { font-size: 18px; }
       .kv-ttl .copy-main { font-size: 28px; }
-      .btn-wrapper { flex-direction: column; gap: 10px; }
-      .btn-wrapper .btn a { width: 100%; }
+      .btn-wrapper { flex-direction: column; gap: 10px; align-items: center; }
+      .btn-wrapper .btn a { width: 380px; max-width: 90%; }
       .benefit-card .card-head { min-height: 60px; font-size: 14px; display: flex; align-items: center; justify-content: center; white-space: nowrap; }
       .pricing-cards { grid-template-columns: 1fr 1fr !important; }
       /* Flow: 横スクロール防止 */
@@ -1736,14 +1758,50 @@
       #hd { position: fixed; }
 
       /* HERO — i-STAFF style mobile layout (woman left, text right) */
-      .kv-cont { width: 100%; padding: 0 0 20px; text-align: left; }
-      .kv-upper { background-position: left center; min-height: 85vh; margin-top: 42px; }
-      .kv-upper::after { background: linear-gradient(to right, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.5) 40%, rgba(255,255,255,0) 60%, rgba(255,255,255,0) 100%); }
+      .kv-cont { width: 100%; padding: 0 0 30px; text-align: center; }
+      .kv-upper {
+        background-image: none;
+        background-color: #fff;
+        min-height: 0;
+        margin-top: 42px;
+        display: block;
+        overflow: hidden;
+      }
+      .kv-upper::before { display: none; }
+      .kv-upper::after { display: none; }
+      .kv-cont { padding: 32px 0 40px; text-align: center; }
+      .kv-photo-frame {
+        display: block;
+        position: relative;
+        width: 100%;
+        margin: -80px auto 16px;
+        z-index: 0;
+      }
+      .kv-photo-frame::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background:
+          linear-gradient(to bottom, #fff 0%, transparent 18%, transparent 82%, #fff 100%);
+      }
+      .kv-photo-sp {
+        display: block;
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+        object-position: 35% center;
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 4%, black 10%, black 25%, rgba(0,0,0,0.3) 50%, transparent 75%);
+        mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 4%, black 10%, black 25%, rgba(0,0,0,0.3) 50%, transparent 75%);
+      }
+      .kv-cont .kv-catch { position: relative; z-index: 2; }
+      .kv-cont .btn-wrapper { margin-top: -50px; position: relative; z-index: 2; }
       .kv-inner { padding: 0 20px 30px; }
       .kv-ttl { text-align: left; }
       .kv-ttl .copy-sub { font-size: 18px; font-weight: 700; white-space: nowrap; }
-      .kv-ttl .copy-main { font-size: 30px; font-weight: 900; line-height: 1.4; }
-      .kv-catch { font-size: 14px; padding: 12px 20px; display: inline-block; text-align: center; }
+      .kv-ttl .copy-main { font-size: 46px; font-weight: 900; line-height: 1.25; letter-spacing: -0.01em; }
+      .kv-ttl .copy-emphasize::after { bottom: 4px; height: 10px; }
+      .kv-catch { font-size: 16px; padding: 12px 20px; display: inline-block; text-align: center; }
       .catch-line1 { display: inline; }
       .catch-line2 { display: inline; }
       .point-badges { flex-direction: column; gap: 8px; align-items: flex-start; }
@@ -1834,11 +1892,12 @@
       .logo-hd .logo-sub { font-size: 9px; margin-bottom: -3px; }
 
       /* HERO */
-      .kv-upper { min-height: auto; }
+      .kv-upper { min-height: 0; }
       .kv-inner { padding: 40px 15px 30px; }
-      .kv-ttl .copy-sub { font-size: 15px; }
-      .kv-ttl .copy-main { font-size: 24px; line-height: 1.4; }
-      .kv-catch { font-size: 13px; padding: 10px 15px; }
+      .kv-ttl .copy-sub { font-size: 16px; }
+      .kv-ttl .copy-main { font-size: 44px; line-height: 1.2; }
+      .kv-catch { font-size: 16px; padding: 10px 15px; line-height: 1.6; }
+      .kv-catch .catch-line1, .kv-catch .catch-line2 { white-space: nowrap; display: block; }
       .badge-num { font-size: 24px; }
 
       /* SECTION TITLES */
@@ -1914,7 +1973,7 @@
 
     /* ===== RESPONSIVE — SMALL MOBILE (max-width: 400px) ===== */
     @media only screen and (max-width: 400px) {
-      .kv-ttl .copy-main { font-size: 22px; }
+      .kv-ttl .copy-main { font-size: 30px; letter-spacing: -0.02em; }
       .section-title h2 { font-size: 19px; }
       .caption.caption-new { display: none; } /* very small screens: hide float */
     }
@@ -1959,15 +2018,10 @@
       <div class="kv-inner">
         <div class="kv-cont">
           <h2 class="kv-ttl">
-            <span class="copy-sub">今だけ・先着5社限定 — 3タスク無料お試し ✓</span>
-            <span class="copy-main">ひとり社長のための、<br class="sp-only">業務代行</span>
+            <span class="copy-main">ひとり社長のための、<br class="sp-only"><span class="copy-emphasize">業務代行</span></span>
           </h2>
-          <p class="kv-catch"><span class="catch-line1">面倒な業務、毎回同じ業務、緊急の業務を、専属スタッフが代行。</span><span class="catch-line2">本業に集中する時間を取り戻します。</span></p>
-          <div class="point-badges">
-            <div class="point-badge"><span>1タスクから依頼OK</span></div>
-            <div class="point-badge"><span>月単位でも対応OK</span></div>
-            <div class="point-badge"><span>24時間以内返信</span></div>
-          </div>
+          <p class="kv-catch"><span class="catch-line1">〜 面倒な業務を、専属スタッフが代行 〜</span><span class="catch-line2">〜 本業に集中する時間を取り戻します 〜</span></p>
+          <span class="kv-photo-frame"><img class="kv-photo-sp" src="images/hero-bg.png" alt=""></span>
           <div class="btn-wrapper">
             <div class="btn btn-primary"><a href="#contact">無料で相談する</a></div>
           </div>
